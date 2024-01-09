@@ -1,0 +1,122 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ assembly name="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json.Linq" #>
+<#@ assembly name="Microsoft.CSharp" #>
+<#@ import namespace="Microsoft.CSharp" #>
+<#@ output extension=".txt" #>
+<#
+	// source files
+    string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json"  };
+	
+	// ci build location
+	string[] cibuild = new string[] { "hl7au/au-fhir-core", "hl7au/au-fhir-base", "hl7au/au-fhir-pd" };
+	
+	// canonical for the IG
+	string[] canonicals = new string[] { "http://hl7.org.au/fhir/core",   "http://hl7.org.au/fhir", "http://hl7.org.au/fhir/pd" };
+	
+	// default current version for IG
+	string[] defaultv = new string[] { "0.2.2-preview", "4.1.0", "2.0.1" };
+
+	// past versions list
+	List<string>[] versions = new List<string>[] {
+		new List<string> {
+			//"0.3.0-preview", 
+			"0.2.2-preview" 
+		},
+		new List<string> {
+			//"4.2.0-ballot",
+			"4.1.2-preview",
+			"4.1.0" 
+		},
+		new List<string> {
+			"2.0.1"
+		}
+	};
+
+	List<string> duplicates = new List<string>();
+
+    string templateFileName = Path.GetFileNameWithoutExtension(this.Host.TemplateFile);
+
+	int i = 0;
+    foreach (var filename in filenames)
+    {
+        string settingsPath = this.Host.ResolvePath(filename);
+        string settingsJson = File.ReadAllText(settingsPath);
+        dynamic datasource = JObject.Parse(settingsJson);
+
+		string ballotUrl = canonicals[i] + "/" + versions[i].First();
+        #>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="<#= ballotUrl #>" ciUrl="https://build.fhir.org/ig/<#= cibuild[i] #>" defaultVersion="<#= defaultv[i] #>" defaultWorkgroup="au-fhir" gitUrl="https://github.com/<#= cibuild[i] #>" url="<#= canonicals[i] #>">
+	<version code="current" url="https://build.fhir.org/ig/<#= cibuild[i] #>"/><#
+		foreach(var version in versions[i])
+		{
+		
+#>  
+    <version code="<#= version #>" url="<#= canonicals[i] #>/<#= version #>"/><# 
+		} 
+#>	
+	<artifactPageExtension value="-definitions"/>
+	<artifactPageExtension value="-examples"/>
+	<artifactPageExtension value="-mapping"/>
+<#
+	foreach(var rnode in datasource.definition.resource)
+	{
+		string key = rnode.reference.reference.ToString().Replace("/","-");
+
+		string duplicated = "";
+		if( duplicates.Contains(rnode.name.ToString() ) )
+			duplicated = "DUPLICATE" ;
+		else
+			duplicates.Add( rnode.name.ToString() );
+
+	#>
+	<artifact id="<#= rnode.reference.reference #>" key="<#= key #>" name="<#= rnode.name #>" <#= duplicated #>/>
+<#}
+#>
+	<page key="NA" name="(NA)"/>
+	<page key="many" name="(many)"/>
+<#
+		pages(datasource.definition.page);
+#>
+</specification>
+        <#
+		var fname = "FHIR-" + filename.Replace("ImplementationGuide-hl7.fhir.","").Replace(".","-").Replace("-json",".xml");
+        save(fname);
+		duplicates.Clear();
+		i++;
+	}
+#>
+<#+
+private void save(string outputFileName) {
+  string templateDirectory = Path.GetDirectoryName(Host.TemplateFile);
+  string outputFilePath = Path.Combine(templateDirectory, outputFileName);
+  File.WriteAllText(outputFilePath, this.GenerationEnvironment.ToString()); 
+  this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+}
+#>
+
+<#+
+private void pages(dynamic node) {
+
+	if(node.nameUrl != null)
+	{
+		string key = node.nameUrl.ToString().Replace(".html","");
+
+		#>
+	<page key="<#= key #>" name="<#= node.title #>"/>
+<#+
+	}
+
+	if(node.page == null)
+		return;
+
+	foreach(var pnode in node.page)
+		pages(pnode);
+}
+#>
