@@ -1,0 +1,24 @@
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="https://confluence.hl7.org/display/HA/Ballot+2024-08" defaultVersion="2024-08" defaultWorkgroup="au-fhir" gitUrl="https://github.com/hl7au" url="https://confluence.hl7.org/display/HA/Guidance%3A+HL7+Australia+Ballot+Sign-up">
+	<version code="2024-08" url="https://confluence.hl7.org/display/HA/Ballot+2024-08"/> 
+	<version deprecated="true"  code="2024-03" url="https://confluence.hl7.org/display/HA/Ballot+2024-03"/>
+	<artifact deprecated="true" id="aucore0-3-0" key="aucore0-3-0" name="AU Core 0.3.0" />
+	<artifact id="aubase4-2-1" key="aubase4-2-1" name="AU Base 4.2.1" />
+	<artifact id="aucore1-0-0" key="aucore1-0-0" name="AU Core 1.0.0" />
+	<page key="individual" name="Individual"/>
+	<page key="org-csiro" name="CSIRO"/>
+	<page key="org-telstrahealth" name="Telstra Health"/>
+	<page key="org-bestpracticesoftware" name="Best Practice Software"/>
+	<page key="org-doha" name="Department of Health and Aged Care"/>
+	<page key="org-adha" name="Australian Digital Health Agency"/>
+	<page key="org-intersystems" name="Intersystems"/>
+	<page key="org-epic" name="Epic"/>
+	<page key="org-oracle" name="Oracle"/>
+	<page key="org-magentus" name="Magentus"/>
+	<page key="org-qldhealth" name="Queensland Health"/>
+	<page key="org-ranzcr" name="RANZCR"/>
+	<page key="org-silverchain" name="Silverchain"/>
+	<page key="org-acthealth" name="ACT Health"/>
+	<page key="org-alcidion" name="Alcidion"/>
+	<page key="org-other" name="Other (Add to Description)"/>
+</specification>
+        
