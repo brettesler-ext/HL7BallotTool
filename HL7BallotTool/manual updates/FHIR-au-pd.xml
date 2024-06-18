@@ -14,7 +14,7 @@
 	<artifact id="ValueSet/service-interfaces" key="ValueSet-service-interfaces" name="Australian Service Interfaces" />
 	<artifact id="ValueSet/au-physical-states-territories" key="ValueSet-au-physical-states-territories" name="Australian States and Territories" />
 	<artifact id="CodeSystem/endpoint-payload-type" key="CodeSystem-endpoint-payload-type" name="Australian Endpoint Payload Types" />
-	<artifact id="ValueSet/endpoint-payload-type" key="ValueSet-endpoint-payload-type" name="Australian Endpoint Payload Types Valueset"/>
+	<artifact id="ValueSet/endpoint-payload-type" key="ValueSet-endpoint-payload-type" name="Australian Endpoint Payload Types" DUPLICATE/>
 	<artifact id="Practitioner/example0" key="Practitioner-example0" name="Practitioner - Dr Helen Mayo" />
 	<artifact id="PractitionerRole/example0" key="PractitionerRole-example0" name="PractitionerRole - Dr Helen Mayo" />
 	<artifact id="Organization/example0" key="Organization-example0" name="Organization - Downunder Hospital" />
