@@ -12,13 +12,13 @@
 <#@ output extension=".txt" #>
 <#
 	// source files
-    string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json", "ImplementationGuide-hl7.fhir.au.erequesting.json" };
+    string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json", "ImplementationGuide-hl7.fhir.au.ereq.json" };
 	
 	// ci build location
 	string[] cibuild = new string[] { "hl7au/au-fhir-core", "hl7au/au-fhir-base", "hl7au/au-fhir-pd", "hl7au/au-fhir-erequesting" };
 	
 	// canonical for the IG
-	string[] canonicals = new string[] { "http://hl7.org.au/fhir/core",   "http://hl7.org.au/fhir", "http://hl7.org.au/fhir/pd", "http://hl7.org.au/fhir/erequesting" };
+	string[] canonicals = new string[] { "http://hl7.org.au/fhir/core",   "http://hl7.org.au/fhir", "http://hl7.org.au/fhir/pd", "http://hl7.org.au/fhir/ereq" };
 	
 	// default current version for IG
 	string[] defaultv = new string[] { "0.4.0-preview", "4.1.0", "2.0.1", "0.1.0-ballot" };

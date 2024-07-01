@@ -1,16 +1,30 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "hl7.fhir.au.erequesting",
+  "id": "hl7.fhir.au.ereq",
   "text": {
-    "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AUeRequesting</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org.au/fhir/erequesting/ImplementationGuide/hl7.fhir.au.erequesting</pre><div><p>This implementation guide is provided to support the use of FHIR®© for clinical requesting and ordering in an Australian context. , and defines the minimum set of constraints on the FHIR resources to create the AU eRequesting profiles.</p>\n</div></div>"
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.au.ereq</b></p><a name=\"hl7.fhir.au.ereq\"> </a><a name=\"hchl7.fhir.au.ereq\"> </a><a name=\"hchl7.fhir.au.ereq-en-AU\"> </a><h2>AUeRequesting</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org.au/fhir/ereq/ImplementationGuide/hl7.fhir.au.ereq</pre><div><p>This implementation guide is provided to support the use of FHIR®© for clinical requesting and ordering in an Australian context. , and defines the minimum set of constraints on the FHIR resources to create the AU eRequesting profiles.</p>\n</div></div>"
   },
-  "url": "http://hl7.org.au/fhir/erequesting/ImplementationGuide/hl7.fhir.au.erequesting",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "HAFWG"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 0
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/ereq/ImplementationGuide/hl7.fhir.au.ereq",
   "version": "0.1.0-ci-build",
   "name": "AUeRequesting",
   "title": "AU eRequesting",
   "status": "draft",
-  "date": "2024-06-17T02:05:56+00:00",
+  "date": "2024-07-01T04:08:59+00:00",
   "publisher": "HL7 Australia",
   "contact": [
     {
@@ -45,7 +59,7 @@
     }
   ],
   "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License. HL7 Australia© 2024+; Licensed Under Creative Commons No Rights Reserved.",
-  "packageId": "hl7.fhir.au.erequesting",
+  "packageId": "hl7.fhir.au.ereq",
   "license": "CC0-1.0",
   "fhirVersion": [ "4.0.1" ],
   "dependsOn": [
@@ -187,7 +201,7 @@
           },
           {
             "url": "value",
-            "valueString": "true"
+            "valueString": "false"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -213,7 +227,7 @@
           },
           {
             "url": "value",
-            "valueString": "true"
+            "valueString": "false"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -226,7 +240,7 @@
           },
           {
             "url": "value",
-            "valueString": "true"
+            "valueString": "false"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -239,7 +253,7 @@
           },
           {
             "url": "value",
-            "valueString": "true"
+            "valueString": "false"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -460,7 +474,7 @@
           },
           {
             "url": "value",
-            "valueString": "http://hl7.org.au/fhir/erequesting/history.html"
+            "valueString": "http://hl7.org.au/fhir/ereq/history.html"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -685,7 +699,7 @@
           },
           {
             "url": "value",
-            "valueString": "true"
+            "valueString": "false"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -711,7 +725,7 @@
           },
           {
             "url": "value",
-            "valueString": "true"
+            "valueString": "false"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -724,7 +738,7 @@
           },
           {
             "url": "value",
-            "valueString": "true"
+            "valueString": "false"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -737,7 +751,7 @@
           },
           {
             "url": "value",
-            "valueString": "true"
+            "valueString": "false"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -958,7 +972,7 @@
           },
           {
             "url": "value",
-            "valueString": "http://hl7.org.au/fhir/erequesting/history.html"
+            "valueString": "http://hl7.org.au/fhir/ereq/history.html"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1090,13 +1104,17 @@
           }
         ],
         "reference": { "reference": "StructureDefinition/au-erequesting-servicerequest" },
-        "name": "eRequesting ServiceRequest",
+        "name": "AU eRequesting ServiceRequest",
         "description": "This profile defines a service request structure to represent a request for a diagnostic investigation. It is based on the [AU Base Diagnostic Request](http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest).",
         "exampleBoolean": false
       }
     ],
     "page": {
       "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+          "valueCode": "informative"
+        },
         {
           "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl": "toc.html"
@@ -1109,6 +1127,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "index.html"
             }
@@ -1119,6 +1141,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "conformance.html"
@@ -1131,6 +1157,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "guidance.html"
             }
@@ -1141,6 +1171,10 @@
           "page": [
             {
               "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                },
                 {
                   "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
                   "valueUrl": "erequesting-future.html"
@@ -1153,6 +1187,10 @@
             {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                },
+                {
                   "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
                   "valueUrl": "relationship.html"
                 }
@@ -1163,6 +1201,25 @@
             },
             {
               "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                },
+                {
+                  "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+                  "valueUrl": "variance.html"
+                }
+              ],
+              "nameUrl": "variance.html",
+              "title": "AU Variance Statement",
+              "generation": "markdown"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                },
                 {
                   "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
                   "valueUrl": "auereqdi.html"
@@ -1177,6 +1234,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "use-cases.html"
             }
@@ -1187,6 +1248,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "artefacts.html"
@@ -1199,6 +1264,10 @@
             {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                },
+                {
                   "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
                   "valueUrl": "profiles-and-extensions.html"
                 }
@@ -1209,6 +1278,10 @@
             },
             {
               "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                },
                 {
                   "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
                   "valueUrl": "search-parameters-and-operations.html"
@@ -1223,6 +1296,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "terminology.html"
             }
@@ -1233,6 +1310,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "examples.html"
@@ -1245,12 +1326,31 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "downloads.html"
             }
           ],
           "nameUrl": "downloads.html",
           "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "license.html"
+            }
+          ],
+          "nameUrl": "license.html",
+          "title": "License",
           "generation": "markdown"
         }
       ]
