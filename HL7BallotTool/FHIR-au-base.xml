@@ -1,6 +1,8 @@
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org.au/fhir/4.3.0-ballot" ciUrl="https://build.fhir.org/ig/hl7au/au-fhir-base" defaultVersion="4.1.0" defaultWorkgroup="au-fhir" gitUrl="https://github.com/hl7au/au-fhir-base" url="http://hl7.org.au/fhir">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org.au/fhir/4.2.2-ballot" ciUrl="https://build.fhir.org/ig/hl7au/au-fhir-base" defaultVersion="4.1.0" defaultWorkgroup="au-fhir" gitUrl="https://github.com/hl7au/au-fhir-base" url="http://hl7.org.au/fhir">
 	<version code="current" url="https://build.fhir.org/ig/hl7au/au-fhir-base"/>  
-    <version code="4.3.0-ballot" url="http://hl7.org.au/fhir/4.3.0-ballot"/>  
+    <version code="4.2.2-ballot" url="http://hl7.org.au/fhir/4.2.2-ballot"/>  
+    <version code="4.2.1-preview" url="http://hl7.org.au/fhir/4.2.1-preview"/>  
+    <version code="4.2.0-preview" url="http://hl7.org.au/fhir/4.2.0-preview"/>  
     <version code="4.1.2-preview" url="http://hl7.org.au/fhir/4.1.2-preview"/>  
     <version code="4.1.0" url="http://hl7.org.au/fhir/4.1.0"/>	
 	<artifactPageExtension value="-definitions"/>
@@ -8,8 +10,7 @@
 	<artifactPageExtension value="-mapping"/>
 	<artifact id="SearchParameter/encounter-discharge-disposition" key="SearchParameter-encounter-discharge-disposition" name="EncounterDischargeDisposition" />
 	<artifact id="SearchParameter/indigenous-status" key="SearchParameter-indigenous-status" name="AustralianIndigenousStatus" />
-	<artifact id="SearchParameter/patient-gender-identity" key="SearchParameter-patient-gender-identity" name="PatientGenderIdentity" />
-	<artifact id="StructureDefinition/individual-recordedSexOrGender" key="StructureDefinition-individual-recordedSexOrGender" name="Person Recorded Sex Or Gender" />
+	<artifact id="SearchParameter/gender-identity" key="SearchParameter-gender-identity" name="GenderIdentity" />
 	<artifact id="StructureDefinition/au-condition" key="StructureDefinition-au-condition" name="AU Base Condition" />
 	<artifact id="StructureDefinition/au-coverage" key="StructureDefinition-au-coverage" name="AU Base Coverage" />
 	<artifact id="StructureDefinition/au-norelevantfinding" key="StructureDefinition-au-norelevantfinding" name="AU Assertion of No Relevant Finding" />
@@ -114,7 +115,6 @@
 	<artifact id="ValueSet/au-v2-0360-extended" key="ValueSet-au-v2-0360-extended" name="hl7VS-degreeLicenseCertificate - AU Extended" />
 	<artifact id="ValueSet/au-v2-0443-extended" key="ValueSet-au-v2-0443-extended" name="hl7VS-providerRole - AU Extended" />
 	<artifact id="ValueSet/service-provision-conditions" key="ValueSet-service-provision-conditions" name="Service Provision Conditions Australian Concepts" />
-	<artifact id="ValueSet/recorded-sex-or-gender-type" key="ValueSet-recorded-sex-or-gender-type" name="Recorded Sex Or Gender Type" />
 	<artifact id="CodeSystem/pbs-item-external" key="CodeSystem-pbs-item-external" name="PBS Item Codes" />
 	<artifact id="ValueSet/pbs-item" key="ValueSet-pbs-item" name="PBS Item Codes" DUPLICATE/>
 	<artifact id="ValueSet/mims" key="ValueSet-mims" name="MIMS" />
@@ -140,7 +140,15 @@
 	<artifact id="ValueSet/au-timezone" key="ValueSet-au-timezone" name="AU Time Zone" />
 	<artifact id="CodeSystem/au-observation-category" key="CodeSystem-au-observation-category" name="Observation Category Codes AU" />
 	<artifact id="ValueSet/au-observation-category-extended" key="ValueSet-au-observation-category-extended" name="Observation Category Codes - AU Extended" />
+	<artifact id="CodeSystem/rsg-source-document-type" key="CodeSystem-rsg-source-document-type" name="AU Recorded Sex or Gender Source Document Type" />
+	<artifact id="CodeSystem/rsg-type" key="CodeSystem-rsg-type" name="AU Recorded Sex or Gender Type" />
+	<artifact id="ValueSet/name-context" key="ValueSet-name-context" name="Name Context" />
+	<artifact id="CodeSystem/name-context" key="CodeSystem-name-context" name="Name Context" DUPLICATE/>
+	<artifact id="ValueSet/rsg-source-document-jurisdiction" key="ValueSet-rsg-source-document-jurisdiction" name="AU Recorded Sex or Gender (RSG) Source Document Jurisdiction" />
+	<artifact id="ValueSet/rsg-source-document-type" key="ValueSet-rsg-source-document-type" name="AU Recorded Sex or Gender (RSG) Source Document Type" />
+	<artifact id="ValueSet/rsg-type" key="ValueSet-rsg-type" name="AU Recorded Sex or Gender Type" DUPLICATE/>
 	<artifact id="StructureDefinition/au-timezone" key="StructureDefinition-au-timezone" name="Australian Time Zone" />
+	<artifact id="StructureDefinition/name-context" key="StructureDefinition-name-context" name="Name Context" DUPLICATE/>
 	<artifact id="StructureDefinition/au-procedure" key="StructureDefinition-au-procedure" name="AU Base Procedure" />
 	<artifact id="Observation/specimen-hepatitis-b-serology" key="Observation-specimen-hepatitis-b-serology" name="Observation - Measurement of Hepatitis B surface antibody" />
 	<artifact id="Specimen/serum" key="Specimen-serum" name="Specimen - Serum sample" />
@@ -168,6 +176,7 @@
 	<artifact id="HealthcareService/example1" key="HealthcareService-example1" name="HealthcareService - a typical Healthcare Service the Radiologist belongs to" />
 	<artifact id="Practitioner/example3" key="Practitioner-example3" name="Practitioner - a typical Practitioner as a General Practitioner" />
 	<artifact id="Practitioner/example4" key="Practitioner-example4" name="Practitioner - a typical Ahpra registered professional" />
+	<artifact id="Practitioner/example-sex-and-gender" key="Practitioner-example-sex-and-gender" name="Practitioner - for use in sex and gender" />
 	<artifact id="Endpoint/example0" key="Endpoint-example0" name="Endpoint - a secure messaging endpoint example" />
 	<artifact id="Location/example3" key="Location-example3" name="Location - of a Practitioner as a General Practitioner" />
 	<artifact id="Organization/example3" key="Organization-example3" name="Organization - a typical Organisation the General Practitioner belongs to" />
@@ -208,6 +217,7 @@
 	<artifact id="RelatedPerson/example1" key="RelatedPerson-example1" name="RelatedPerson - as a carer for an older patient" />
 	<artifact id="RelatedPerson/example2" key="RelatedPerson-example2" name="RelatedPerson - as a mother for the patient in example 4" />
 	<artifact id="RelatedPerson/example3" key="RelatedPerson-example3" name="RelatedPerson - as father" />
+	<artifact id="RelatedPerson/example-sex-and-gender" key="RelatedPerson-example-sex-and-gender" name="RelatedPerson - as family member, for use in sex and gender" />
 	<artifact id="Patient/example8" key="Patient-example8" name="Patient - male born in 1949 with address and contact details" />
 	<artifact id="Observation/norelevantfinding-example0" key="Observation-norelevantfinding-example0" name="Observation - of no relevant finding of procedure" />
 	<artifact id="Observation/norelevantfinding-example1" key="Observation-norelevantfinding-example1" name="Observation - of no relevant finding of immunisations" />
@@ -219,6 +229,8 @@
 	<artifact id="Patient/address-example1" key="Patient-address-example1" name="Patient - unstructured Australian Address" />
 	<artifact id="Patient/address-example2" key="Patient-address-example2" name="Patient - Australian No Fixed Address" />
 	<artifact id="Patient/address-example3" key="Patient-address-example3" name="Patient - Australian address with identifiers" />
+	<artifact id="Patient/example-patient-name-context" key="Patient-example-patient-name-context" name="Patient - indicate IHI validation name context" />
+	<artifact id="Practitioner/example-practitioner-name-context" key="Practitioner-example-practitioner-name-context" name="Practitioner - indicate HPI-I validation name context" />
 	<artifact id="Medication/DoseBased" key="Medication-DoseBased" name="Medication - dose based" />
 	<artifact id="Medication/UnbrandedProduct0" key="Medication-UnbrandedProduct0" name="Medication - Unbranded Product of clarithromycin 500mg tablet" />
 	<artifact id="Medication/UnbrandedProduct1" key="Medication-UnbrandedProduct1" name="Medication - Unbranded Product of esomeprazole 20mg tablet" />
@@ -269,18 +281,21 @@
 	<artifact id="Procedure/example0" key="Procedure-example0" name="Procedure - Cryotherapy" />
 	<artifact id="Procedure/example1" key="Procedure-example1" name="Procedure - Cardiac catheterisation" />
 	<artifact id="Procedure/example2" key="Procedure-example2" name="Procedure - Stent placement" />
-	<artifact id="StructureDefinition/individual-pronouns" key="StructureDefinition-individual-pronouns" name="Individual Pronouns" />
-	<artifact id="ValueSet/pronouns" key="ValueSet-pronouns" name="Personal Pronouns" />
 	<page key="NA" name="(NA)"/>
 	<page key="many" name="(many)"/>
 	<page key="toc" name="Table of Contents"/>
 	<page key="index" name="Home"/>
 	<page key="guidance" name="Guidance"/>
+	<page key="generalguidance" name="General Guidance"/>
+	<page key="relationship" name="Relationship with other IGs"/>
+	<page key="future" name="Future of AU Base"/>
 	<page key="profiles-and-extensions" name="Profiles and Extensions"/>
 	<page key="search-parameters" name="Search Parameters"/>
 	<page key="terminology" name="Terminology"/>
 	<page key="examples" name="Examples"/>
+	<page key="support" name="Support"/>
 	<page key="downloads" name="Downloads"/>
+	<page key="license" name="License and Legal"/>
 	<page key="changes" name="Change Log"/>
 </specification>
         

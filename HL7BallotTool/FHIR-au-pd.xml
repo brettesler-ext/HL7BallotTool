@@ -10,6 +10,8 @@
 	<artifact id="StructureDefinition/au-pd-location" key="StructureDefinition-au-pd-location" name="AU PD Location" />
 	<artifact id="StructureDefinition/au-pd-sm-endpoint" key="StructureDefinition-au-pd-sm-endpoint" name="AU PD Secure Messaging Endpoint" />
 	<artifact id="StructureDefinition/au-pd-healthcareservice" key="StructureDefinition-au-pd-healthcareservice" name="AU PD Healthcare Service" />
+	<artifact id="StructureDefinition/au-pd-smdtargetidentifier" key="StructureDefinition-au-pd-smdtargetidentifier" name="PD Secure Messaging Delivery Target Identifier" />
+	<artifact id="StructureDefinition/au-pd-vdi" key="StructureDefinition-au-pd-vdi" name="AU Vendor Directory Identifier" />
 	<artifact id="CodeSystem/smd-interfaces" key="CodeSystem-smd-interfaces" name="Australian Secure Message Service Interfaces" />
 	<artifact id="ValueSet/service-interfaces" key="ValueSet-service-interfaces" name="Australian Service Interfaces" />
 	<artifact id="ValueSet/au-physical-states-territories" key="ValueSet-au-physical-states-territories" name="Australian States and Territories" />
@@ -38,6 +40,8 @@
 	<page key="federation" name="Federation of Directory Services"/>
 	<page key="examples" name="Examples"/>
 	<page key="downloads" name="Downloads"/>
+	<page key="license" name="License and Legal"/>
 	<page key="changes" name="Change Log"/>
+	<page key="variance" name="AU Variance Statement"/>
 </specification>
         

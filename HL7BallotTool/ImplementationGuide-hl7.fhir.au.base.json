@@ -2,8 +2,8 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.au.base",
   "text": {
-    "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AUBaseImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base</pre><div><p>This implementation guide is provided to support the use of FHIR®© in an Australian context.</p>\n</div></div>"
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.au.base</b></p><a name=\"hl7.fhir.au.base\"> </a><a name=\"hchl7.fhir.au.base\"> </a><a name=\"hl7.fhir.au.base-en-AU\"> </a><h2>AUBaseImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base</pre><div><p>This implementation guide is provided to support the use of FHIR®© in an Australian context.</p>\n</div></div>"
   },
   "extension": [
     {
@@ -12,12 +12,12 @@
     }
   ],
   "url": "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base",
-  "version": "4.1.1",
+  "version": "4.2.2-ci-build",
   "name": "AUBaseImplementationGuide",
   "title": "AU Base Implementation Guide",
   "status": "active",
   "experimental": false,
-  "date": "2023-12-20T22:18:03+00:00",
+  "date": "2024-07-17T03:31:47+00:00",
   "publisher": "HL7 Australia",
   "contact": [
     {
@@ -57,7 +57,7 @@
       ],
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
-      "version": "5.3.0"
+      "version": "6.0.0"
     },
     {
       "id": "hl7ext",
@@ -69,7 +69,7 @@
       ],
       "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId": "hl7.fhir.uv.extensions.r4",
-      "version": "1.0.0"
+      "version": "5.1.0"
     }
   ],
   "definition": {
@@ -122,19 +122,6 @@
           {
             "url": "value",
             "valueString": "false"
-          }
-        ],
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-      },
-      {
-        "extension": [
-          {
-            "url": "code",
-            "valueString": "showsource"
-          },
-          {
-            "url": "value",
-            "valueString": "true"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -213,19 +200,6 @@
           {
             "url": "value",
             "valueString": "../input/_resources/exp-params.json"
-          }
-        ],
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-      },
-      {
-        "extension": [
-          {
-            "url": "code",
-            "valueString": "special-url"
-          },
-          {
-            "url": "value",
-            "valueString": "http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -343,6 +317,19 @@
           {
             "url": "value",
             "valueString": "http://terminology.hl7.org.au/ValueSet/medication-type"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/name-context"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -576,6 +563,19 @@
           },
           {
             "url": "value",
+            "valueString": "http://terminology.hl7.org.au/CodeSystem/name-context"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
             "valueString": "http://terminology.hl7.org.au/CodeSystem/contact-purpose"
           }
         ],
@@ -707,6 +707,71 @@
           {
             "url": "value",
             "valueString": "http://terminology.hl7.org.au/ValueSet/coverage-type-extended"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/rsg-source-document-jurisdiction"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/rsg-source-document-type"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/rsg-type"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/CodeSystem/rsg-source-document-type"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/CodeSystem/rsg-type"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -960,7 +1025,7 @@
       },
       {
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode": "hl7.fhir.uv.tools#current"
+        "valueCode": "hl7.fhir.uv.tools#0.1.0"
       },
       {
         "extension": [
@@ -1010,19 +1075,6 @@
           {
             "url": "value",
             "valueString": "false"
-          }
-        ],
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-      },
-      {
-        "extension": [
-          {
-            "url": "code",
-            "valueCode": "showsource"
-          },
-          {
-            "url": "value",
-            "valueString": "true"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1101,19 +1153,6 @@
           {
             "url": "value",
             "valueString": "../input/_resources/exp-params.json"
-          }
-        ],
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-      },
-      {
-        "extension": [
-          {
-            "url": "code",
-            "valueCode": "special-url"
-          },
-          {
-            "url": "value",
-            "valueString": "http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1231,6 +1270,19 @@
           {
             "url": "value",
             "valueString": "http://terminology.hl7.org.au/ValueSet/medication-type"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/name-context"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1464,6 +1516,19 @@
           },
           {
             "url": "value",
+            "valueString": "http://terminology.hl7.org.au/CodeSystem/name-context"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
             "valueString": "http://terminology.hl7.org.au/CodeSystem/contact-purpose"
           }
         ],
@@ -1595,6 +1660,71 @@
           {
             "url": "value",
             "valueString": "http://terminology.hl7.org.au/ValueSet/coverage-type-extended"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/rsg-source-document-jurisdiction"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/rsg-source-document-type"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/rsg-type"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/CodeSystem/rsg-source-document-type"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/CodeSystem/rsg-type"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1855,7 +1985,9 @@
             "valueString": "SearchParameter"
           }
         ],
-        "reference": { "reference": "SearchParameter/encounter-discharge-disposition" },
+        "reference": {
+          "reference": "SearchParameter/encounter-discharge-disposition"
+        },
         "name": "EncounterDischargeDisposition",
         "description": "This search parameter returns encounters with a discharge-disposition matching the specified code.",
         "exampleBoolean": false
@@ -1867,7 +1999,9 @@
             "valueString": "SearchParameter"
           }
         ],
-        "reference": { "reference": "SearchParameter/indigenous-status" },
+        "reference": {
+          "reference": "SearchParameter/indigenous-status"
+        },
         "name": "AustralianIndigenousStatus",
         "description": "This search parameter returns patients with an Australian Indigenous Status extension matching the specified code.",
         "exampleBoolean": false
@@ -1879,21 +2013,12 @@
             "valueString": "SearchParameter"
           }
         ],
-        "reference": { "reference": "SearchParameter/patient-gender-identity" },
-        "name": "PatientGenderIdentity",
-        "description": "This search parameter returns patients with the genderIdentity extension matching the specified code.",
+        "reference": {
+          "reference": "SearchParameter/gender-identity"
+        },
+        "name": "GenderIdentity",
+        "description": "This search parameter returns resources with the Individual Gender Identity extension matching the specified code.",
         "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": { "reference": "StructureDefinition/individual-recordedSexOrGender" },
-        "name": "Person Recorded Sex Or Gender",
-        "description": "Person Recorded Sex Or Gender"
       },
       {
         "extension": [
@@ -1902,7 +2027,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-condition" },
+        "reference": {
+          "reference": "StructureDefinition/au-condition"
+        },
         "name": "AU Base Condition",
         "description": "This profile defines a condition structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -1914,7 +2041,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-coverage" },
+        "reference": {
+          "reference": "StructureDefinition/au-coverage"
+        },
         "name": "AU Base Coverage",
         "description": "This profile defines a coverage structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -1926,7 +2055,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-norelevantfinding" },
+        "reference": {
+          "reference": "StructureDefinition/au-norelevantfinding"
+        },
         "name": "AU Assertion of No Relevant Finding",
         "description": "This profile provides an observation information structure for asserting a clinical judgement that there are no items of specific interest, (e.g. no current medications or no history of vaccination), for a patient. An assertion of no relevant finding may be used in continuity of care or transfer or care related lists and composition sections.",
         "exampleBoolean": false
@@ -1938,7 +2069,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-receivingapplication" },
+        "reference": {
+          "reference": "StructureDefinition/au-receivingapplication"
+        },
         "name": "HL7 V2 Receiving Application",
         "description": "This extension applies to the Endpoint resource and is used to represent routing HL7 V2 message payload details associated with an endpoint. This content allows a sender using these endpoint details to include Receiving Application (MSH-5) information in HL7 V2 messages sent via this channel which allow correct delivery within the receiving system.",
         "exampleBoolean": false
@@ -1950,7 +2083,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-receivingfacility" },
+        "reference": {
+          "reference": "StructureDefinition/au-receivingfacility"
+        },
         "name": "HL7 V2 Receiving Facility",
         "description": "This extension applies to the Endpoint resource and is used to represent HL7 V2 receiving facility details for HL7 V2 routing purposes associated with an endpoint. This content allows a sender using these endpoint details to include Receiving Facility (MSH-6) information in HL7 V2 messages sent via this channel which allow correct delivery within the receiving system.",
         "exampleBoolean": false
@@ -1962,7 +2097,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-assigningauthority" },
+        "reference": {
+          "reference": "StructureDefinition/au-assigningauthority"
+        },
         "name": "HL7 V2 Assigning Authority",
         "description": "This extension applies to the [Identifier](http://hl7.org/fhir/datatypes.html#identifier) data type and is used to represent HL7 V2 assigning authority details for HL7 V2 identification for routing.",
         "exampleBoolean": false
@@ -1974,7 +2111,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/encryption-certificate-pem-x509" },
+        "reference": {
+          "reference": "StructureDefinition/encryption-certificate-pem-x509"
+        },
         "name": "Encryption Certificate PEM X509",
         "description": "This extension applies to the Endpoint resource and is used to support encrypted certificate content for use with an endpoint. This extension allows an endpoint entry to define a suitable certificate for use in communications on the associated channel.",
         "exampleBoolean": false
@@ -1986,7 +2125,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/indigenous-status" },
+        "reference": {
+          "reference": "StructureDefinition/indigenous-status"
+        },
         "name": "Australian Indigenous Status",
         "description": "This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin.",
         "exampleBoolean": false
@@ -1998,7 +2139,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/dispense-number" },
+        "reference": {
+          "reference": "StructureDefinition/dispense-number"
+        },
         "name": "Dispense Number",
         "description": "This extension applies to the MedicationDispense resource and is used to represent the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats.",
         "exampleBoolean": false
@@ -2010,7 +2153,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/medication-long-term" },
+        "reference": {
+          "reference": "StructureDefinition/medication-long-term"
+        },
         "name": "Long Term",
         "description": "This extension applies to the MedicationStatement resource and is used to indicate long term use of a medication.",
         "exampleBoolean": false
@@ -2022,7 +2167,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/medication-type" },
+        "reference": {
+          "reference": "StructureDefinition/medication-type"
+        },
         "name": "Medication Type",
         "description": "This extension applies to the [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding) data type and and is used to indicate the type of information covered by the code e.g. branded product with no strength or form. This is useful when there are multiple codings from the same coding system at different levels/classifications.",
         "exampleBoolean": false
@@ -2034,7 +2181,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/medication-strength" },
+        "reference": {
+          "reference": "StructureDefinition/medication-strength"
+        },
         "name": "Medication Strength",
         "description": "This extension applies to the Medication resource and is used to represent the strength of a medication as text.",
         "exampleBoolean": false
@@ -2046,7 +2195,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/medication-brand-name" },
+        "reference": {
+          "reference": "StructureDefinition/medication-brand-name"
+        },
         "name": "Medication Brand Name",
         "description": "This extension applies to the Medication, MedicationRequest, MedicationDispense amd MedicationStatement resources and is used to represent the brand name of a medication. This extension is not to be the sole representation of the medication concept; it shall not be used as a substitute for medication code (e.g. Medication.code or MedicationStatement.medicationCodeableConcept).\n\nIf a system can only supply branded product information in text form, that information will be supplied in the text portion of that code e.g. code.text or medicationCodeableConcept.text. This extension only supports the name portion of a medication concept, not the branded product or product pack information. It is available for use for where a system needs to separate out the brand name string for handling or other processing.",
         "exampleBoolean": false
@@ -2058,7 +2209,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/medication-generic-name" },
+        "reference": {
+          "reference": "StructureDefinition/medication-generic-name"
+        },
         "name": "Medication Generic Drug Name",
         "description": "This extension applies to the Medication, MedicationRequest, MedicationDispense and MedicationStatement resources and is used to represent the generic name of a medication. The generic medication text name may not be the same as the subject medication (prescribed, dispensed or stated) but may be used to provide an additional or equivalent drug name that is a generic medication concept. This extension is not to be the sole representation of the medication concept; it shall not be used as a substitute for medication code (e.g. Medication.code or MedicationStatement.medicationCodeableConcept).\n\nIf a system can only supply generic product information, and only in text form, that information will be supplied in the text portion of that code e.g. code.text or medicationCodeableConcept.text. This extension only supports the name portion of a medication concept, not the generic product or product pack information. It is available for use for where a system needs to separate out the generic name string for handling or other processing.",
         "exampleBoolean": false
@@ -2070,7 +2223,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/ethnicity" },
+        "reference": {
+          "reference": "StructureDefinition/ethnicity"
+        },
         "name": "Ethnicity",
         "description": "This extension applies to the Patient resource and is used to represent ethnic identity (see [Australian Bureau of Statistics](https://www.abs.gov.au/statistics/classifications/australian-standard-classification-cultural-and-ethnic-groups-ascceg/2019) for further information). This extension is to support the provision of healthcare services to patients with specific cultural identities. This extension provides further information about a person’s cultural values and practices which can be significant in determining service type, support required and possible needs.\n\nThe words 'ethnicity' and 'ethnic' are associated with many different meanings, but for the purpose of this extension ethnicity refers to the shared identity or similarity of a group of people on the basis of one or more distinguishing sociological characteristics, such as language, shared history, religion, cultural traditions or geographic origin etc. This extension supports Australian Aboriginal and Torres Strait Islander peoples as well as ethnicities originating from outside of Australia.",
         "exampleBoolean": false
@@ -2082,7 +2237,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/closing-the-gap-registration" },
+        "reference": {
+          "reference": "StructureDefinition/closing-the-gap-registration"
+        },
         "name": "Closing the Gap Registration",
         "description": "This extension applies to the Patient resource and provides an indicator of whether the patient is eligible for a Closing the Gap (CTG) co-payment.",
         "exampleBoolean": false
@@ -2094,7 +2251,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/associated-healthcareservice" },
+        "reference": {
+          "reference": "StructureDefinition/associated-healthcareservice"
+        },
         "name": "Associated Healthcare Service",
         "description": "This extension applies to any resource and is used to represent a healthcare service relating to a resource, e.g. healthcare services under which the patient was managed during an encounter.",
         "exampleBoolean": false
@@ -2106,7 +2265,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/subsidised-concurrent-supply" },
+        "reference": {
+          "reference": "StructureDefinition/subsidised-concurrent-supply"
+        },
         "name": "Subsidised Concurrent Supply",
         "description": "This extension applies to the MedicationRequest or MedicationDispense resources and is used to represent the grounds (e.g. [Regulation 49](https://www.pbs.gov.au/info/healthpro/explanatory-notes/section1/Section_1_2_Explanatory_Notes#Regulation-49)) that authorise a PBS or RPBS subsidy for the concurrent supply of an item specified in a prescription and all of its repeats (see [PBS](https://www.pbs.gov.au/info/healthpro/explanatory-notes/section1/Section_1_3_Explanatory_Notes) for further information).",
         "exampleBoolean": false
@@ -2118,7 +2279,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/encounter-description" },
+        "reference": {
+          "reference": "StructureDefinition/encounter-description"
+        },
         "name": "Encounter Description",
         "description": "This extension applies to the Encounter resource and is used to represent a narrative description of the healthcare event or encounter. The description may include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event. The description may capture text about the encounter that is not captured in other fields.",
         "exampleBoolean": false
@@ -2130,7 +2293,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/change-description" },
+        "reference": {
+          "reference": "StructureDefinition/change-description"
+        },
         "name": "Change Description",
         "description": "This extension applies to the List resource and is used to represent a narrative description of the change to an item in a list entry. The narrative description may include the reason for the change to an item.",
         "exampleBoolean": false
@@ -2142,7 +2307,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/author-related-person" },
+        "reference": {
+          "reference": "StructureDefinition/author-related-person"
+        },
         "name": "Author as a RelatedPerson",
         "description": "This extension applies to any resource and is used to represent an author who is a related person.",
         "exampleBoolean": false
@@ -2154,7 +2321,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/no-fixed-address" },
+        "reference": {
+          "reference": "StructureDefinition/no-fixed-address"
+        },
         "name": "No Fixed Address",
         "description": "This extension applies to the [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type and is used to indicate that a location address is not a fixed address for an individual.",
         "exampleBoolean": false
@@ -2166,7 +2335,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/identifier-routability" },
+        "reference": {
+          "reference": "StructureDefinition/identifier-routability"
+        },
         "name": "Identifier Routability",
         "description": "This extension applies to the [Identifier](http://hl7.org/fhir/datatypes.html#identifier) data type. Identifier routability preferences for an asserter.",
         "exampleBoolean": false
@@ -2178,7 +2349,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/ihi-status" },
+        "reference": {
+          "reference": "StructureDefinition/ihi-status"
+        },
         "name": "IHI Status",
         "description": "This extension applies to the [Identifier](http://hl7.org/fhir/datatypes.html#identifier) data type and is used to represent the status of the associated Individual Healthcare Identifier (IHI) and indicates whether the status of the IHI is active or otherwise.",
         "exampleBoolean": false
@@ -2190,7 +2363,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/ihi-record-status" },
+        "reference": {
+          "reference": "StructureDefinition/ihi-record-status"
+        },
         "name": "IHI Record Status",
         "description": "This extension applies to the [Identifier](http://hl7.org/fhir/datatypes.html#identifier) data type and is used to indicate whether verification of the Individual Healthcare Identifier (IHI) has occurred and is based on the evidence available for a person’s identity.",
         "exampleBoolean": false
@@ -2202,7 +2377,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/ihi-verified-date" },
+        "reference": {
+          "reference": "StructureDefinition/ihi-verified-date"
+        },
         "name": "IHI Verification Date",
         "description": "This extension applies to the [Identifier](http://hl7.org/fhir/datatypes.html#identifier) data type and is used to represent the date, and optionally time, that the IHI was verified with HI Services. This is not the date that it was created by the HI Services, but when it was checked. This is often required to know how recently the identifier was checked, and if it must be re-verified before using it.",
         "exampleBoolean": false
@@ -2214,7 +2391,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/date-accuracy-indicator" },
+        "reference": {
+          "reference": "StructureDefinition/date-accuracy-indicator"
+        },
         "name": "Date Accuracy Indicator",
         "description": "This extension applies to the [date](http://hl7.org/fhir/R4/datatypes.html#date) and [dateTime](http://hl7.org/fhir/R4/datatypes.html#dateTime) data types and is used to represent the accuracy of the associated date.",
         "exampleBoolean": false
@@ -2226,7 +2405,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/information-recipient" },
+        "reference": {
+          "reference": "StructureDefinition/information-recipient"
+        },
         "name": "Information Recipient",
         "description": "This extension applies to the Composition resource and is used to represent an intended recipient of the composition.",
         "exampleBoolean": false
@@ -2238,7 +2419,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/vaccine-serial-number" },
+        "reference": {
+          "reference": "StructureDefinition/vaccine-serial-number"
+        },
         "name": "Vaccine Vial Serial Number",
         "description": "This extension applies to the Immunization resource and is used to represent the serial number of the vial of vaccine. Vial serial number is part of the [Australian Immunisation Register Rule 2015](https://www.legislation.gov.au/Latest/F2021C00234) data elements to report for COVID-19 vaccines.",
         "exampleBoolean": false
@@ -2250,7 +2433,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/veteran-status" },
+        "reference": {
+          "reference": "StructureDefinition/veteran-status"
+        },
         "name": "Australian Veteran Status",
         "description": "This extension applies to the Patient resource and is used to indicate whether a person is serving, or has served, in the Australian Defence Force.",
         "exampleBoolean": false
@@ -2262,7 +2447,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/result-copies-to" },
+        "reference": {
+          "reference": "StructureDefinition/result-copies-to"
+        },
         "name": "Result Copies To",
         "description": "This extension applies to the ServiceRequest resource and is used to indicate an additional recipient to whom a copy of the outcome of the request (i.e. the results) should be sent. The service requester will typically receive a result as part of the normal processing from the filler of the request and this extension is only relevant for any additional result copy recipients indicated on the request.",
         "exampleBoolean": false
@@ -2274,7 +2461,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-patient" },
+        "reference": {
+          "reference": "StructureDefinition/au-patient"
+        },
         "name": "AU Base Patient",
         "description": "This profile defines a patient structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2286,7 +2475,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-practitioner" },
+        "reference": {
+          "reference": "StructureDefinition/au-practitioner"
+        },
         "name": "AU Base Practitioner",
         "description": "This profile defines a practitioner structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2298,7 +2489,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-practitionerrole" },
+        "reference": {
+          "reference": "StructureDefinition/au-practitionerrole"
+        },
         "name": "AU Base Practitioner Role",
         "description": "This profile defines a practitioner role structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2310,7 +2503,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-relatedperson" },
+        "reference": {
+          "reference": "StructureDefinition/au-relatedperson"
+        },
         "name": "AU Base Related Person",
         "description": "This profile defines a related person structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2322,7 +2517,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-organization" },
+        "reference": {
+          "reference": "StructureDefinition/au-organization"
+        },
         "name": "AU Base Organisation",
         "description": "This profile defines an organisation structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2334,7 +2531,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medication" },
+        "reference": {
+          "reference": "StructureDefinition/au-medication"
+        },
         "name": "AU Base Medication",
         "description": "This profile defines a medication structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2346,7 +2545,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-encounter" },
+        "reference": {
+          "reference": "StructureDefinition/au-encounter"
+        },
         "name": "AU Base Encounter",
         "description": "This profile defines an encounter structure that localises core concepts, including terminology, for use in an Australian context. This profile is intended to be applicable for recording details of ambulatory and non-ambulatory patient encounters in an Australian healthcare context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2358,7 +2559,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-address" },
+        "reference": {
+          "reference": "StructureDefinition/au-address"
+        },
         "name": "Australian Address",
         "description": "This profile defines an address structure that localises core concepts, including identifiers and terminology, for use in an Australian context, to specifically represent an Australian (location) address. The purpose of this profile is to provide best practice guidance on Australian address representation, where some constraint on content is desirable to guarantee the quality of an Australian address.",
         "exampleBoolean": false
@@ -2370,7 +2573,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-healthprogramparticipation" },
+        "reference": {
+          "reference": "StructureDefinition/au-healthprogramparticipation"
+        },
         "name": "AU Health Program Participation Summary",
         "description": "This profile defines an observation information structure for a summary of an individual's participation in a health program, e.g. weight management, disease screening, or substance use therapy. Participation information may include information on an individual's eligibility for a program, suspension of participation in a program, or status of participation in a program.",
         "exampleBoolean": false
@@ -2382,7 +2587,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-ihi" },
+        "reference": {
+          "reference": "StructureDefinition/au-ihi"
+        },
         "name": "AU IHI",
         "description": "This identifier profile defines an Individual Healthcare Identifier in an Australian context (see [Australian Digital Health Agency](https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010) for further information). An IHI is assigned under the Healthcare Identifiers (HI) Service to a patient.",
         "exampleBoolean": false
@@ -2394,7 +2601,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-nationalprovideridentifieratorganisation" },
+        "reference": {
+          "reference": "StructureDefinition/au-nationalprovideridentifieratorganisation"
+        },
         "name": "AU National Provider Identifier At Organisation",
         "description": "This identifier profile defines a National Provider Identifier at Organisation (NPIO) in an Australian context. An NPIO identifies an individual practitioner at an organisation using the practitioner's HPI-I and organisation's HPI-O to form the NPIO.",
         "exampleBoolean": false
@@ -2406,7 +2615,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medicarecardnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-medicarecardnumber"
+        },
         "name": "AU Medicare Card Number",
         "description": "This identifier profile defines a Medicare card number in an Australian context. A Medicare card is provided to individuals who are enrolled in [Medicare](https://www.servicesaustralia.gov.au/individuals/medicare). This definition supports sending either the 10 digit Medicare card number or the 11 digit number (includes the individual reference number (IRN)).",
         "exampleBoolean": false
@@ -2418,7 +2629,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medicareprovidernumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-medicareprovidernumber"
+        },
         "name": "AU Medicare Provider Number",
         "description": "This identifier profile defines a Medicare provider number assigned by Services Australia to practitioners who provide services covered by the Medicare Benefits Schedule (MBS) at a specific location. A practitioner may have more than one Medicare provider number if they deliver health services in different locations or are registered in multiple health professions.",
         "exampleBoolean": false
@@ -2430,7 +2643,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-pbsprescribernumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-pbsprescribernumber"
+        },
         "name": "AU PBS Prescriber Number",
         "description": "This identifier profile defines a Pharmaceutical Benefits Scheme (PBS) prescriber number in an Australian context (see [PBS](https://www.pbs.gov.au/info/healthpro/explanatory-notes/section1/Section_1_2_Explanatory_Notes) for further information). A PBS prescriber number, previously referred to as Medicare prescriber number in earlier versions of this implementation guide, is assigned by Services Australia under the Pharmaceutical Benefits Scheme to practitioners who are approved to prescribe PBS medicines under the National Health Act 1953.",
         "exampleBoolean": false
@@ -2442,7 +2657,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medicalrecordnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-medicalrecordnumber"
+        },
         "name": "AU Medical Record Number",
         "description": "This identifier profile defines a  (MRN) (sometimes referred to as unit record number (URN) or (UR)) in an Australian context. An MRN is an institution's identifier for a patient's record at that institution. A patient may have more than one MRN for a single institution due to organisational restructures.",
         "exampleBoolean": false
@@ -2454,7 +2671,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-hpii" },
+        "reference": {
+          "reference": "StructureDefinition/au-hpii"
+        },
         "name": "AU HPI-I",
         "description": "This identifier profile defines a Healthcare Provider Identifier - Individual (HPI-I) in an Australian context (see [Australian Digital Health Agency](https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010) for further information). An HPI-I is assigned under the HI Service to healthcare providers involved in providing patient care.",
         "exampleBoolean": false
@@ -2466,7 +2685,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-dvanumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-dvanumber"
+        },
         "name": "AU DVA Number",
         "description": "This identifier profile defines a Department of Veterans' Affairs (DVA) number) in an Australian context. This definition supports sending an individual's state-based DVA file number as displayed on a [Veteran Card](https://www.dva.gov.au/health-and-treatment/veteran-healthcare-cards/veteran-card), i.e. a Gold, White, or Orange Card. A Veteran Card may be issued by DVA to eligible individuals to allowing access to specific goods and services at a concessional rate.",
         "exampleBoolean": false
@@ -2478,7 +2699,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-hpio" },
+        "reference": {
+          "reference": "StructureDefinition/au-hpio"
+        },
         "name": "AU HPI-O",
         "description": "This identifier profile defines a Healthcare Provider Identifier – Organisation in an Australian context (see [Australian Digital Health Agency](https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010) for further information). An HPI-O is assigned under the HI Service to an organisation (such as a hospital or medical clinic) where healthcare is provided.",
         "exampleBoolean": false
@@ -2490,7 +2713,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-ahpraregistrationnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-ahpraregistrationnumber"
+        },
         "name": "AU Ahpra Registration Number",
         "description": "This identifier profile defines an Australian Health Practitioner Regulation Agency (Ahpra) registration number in an Australian context (see [Ahpra](https://www.ahpra.gov.au) for further information).",
         "exampleBoolean": false
@@ -2502,7 +2727,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-australianbusinessnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-australianbusinessnumber"
+        },
         "name": "AU Australian Business Number",
         "description": "This identifier profile defines an Australian Business Number (ABN) in an Australian context. An ABN is issued to all entities registered in the Australian Business Register (ABR).",
         "exampleBoolean": false
@@ -2514,7 +2741,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-australianregistredbodynumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-australianregistredbodynumber"
+        },
         "name": "AU Australian Registered Body Number",
         "description": "This identifier profile defines an Australian Registered Body Number (ARBN) in an Australian context. ARBNs are issued to registrable Australian bodies and foreign companies.",
         "exampleBoolean": false
@@ -2526,7 +2755,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-paididentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-paididentifier"
+        },
         "name": "AU PAI-D Identifier",
         "description": "This identifier profile defines a My Health Record Assigned Identity - Device (PAI-D) identifier in an Australian context. A PAI-D is typically used to identify a device that plays a role, for example an authoring or observing, in the exchange of digital health data with the My Health Record system.",
         "exampleBoolean": false
@@ -2538,7 +2769,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-paioidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-paioidentifier"
+        },
         "name": "AU PAI-O Identifier",
         "description": "This identifier profile defines a My Health Record Assigned Identity - Organisation (PAI-O) identifier in an Australian context. A PAI-O may be issued to organisations who wish to participate in the My Health Record and who are not eligible for a Healthcare Provider Identifier - Organisation (HPI-O).",
         "exampleBoolean": false
@@ -2550,7 +2783,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-careagencyemployeeidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-careagencyemployeeidentifier"
+        },
         "name": "AU Care Agency Employee Identifier",
         "description": "This identifier profile defines a care agency employee (CAE) identifier in an Australian context. A CAE identifier may be issued to an employee of, or person under contracted arrangement with, a care agency who wishes to participate in the My Health Record.",
         "exampleBoolean": false
@@ -2562,7 +2797,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-etpprescriptionidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-etpprescriptionidentifier"
+        },
         "name": "AU ETP Prescription Identifier",
         "description": "This identifier profile defines an Electronic Transfer of Prescription (ETP) prescription identifier in an Australian context. An ETP prescription identifier is assigned to a prescription by an ETP vendor, e.g. ERx or Medisecure, and is the assigned numeric value of the barcode on a prescription instance.",
         "exampleBoolean": false
@@ -2574,7 +2811,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-nataaccreditationnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-nataaccreditationnumber"
+        },
         "name": "AU NATA Accreditation Number",
         "description": "This identifier profile defines a National Association of Testing Authorities (NATA) accreditation number in an Australian context (see [NATA](https://www.nata.com.au/) for further information).",
         "exampleBoolean": false
@@ -2586,7 +2825,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-natasitenumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-natasitenumber"
+        },
         "name": "AU NATA Site Number",
         "description": "This identifier profile defines a National Association of Testing Authorities (NATA) site number in an Australian context (see [NATA](https://www.nata.com.au/) for further information).",
         "exampleBoolean": false
@@ -2598,7 +2839,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-locationspecificpracticenumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-locationspecificpracticenumber"
+        },
         "name": "AU Location Specific Practice Number",
         "description": "This identifier profile defines a Location Specific Practice Number (LSPN) in an Australian context (see [Services Australia](https://www.servicesaustralia.gov.au/organisations/health-professionals/services/medicare/medicare-eligibility-provide-diagnostic-imaging-and-radiation-oncology-services#a2) and [Department of Health and Aged Care](https://www1.health.gov.au/internet/main/publishing.nsf/Content/stage-two-diag-img-acc-scheme-loc-spec-prac-num-fact-sheet) for further information). An LSPN is an identifier assigned to a specific location by Services Australia under the Medicare program and identifies an accredited practice site that provides diagnostic imaging and radiation oncology services.",
         "exampleBoolean": false
@@ -2610,7 +2853,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-employeenumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-employeenumber"
+        },
         "name": "AU Employee Number",
         "description": "This identifier profile defines an employee number (sometimes referred to as an employee identifier (EI)) in an Australian context. An employee number is an organisation's identifier for an individual employed by that organisation.",
         "exampleBoolean": false
@@ -2622,7 +2867,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-cspregistrationnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-cspregistrationnumber"
+        },
         "name": "AU CSP Registration Number",
         "description": "This identifier profile defines a Contracted Service Provider (CSP) registration number in an Australian context (see [My Health Record](https://www.myhealthrecord.gov.au/for-healthcare-professionals/howtos/contracted-service-provider-registration) for further information). A CSP registration number may be issued to organisations who wish to participate in the My Health Record and/or the Healthcare Identifiers Service as a CSP.",
         "exampleBoolean": false
@@ -2634,7 +2881,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-healthcarecardnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-healthcarecardnumber"
+        },
         "name": "AU Health Care Card Number",
         "description": "This identifier profile defines Health Care Card number in an Australian context (see [Services Australia](https://www.servicesaustralia.gov.au/individuals/services/centrelink/health-care-card) for further information).\n\nThis definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Health Care Card (see [Services Australia](https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn) for further information). An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers.\n\nA Health Care Card is a concession card assigned by Services Australia to benefit recipients, low income earners and selected other groups (e.g. foster children) to assist with certain health costs, by allowing access to specific services at a concessional rate.",
         "exampleBoolean": false
@@ -2646,7 +2895,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-australiancompanynumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-australiancompanynumber"
+        },
         "name": "AU Australian Company Number",
         "description": "This identifier profile defines an Australian Company Number in an Australian context. An ACN is allocated by the Australian Securities and Investments Commission (ASIC) when a body becomes registered as a company under Corporations Law.",
         "exampleBoolean": false
@@ -2658,7 +2909,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-cwlthseniorshealthcardnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-cwlthseniorshealthcardnumber"
+        },
         "name": "AU Commonwealth Seniors Health Card Number",
         "description": "This identifier profile defines a Commonwealth Seniors Health Card number in an Australian context (see [Services Australia](https://www.servicesaustralia.gov.au/individuals/services/centrelink/commonwealth-seniors-health-card) or [Department of Veterans' Affairs](https://www.dva.gov.au/health-and-treatment/veteran-healthcare-cards/commonwealth-seniors-health-card) for further information).\n\nThis definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Commonwealth Seniors Health Card (see [Services Australia](https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn) for further information). An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers.\n\nA Commonwealth Seniors Health Card may be issued by Services Australia or Department of Veterans' Affairs (DVA) to retirees of age pension qualification age to assist with certain living costs by allowing access to specific goods and services at a concessional rate.",
         "exampleBoolean": false
@@ -2670,7 +2923,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-pensionerconcessioncardnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-pensionerconcessioncardnumber"
+        },
         "name": "AU Pensioner Concession Card Number",
         "description": "This identifier profile defines a Pensioner Concession Card number in an Australian context (see [Services Australia](https://www.servicesaustralia.gov.au/individuals/services/centrelink/pensioner-concession-card) or [Department of Veterans' Affairs](https://www.dva.gov.au/health-and-treatment/veteran-healthcare-cards/pensioner-concession-card)).\n\nThis definition supports sending the Centrelink Customer Reference Number (CRN) (also referred to as unique identifier number (UIN) in the Centrelink Confirmation eServices (CCeS)) as displayed on the individual's Pensioner Concession Card (see [Services Australia](https://www.servicesaustralia.gov.au/individuals/subjects/centrelink-customer-reference-number-crn) for further information). An individual's CRN is present as the primary identifier on different concession cards and is used to confirm concessions by most government agencies and utility providers.\n\nA Pensioner Concession Card may be issued by Services Australia or Department of Veterans' Affairs (DVA) to pensioners and selected benefit recipients to assist them with certain living costs, by allowing access to specific goods and services at a concessional rate.",
         "exampleBoolean": false
@@ -2682,7 +2937,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-insurancemembernumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-insurancemembernumber"
+        },
         "name": "AU Insurance Member Number",
         "description": "This identifier profile defines an insurance member number in an Australian context. An insurance member number is the unique member number assigned to an individual by an insurer and is typically displayed on their insurance card. An individual will not have more than one member number per insurer.\n\nThis definition supports the sending of an insurance member number that is relevant in a healthcare context and may be used to capture Australian and International health insurer issued member numbers. In Australia this will typically be a private health insurance member number. This identifier should not be confused with an insurance policy number.",
         "exampleBoolean": false
@@ -2694,7 +2951,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-localprescriptionidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-localprescriptionidentifier"
+        },
         "name": "AU Local Prescription Identifier",
         "description": "This identifier profile defines a local prescription identifier (sometimes referred to as prescription number) in an Australian context. A local prescription identifier is an organisation's identifier for a prescription in that organisation's local system set of prescriptions. A local prescription identifier allows linking of a prescription to a system's local identifier.",
         "exampleBoolean": false
@@ -2706,7 +2965,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-localdispenseidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-localdispenseidentifier"
+        },
         "name": "AU Local Dispense Identifier",
         "description": "This identifier profile defines a local dispense identifier in an Australian context. A local dispense identifier is an organisation's identifier for a dispense record in that organisation's local system set of dispense records. A dispense record identifier is typically assigned by the dispensing system and allows linking of a dispensing record to the dispensing system's local identifier.",
         "exampleBoolean": false
@@ -2718,7 +2979,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medlist" },
+        "reference": {
+          "reference": "StructureDefinition/au-medlist"
+        },
         "name": "AU Medicine List",
         "description": "This profile defines a list structure that localises core concepts for use as a medicines list in an Australian context. This profile is intended to offer a common structure and expectations for a list of medications associated with a patient in an Australian healthcare context.",
         "exampleBoolean": false
@@ -2730,7 +2993,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-composition" },
+        "reference": {
+          "reference": "StructureDefinition/au-composition"
+        },
         "name": "AU Base Composition",
         "description": "This profile defines a composition structure that localises core concepts for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2742,7 +3007,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-immunization" },
+        "reference": {
+          "reference": "StructureDefinition/au-immunization"
+        },
         "name": "AU Base Immunisation",
         "description": "This profile defines an immunisation structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2754,7 +3021,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medicationstatement" },
+        "reference": {
+          "reference": "StructureDefinition/au-medicationstatement"
+        },
         "name": "AU Base Medication Statement",
         "description": "This profile defines a medication statement structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2766,7 +3035,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medicationadministration" },
+        "reference": {
+          "reference": "StructureDefinition/au-medicationadministration"
+        },
         "name": "AU Base Medication Administration",
         "description": "This profile defines a medication administration structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2778,7 +3049,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medicationdispense" },
+        "reference": {
+          "reference": "StructureDefinition/au-medicationdispense"
+        },
         "name": "AU Base Medication Dispense",
         "description": "This profile defines a medication dispense structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2790,7 +3063,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-medicationrequest" },
+        "reference": {
+          "reference": "StructureDefinition/au-medicationrequest"
+        },
         "name": "AU Base Medication Request",
         "description": "This profile defines a medication request structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2802,7 +3077,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-dosage" },
+        "reference": {
+          "reference": "StructureDefinition/au-dosage"
+        },
         "name": "AU Base Dosage",
         "description": "This profile defines a dosage structure that localises core concepts for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2814,7 +3091,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-location" },
+        "reference": {
+          "reference": "StructureDefinition/au-location"
+        },
         "name": "AU Base Location",
         "description": "This profile defines a location structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2826,7 +3105,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-healthcareservice" },
+        "reference": {
+          "reference": "StructureDefinition/au-healthcareservice"
+        },
         "name": "AU Base Healthcare Service",
         "description": "This profile defines a healthcare service structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2838,7 +3119,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-allergyintolerance" },
+        "reference": {
+          "reference": "StructureDefinition/au-allergyintolerance"
+        },
         "name": "AU Base Allergy Intolerance",
         "description": "This profile defines an allergy intolerance structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2850,7 +3133,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-bodystructure" },
+        "reference": {
+          "reference": "StructureDefinition/au-bodystructure"
+        },
         "name": "AU Base Body Structure",
         "description": "This profile defines a body structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2862,7 +3147,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-diagnosticresult" },
+        "reference": {
+          "reference": "StructureDefinition/au-diagnosticresult"
+        },
         "name": "AU Base Diagnostic Result",
         "description": "This profile defines an observation structure to represent a diagnostic investigation result issued by a diagnostic service provider in an Australian context. This profile may be used to represent a specialist or other diagnostic (not imaging or pathology) observation including results of audiology studies, sleep studies or speech pathology. The observation may represent the result of a simple investigation or it may group the set of results of a multi-modality procedure or multi-test study / panel.",
         "exampleBoolean": false
@@ -2874,7 +3161,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-pathologyresult" },
+        "reference": {
+          "reference": "StructureDefinition/au-pathologyresult"
+        },
         "name": "AU Base Pathology Result",
         "description": "This profile defines an observation structure to represent a pathology test result issued by a diagnostic service provider in an Australian context. This profile is intended to be capable of supporting reporting for all pathology disciplines (e.g. including microbiology, histopathology, cytology, blood transfusion) with the exception of genomics. The observation may represent the result of a simple test such as haemoglobin or it may group the set of results produced by a multi-test study or panel such as a full blood count, or urine specimen study.\n\nThis profile does not provide full support for structured pathology reporting. It is expected that this support is best handled by a set of profiles that represent the structured reporting requirements for each specific protocol (see for example [RCPA’s structured pathology reporting of cancer](https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer)); this is not in the scope of this implementation guide at this time.",
         "exampleBoolean": false
@@ -2886,7 +3175,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-imagingresult" },
+        "reference": {
+          "reference": "StructureDefinition/au-imagingresult"
+        },
         "name": "AU Base Diagnostic Imaging Result",
         "description": "This profile defines an observation structure to represent a imaging examination result issued by a diagnostic service provider in an Australian context. The observation may represent the result of a simple test such as haemoglobin or it may group the set of results produced by a multi-test study or panel such as a full blood count, or urine specimen study.",
         "exampleBoolean": false
@@ -2898,7 +3189,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-imagingreport" },
+        "reference": {
+          "reference": "StructureDefinition/au-imagingreport"
+        },
         "name": "AU Base Diagnostic Imaging Report",
         "description": "This profile defines a diagnostic report structure to represent a diagnostic imaging report issued by a diagnostic service provider in an Australian context.",
         "exampleBoolean": false
@@ -2910,7 +3203,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-diagnosticreport" },
+        "reference": {
+          "reference": "StructureDefinition/au-diagnosticreport"
+        },
         "name": "AU Base Diagnostic Report",
         "description": "This profile defines a diagnostic report structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2922,7 +3217,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-pathologyreport" },
+        "reference": {
+          "reference": "StructureDefinition/au-pathologyreport"
+        },
         "name": "AU Base Pathology Report",
         "description": "This profile defines a diagnostic report structure to represent a pathology report issued by a diagnostic service provider in an Australian context. This profile is intended to be capable of supporting reporting for all pathology disciplines (e.g. including microbiology, histopathology, cytology, blood transfusion) with the exception of genomics.\n\nThis profile does not provide full support for structured pathology reporting. It is expected that this support is best handled by a set of profiles that represent the structured reporting requirements for each specific protocol (see for example [RCPA’s structured pathology reporting of cancer](https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer)); this is not in the scope of this implementation guide at this time.",
         "exampleBoolean": false
@@ -2934,7 +3231,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-specimen" },
+        "reference": {
+          "reference": "StructureDefinition/au-specimen"
+        },
         "name": "AU Base Specimen",
         "description": "This profile defines a specimen structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -2946,7 +3245,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/contact-purpose" },
+        "reference": {
+          "reference": "StructureDefinition/contact-purpose"
+        },
         "name": "Contact Purpose",
         "description": "This extension applies to the [ContactPoint](http://hl7.org/fhir/datatypes.html#ContactPoint) data type and is used to represent the purpose for which a contact can be reached, e.g. after hours or billing.",
         "exampleBoolean": false
@@ -2958,7 +3259,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-deliverypointidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-deliverypointidentifier"
+        },
         "name": "AU Delivery Point Identifier",
         "description": "This identifier profile defines an Australia Post Delivery Point Identifier (DPID) in an Australian context (see [Australia Post](https://auspost.com.au/content/dam/auspost_corp/media/documents/australia-post-data-guide.pdf) for further information). A DPID is a randomly generated, unique 8-digit number, allocated by Australia Post to an address. A DPID enables each delivery point in Australia to be uniquely identified.",
         "exampleBoolean": false
@@ -2970,7 +3273,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-gnafidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-gnafidentifier"
+        },
         "name": "AU G-NAF Identifier",
         "description": "This identifier profile defines a Geocoded National Address File (G-NAF) identifier in an Australian context. The [PSMA G-NAF](https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf) is Australia’s authoritative, geocoded address file. A G-NAF identifier (sometimes referred to as G-NAF ID, or G-NAF PID, or GNAF ID, or address_detail_pid) identifies an address in the PSMA G-NAF.",
         "exampleBoolean": false
@@ -2982,7 +3287,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/address-identifier" },
+        "reference": {
+          "reference": "StructureDefinition/address-identifier"
+        },
         "name": "Address Identifier",
         "description": "This extension applies to the [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type and is used to represent an identifier for an address. An address identifier does not form part of the address itself, e.g. a street number. It is a unique identifier associated with a location address and may be used to look up an address, validate an address, or link to other data relating to an address.",
         "exampleBoolean": false
@@ -2994,7 +3301,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-pharmacyapprovalnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-pharmacyapprovalnumber"
+        },
         "name": "AU Pharmacy Approval Number",
         "description": "This identifier profile defines a pharmacy approval number in an Australian context (see [Department of Health and Aged Care](https://www1.health.gov.au/internet/main/publishing.nsf/Content/pharmaceutical-benefits-scheme-approved-supplier-administrative-functions) for further information). A pharmacy approval number, also known as a PBS approval number, is assigned by the Department of Health to pharmacies that are approved to supply pharmaceutical benefits at particular premises under the National Health Act 1953.",
         "exampleBoolean": false
@@ -3006,7 +3315,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/ahpraregistration-details" },
+        "reference": {
+          "reference": "StructureDefinition/ahpraregistration-details"
+        },
         "name": "Ahpra Registration Details",
         "description": "This extension applies to the Practitioner.qualification element and is used to represent Australian Health Practitioner Regulation Agency (Ahpra) registration details (see [Ahpra](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number) for further information). This extension supports the inclusion of the Ahpra profession code and information about division, speciality, registration status, endorsements and notations in a qualification element instance representing a practitioner’s Ahpra registration.",
         "exampleBoolean": false
@@ -3018,7 +3329,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/ahpraprofession-details" },
+        "reference": {
+          "reference": "StructureDefinition/ahpraprofession-details"
+        },
         "name": "Ahpra Profession Details",
         "description": "This extension applies to the Practitioner.qualification element and is used to represent Australian Health Practitioner Regulation Agency (Ahpra) profession details (see [Ahpra](https://www.ahpra.gov.au/Support/Glossary.aspx#Registration%20Number) for further information). This extension supports the inclusion of the Ahpra profession code and information about conditions, undertakings, reprimands and cautions in a qualification element instance representing a practitioner’s Ahpra profession.",
         "exampleBoolean": false
@@ -3030,7 +3343,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-substance" },
+        "reference": {
+          "reference": "StructureDefinition/au-substance"
+        },
         "name": "AU Base Substance",
         "description": "This profile defines a substance structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -3042,7 +3357,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/au-coverage-selfpay" },
+        "reference": {
+          "reference": "CodeSystem/au-coverage-selfpay"
+        },
         "name": "Coverage SelfPay Codes AU",
         "description": "Additional concept codes for coverage self pay type defined for use in Australian context. These codes are used as extensions to the HL7 International code set.",
         "exampleBoolean": false
@@ -3054,7 +3371,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-coverage-type-extended" },
+        "reference": {
+          "reference": "ValueSet/au-coverage-type-extended"
+        },
         "name": "Coverage Type and Self-Pay Codes - AU Extended",
         "description": "Coverage Type and Self-Pay Codes extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
         "exampleBoolean": false
@@ -3066,7 +3385,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-coverage-selfpay-extended" },
+        "reference": {
+          "reference": "ValueSet/au-coverage-selfpay-extended"
+        },
         "name": "Coverage SelfPay Codes - AU Extended",
         "description": "Coverage SelfPay Codes extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
         "exampleBoolean": false
@@ -3078,7 +3399,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/contact-purpose" },
+        "reference": {
+          "reference": "ValueSet/contact-purpose"
+        },
         "name": "Contact Purpose",
         "description": "The purpose for which an associated contact can be reached.",
         "exampleBoolean": false
@@ -3090,7 +3413,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-v3-ActEncounterCode-extended" },
+        "reference": {
+          "reference": "ValueSet/au-v3-ActEncounterCode-extended"
+        },
         "name": "ActEncounterCode - AU Extended",
         "description": "v3 Act Encounter Code extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
         "exampleBoolean": false
@@ -3102,7 +3427,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-v2-0203-extended" },
+        "reference": {
+          "reference": "ValueSet/au-v2-0203-extended"
+        },
         "name": "hl7VS-identifierType - AU Extended",
         "description": "Extended value set of identifier types for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set. NOTE: codes contained LACN Laboratory Accession ID and ACN Accession ID are exclusive concepts and not consider related in this terminology.",
         "exampleBoolean": false
@@ -3114,7 +3441,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-v2-0360-extended" },
+        "reference": {
+          "reference": "ValueSet/au-v2-0360-extended"
+        },
         "name": "hl7VS-degreeLicenseCertificate - AU Extended",
         "description": "hl7VS-degreeLicenseCertificate extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
         "exampleBoolean": false
@@ -3126,7 +3455,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-v2-0443-extended" },
+        "reference": {
+          "reference": "ValueSet/au-v2-0443-extended"
+        },
         "name": "hl7VS-providerRole - AU Extended",
         "description": "hl7VS-providerRole extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
         "exampleBoolean": false
@@ -3138,21 +3469,11 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/service-provision-conditions" },
+        "reference": {
+          "reference": "ValueSet/service-provision-conditions"
+        },
         "name": "Service Provision Conditions Australian Concepts",
         "description": "The Service Provision Conditions Australian Concepts value set includes values that may be used to identify the type of service provision conditions in an Australian context.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": { "reference": "ValueSet/recorded-sex-or-gender-type" },
-        "name": "Recorded Sex Or Gender Type",
-        "description": "Codes that represent the type of the recorded sex and gender.",
         "exampleBoolean": false
       },
       {
@@ -3162,7 +3483,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/pbs-item-external" },
+        "reference": {
+          "reference": "CodeSystem/pbs-item-external"
+        },
         "name": "PBS Item Codes",
         "description": "This CodeSystem resource represents the items listed on the Australian Pharmaceutical Benefits Scheme (PBS) schedule published by the Department of Health. Codes are represented as five or six characters in format (n)nnnna and the display is the PBS prescribing rule preferred term. This is not the canonical publication of this code system nor it is intended to be publication on behalf of the Department of Health. For the complete content of the code system contact the publisher.",
         "exampleBoolean": false
@@ -3174,7 +3497,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/pbs-item" },
+        "reference": {
+          "reference": "ValueSet/pbs-item"
+        },
         "name": "PBS Item Codes",
         "description": "The PBS Item Codes value set includes all values from Australian Pharmaceutical Benefits Scheme (PBS) schedule published by the Department of Health. Further details can be found at https://www.pbs.gov.au/pbs/.",
         "exampleBoolean": false
@@ -3186,7 +3511,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/mims" },
+        "reference": {
+          "reference": "ValueSet/mims"
+        },
         "name": "MIMS",
         "description": "The MIMS value set includes all values from the Monthly Index of Medical Specialties (MIMS) published by MIMS Australia. Further details can be found at https://www.mims.com.au/.",
         "exampleBoolean": false
@@ -3198,7 +3525,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/mims-external" },
+        "reference": {
+          "reference": "CodeSystem/mims-external"
+        },
         "name": "Monthly Index of Medical Specialties (MIMS)",
         "description": "This CodeSystem resource represents the Monthly Index of Medical Specialties (MIMS) code system published by MIMS Australia. The intended use of MIMS data is to fully specify the product as a combination of product code, form code, and pack code. For example, when providing a MIMS Code within a Clinical Document Architecture (CDA) document, the MIMS code will be a minimum of 5 digits (in most cases, will be 8 digits).This is not the canonical publication of this code system nor it is intended to be publication on behalf of the MIMS Australia. For the complete content of the code system contact the publisher.",
         "exampleBoolean": false
@@ -3210,7 +3539,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/amt-mp-codes" },
+        "reference": {
+          "reference": "ValueSet/amt-mp-codes"
+        },
         "name": "AMT Medicinal Product and Substances",
         "description": "The AMT Medicinal Product and Substances value set includes values that may be used to identify a substance or a medicinal product that is an ingredient of a medication.",
         "exampleBoolean": false
@@ -3222,7 +3553,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/medication-type" },
+        "reference": {
+          "reference": "ValueSet/medication-type"
+        },
         "name": "Medication Type",
         "description": "The Medication Type value set may be used to classify the nature of properties defined by the code e.g. branded product with no strength or form. This allows the distinction between codes provided containing container, pack, strength and form explicitly especially where terminologies supplied are unknown or terminology services are unavailable.",
         "exampleBoolean": false
@@ -3234,7 +3567,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/dva-entitlement" },
+        "reference": {
+          "reference": "ValueSet/dva-entitlement"
+        },
         "name": "DVA Entitlement",
         "description": "Entitlement types that may be associated with an individual's Department of Veterans’ Affairs (DVA) File Number on a DVA issued health card in an Australian context.",
         "exampleBoolean": false
@@ -3246,7 +3581,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/accession-number-type" },
+        "reference": {
+          "reference": "ValueSet/accession-number-type"
+        },
         "name": "Accession Number Type",
         "description": "Identifier types that may be associated with an accession number in an Australian context.",
         "exampleBoolean": false
@@ -3258,7 +3595,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/order-identifier-type" },
+        "reference": {
+          "reference": "ValueSet/order-identifier-type"
+        },
         "name": "Order Identifier Type",
         "description": "Identifier types that may be associated with an order identifier in an Australian context.",
         "exampleBoolean": false
@@ -3270,7 +3609,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/medication-type" },
+        "reference": {
+          "reference": "CodeSystem/medication-type"
+        },
         "name": "Medication Type",
         "description": "The Medication Type code system defines concepts in a classification scheme for medication coding. The classification scheme defines the nature of the properties defined by the code e.g. branded product with no strength or form. This allows the distinction between codes provided containing container, pack, strength and form explicitly especially where terminologies supplied are unknown or terminology services are unavailable.",
         "exampleBoolean": false
@@ -3282,7 +3623,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/service-provision-conditions" },
+        "reference": {
+          "reference": "CodeSystem/service-provision-conditions"
+        },
         "name": "Service Provision Conditions Australian Concepts",
         "description": "The Service Provision Conditions Australian Concepts code system defines concepts that identify the conditions under which a healthcare service is available/offered.",
         "exampleBoolean": false
@@ -3294,7 +3637,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/contact-purpose" },
+        "reference": {
+          "reference": "CodeSystem/contact-purpose"
+        },
         "name": "Contact Purpose",
         "description": "Purpose for associated contact information.",
         "exampleBoolean": false
@@ -3306,7 +3651,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/au-v3-ActCode" },
+        "reference": {
+          "reference": "CodeSystem/au-v3-ActCode"
+        },
         "name": "ActCode AU",
         "description": "Additional concept codes for act coding defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.",
         "exampleBoolean": false
@@ -3318,7 +3665,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/au-v2-0203" },
+        "reference": {
+          "reference": "CodeSystem/au-v2-0203"
+        },
         "name": "IdentifierType AU",
         "description": "Additional concept codes for identifier type defined for use in an Australian context. These are additional identifier type codes to the HL7 International code set and suitable for use with Australian identifiers and may be used in HL7 V2.x identifier representations.",
         "exampleBoolean": false
@@ -3330,7 +3679,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/au-v2-0360" },
+        "reference": {
+          "reference": "CodeSystem/au-v2-0360"
+        },
         "name": "DegreeLicenseCertificate AU",
         "description": "Additional concept codes for qualification defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.",
         "exampleBoolean": false
@@ -3342,7 +3693,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/au-v2-0443" },
+        "reference": {
+          "reference": "CodeSystem/au-v2-0443"
+        },
         "name": "providerRole AU",
         "description": "Additional concept codes for specifying the functional involvement with the activity being transmitted (e.g., Case Manager, Evaluator, Transcriber, Nurse Care Practitioner, Midwife, Physician Assistant, etc.) defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.",
         "exampleBoolean": false
@@ -3354,7 +3707,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/au-location-physical-type" },
+        "reference": {
+          "reference": "CodeSystem/au-location-physical-type"
+        },
         "name": "Location Type (Physical) AU",
         "description": "Additional concept codes for location physical type defined for use in Australian context. These codes are used as extensions to the HL7 International code set.",
         "exampleBoolean": false
@@ -3366,7 +3721,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-location-physical-type-extended" },
+        "reference": {
+          "reference": "ValueSet/au-location-physical-type-extended"
+        },
         "name": "Location Type (Physical) - AU Extended",
         "description": "Location type (physical) extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
         "exampleBoolean": false
@@ -3378,7 +3735,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/au-location-type" },
+        "reference": {
+          "reference": "CodeSystem/au-location-type"
+        },
         "name": "Location Type AU",
         "description": "Additional concept codes for location type defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.",
         "exampleBoolean": false
@@ -3390,7 +3749,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-v3-ServiceDeliveryLocationRoleType-extended" },
+        "reference": {
+          "reference": "ValueSet/au-v3-ServiceDeliveryLocationRoleType-extended"
+        },
         "name": "ServiceDeliveryLocationRoleType - AU Extended",
         "description": "ServiceDeliveryLocationRoleType extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
         "exampleBoolean": false
@@ -3402,7 +3763,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/medicine-item-change" },
+        "reference": {
+          "reference": "CodeSystem/medicine-item-change"
+        },
         "name": "Medicine Item Change",
         "description": "The Medicine Item Change code system defines concepts that identify a change that has been made, or is recommended to be made, to a medicine item.",
         "exampleBoolean": false
@@ -3414,7 +3777,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/medicine-item-change" },
+        "reference": {
+          "reference": "ValueSet/medicine-item-change"
+        },
         "name": "Medicine Item Change",
         "description": "The Medicine Item Change value set includes values that may be used to identify that a change that has been made, or is recommended to be made, to a medicine item.",
         "exampleBoolean": false
@@ -3426,7 +3791,9 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-timezone" },
+        "reference": {
+          "reference": "ValueSet/au-timezone"
+        },
         "name": "AU Time Zone",
         "description": "Australian time zones.",
         "exampleBoolean": false
@@ -3438,7 +3805,9 @@
             "valueString": "CodeSystem"
           }
         ],
-        "reference": { "reference": "CodeSystem/au-observation-category" },
+        "reference": {
+          "reference": "CodeSystem/au-observation-category"
+        },
         "name": "Observation Category Codes AU",
         "description": "Additional concept codes for observation category codes defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.",
         "exampleBoolean": false
@@ -3450,9 +3819,109 @@
             "valueString": "ValueSet"
           }
         ],
-        "reference": { "reference": "ValueSet/au-observation-category-extended" },
+        "reference": {
+          "reference": "ValueSet/au-observation-category-extended"
+        },
         "name": "Observation Category Codes - AU Extended",
         "description": "Observation Category Codes extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/rsg-source-document-type"
+        },
+        "name": "AU Recorded Sex or Gender Source Document Type",
+        "description": "The AU Recorded Sex or Gender Source Document Type code system defines concepts that represent the type of document where this sex or gender value is recorded.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/rsg-type"
+        },
+        "name": "AU Recorded Sex or Gender Type",
+        "description": "The AU Recorded Sex or Gender Type code system defines concepts that represent the type or category of sex or gender that is recorded.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/name-context"
+        },
+        "name": "Name Context",
+        "description": "The Name Context value set may be used to classify suitable uses or purposes of names.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/name-context"
+        },
+        "name": "Name Context",
+        "description": "The Name Context code system defines concepts describing usage of names. This provides well known concepts that can be used to indicate usage to achieve an associated purpose e.g. identifier validation or (in)appropriate cultural, religious or social usage of names.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/rsg-source-document-jurisdiction"
+        },
+        "name": "AU Recorded Sex or Gender (RSG) Source Document Jurisdiction",
+        "description": "The AU Recorded Sex or Gender (RSG) Source Document Jurisdiction value set includes codes that can be used to identify the jurisdiction that issued the source document where the sex or gender value is recorded.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/rsg-source-document-type"
+        },
+        "name": "AU Recorded Sex or Gender (RSG) Source Document Type",
+        "description": "The AU Recorded Sex or Gender (RSG) Source Document Type value set includes codes that can be used to represent the type of document where this sex or gender value is recorded.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/rsg-type"
+        },
+        "name": "AU Recorded Sex or Gender Type",
+        "description": "The AU Recorded Sex or Gender Type value set includes codes that can be used to represent the type or category of sex or gender that is recorded.",
         "exampleBoolean": false
       },
       {
@@ -3462,9 +3931,25 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-timezone" },
+        "reference": {
+          "reference": "StructureDefinition/au-timezone"
+        },
         "name": "Australian Time Zone",
         "description": "This extension applies to the [time](http://hl7.org/fhir/R4/datatypes.html#time) data type and is used to represent an Australian time zone.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/name-context"
+        },
+        "name": "Name Context",
+        "description": "This extension applies to the [HumanName](http://hl7.org/fhir/R4/datatypes.html#HumanName) data type, in the context of Patient, Person, Practitioner or RelatedPerson resources and is used to indicate a suitable use of the associated name.\nThe usage described may be varied in nature including suitability for a particular purpose e.g. IHI validation, or highlighting (in)appropriate use when referring to an individual e.g. deceased Aboriginal name, transgender deadname.",
         "exampleBoolean": false
       },
       {
@@ -3474,7 +3959,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-procedure" },
+        "reference": {
+          "reference": "StructureDefinition/au-procedure"
+        },
         "name": "AU Base Procedure",
         "description": "This profile defines a procedure structure that localises core concepts, including terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
         "exampleBoolean": false
@@ -3486,10 +3973,12 @@
             "valueString": "Observation"
           }
         ],
-        "reference": { "reference": "Observation/specimen-hepatitis-b-serology" },
+        "reference": {
+          "reference": "Observation/specimen-hepatitis-b-serology"
+        },
         "name": "Observation - Measurement of Hepatitis B surface antibody",
         "description": "Hepatitis B surface antibody measurement",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-pathologyresult"
+        "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"
       },
       {
         "extension": [
@@ -3498,7 +3987,9 @@
             "valueString": "Specimen"
           }
         ],
-        "reference": { "reference": "Specimen/serum" },
+        "reference": {
+          "reference": "Specimen/serum"
+        },
         "name": "Specimen - Serum sample",
         "description": "Serum sample as a specimen",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-specimen"
@@ -3510,7 +4001,9 @@
             "valueString": "ServiceRequest"
           }
         ],
-        "reference": { "reference": "ServiceRequest/hepatitis-b-antibody" },
+        "reference": {
+          "reference": "ServiceRequest/hepatitis-b-antibody"
+        },
         "name": "ServiceRequest - for Hepatitis B surface antibody measurement",
         "description": "Service request for Hepatitis B surface antibody measurement",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest"
@@ -3522,7 +4015,9 @@
             "valueString": "ServiceRequest"
           }
         ],
-        "reference": { "reference": "ServiceRequest/path-example0" },
+        "reference": {
+          "reference": "ServiceRequest/path-example0"
+        },
         "name": "ServiceRequest - with multiple result copies to indicated",
         "description": "A service request with multiple result copies to indicated",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest"
@@ -3534,7 +4029,9 @@
             "valueString": "Condition"
           }
         ],
-        "reference": { "reference": "Condition/example0" },
+        "reference": {
+          "reference": "Condition/example0"
+        },
         "name": "Condition - with evidence and onset date-time",
         "description": "Condition with evidence and onset date-time",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-condition"
@@ -3546,7 +4043,9 @@
             "valueString": "Coverage"
           }
         ],
-        "reference": { "reference": "Coverage/dva" },
+        "reference": {
+          "reference": "Coverage/dva"
+        },
         "name": "Coverage - DVA Gold Card",
         "description": "Coverage with DVA Gold Card",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-coverage"
@@ -3558,7 +4057,9 @@
             "valueString": "Coverage"
           }
         ],
-        "reference": { "reference": "Coverage/private" },
+        "reference": {
+          "reference": "Coverage/private"
+        },
         "name": "Coverage - private health insurer",
         "description": "Coverage with private health insurer",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-coverage"
@@ -3570,7 +4071,9 @@
             "valueString": "Immunization"
           }
         ],
-        "reference": { "reference": "Immunization/example0" },
+        "reference": {
+          "reference": "Immunization/example0"
+        },
         "name": "Immunization - Non-administration of varicella-zoster live vaccine due to refusal",
         "description": "Non-administration of varicella-zoster live vaccine due to refusal",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-immunization"
@@ -3582,7 +4085,9 @@
             "valueString": "Immunization"
           }
         ],
-        "reference": { "reference": "Immunization/example1" },
+        "reference": {
+          "reference": "Immunization/example1"
+        },
         "name": "Immunization - Administration of a vaccine - record compliant with Australian Immunisation Register (AIR)",
         "description": "Administration of a vaccine - record compliant with Australian Immunisation Register (AIR)",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-immunization"
@@ -3594,7 +4099,9 @@
             "valueString": "Immunization"
           }
         ],
-        "reference": { "reference": "Immunization/example2" },
+        "reference": {
+          "reference": "Immunization/example2"
+        },
         "name": "Immunization - Administration of a vaccine with administering provider and protocol",
         "description": "Administration of a vaccine with administering provider and protocol",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-immunization"
@@ -3606,7 +4113,9 @@
             "valueString": "Immunization"
           }
         ],
-        "reference": { "reference": "Immunization/example3" },
+        "reference": {
+          "reference": "Immunization/example3"
+        },
         "name": "Immunization - Administration of Pfizer Comirnaty dose 1 for Sarah Simmons",
         "description": "Administration of Pfizer Comirnaty dose 1 for Sarah Simmons",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-immunization"
@@ -3618,7 +4127,9 @@
             "valueString": "Practitioner"
           }
         ],
-        "reference": { "reference": "Practitioner/example1" },
+        "reference": {
+          "reference": "Practitioner/example1"
+        },
         "name": "Practitioner - as a Radiologist",
         "description": "Shows a typical Practitioner as a Radiologist",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
@@ -3630,7 +4141,9 @@
             "valueString": "AllergyIntolerance"
           }
         ],
-        "reference": { "reference": "AllergyIntolerance/example0" },
+        "reference": {
+          "reference": "AllergyIntolerance/example0"
+        },
         "name": "AllergyIntolerance - ibuprofen allergy",
         "description": "AllergyIntolerance - ibuprofen allergy",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"
@@ -3642,7 +4155,9 @@
             "valueString": "AllergyIntolerance"
           }
         ],
-        "reference": { "reference": "AllergyIntolerance/example1" },
+        "reference": {
+          "reference": "AllergyIntolerance/example1"
+        },
         "name": "AllergyIntolerance - self-reported allergy to eggs",
         "description": "AllergyIntolerance - self-reported allergy to eggs",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"
@@ -3654,7 +4169,9 @@
             "valueString": "AllergyIntolerance"
           }
         ],
-        "reference": { "reference": "AllergyIntolerance/example2" },
+        "reference": {
+          "reference": "AllergyIntolerance/example2"
+        },
         "name": "AllergyIntolerance - self-reported intolerance to lactose",
         "description": "AllergyIntolerance - self-reported intolerance to lactose",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"
@@ -3666,7 +4183,9 @@
             "valueString": "AllergyIntolerance"
           }
         ],
-        "reference": { "reference": "AllergyIntolerance/example3" },
+        "reference": {
+          "reference": "AllergyIntolerance/example3"
+        },
         "name": "AllergyIntolerance - no known allergy",
         "description": "AllergyIntolerance - no known allergy",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"
@@ -3678,7 +4197,9 @@
             "valueString": "BodyStructure"
           }
         ],
-        "reference": { "reference": "BodyStructure/example0" },
+        "reference": {
+          "reference": "BodyStructure/example0"
+        },
         "name": "BodyStructure - Bone tissue of left shoulder",
         "description": "Bone tissue of left shoulder",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-bodystructure"
@@ -3690,7 +4211,9 @@
             "valueString": "BodyStructure"
           }
         ],
-        "reference": { "reference": "BodyStructure/example1" },
+        "reference": {
+          "reference": "BodyStructure/example1"
+        },
         "name": "BodyStructure - Blister of right foot",
         "description": "Blister of right foot",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-bodystructure"
@@ -3702,7 +4225,9 @@
             "valueString": "Device"
           }
         ],
-        "reference": { "reference": "Device/example1" },
+        "reference": {
+          "reference": "Device/example1"
+        },
         "name": "Device - as a registered repository service",
         "description": "A registered repository service",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/Device"
@@ -3714,7 +4239,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example1" },
+        "reference": {
+          "reference": "Location/example1"
+        },
         "name": "Location - of a Practitioner as a Radiologist",
         "description": "Shows a typical location at which this practitioner provides care",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -3726,7 +4253,9 @@
             "valueString": "Organization"
           }
         ],
-        "reference": { "reference": "Organization/example1" },
+        "reference": {
+          "reference": "Organization/example1"
+        },
         "name": "Organization - a typical Organisation the Radiologist belongs to",
         "description": "Shows a typical Organisation the Radiologist belongs to",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-organization"
@@ -3738,7 +4267,9 @@
             "valueString": "Organization"
           }
         ],
-        "reference": { "reference": "Organization/example2" },
+        "reference": {
+          "reference": "Organization/example2"
+        },
         "name": "Organization - Holistic Medical Pty Ltd with ABN and HPI-O",
         "description": "Shows a typical Organisation with ABN and HPI-O identifiers",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-organization"
@@ -3750,7 +4281,9 @@
             "valueString": "PractitionerRole"
           }
         ],
-        "reference": { "reference": "PractitionerRole/example1" },
+        "reference": {
+          "reference": "PractitionerRole/example1"
+        },
         "name": "PractitionerRole - a typical Practitioner Role as a Radiologist",
         "description": "Shows a typical Practitioner Role as a Radiologist",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"
@@ -3762,7 +4295,9 @@
             "valueString": "HealthcareService"
           }
         ],
-        "reference": { "reference": "HealthcareService/example1" },
+        "reference": {
+          "reference": "HealthcareService/example1"
+        },
         "name": "HealthcareService - a typical Healthcare Service the Radiologist belongs to",
         "description": "Shows a typical Healthcare Service the Radiologist belongs to",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
@@ -3774,7 +4309,9 @@
             "valueString": "Practitioner"
           }
         ],
-        "reference": { "reference": "Practitioner/example3" },
+        "reference": {
+          "reference": "Practitioner/example3"
+        },
         "name": "Practitioner - a typical Practitioner as a General Practitioner",
         "description": "Shows a typical Practitioner as a General Practitioner",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
@@ -3786,9 +4323,25 @@
             "valueString": "Practitioner"
           }
         ],
-        "reference": { "reference": "Practitioner/example4" },
+        "reference": {
+          "reference": "Practitioner/example4"
+        },
         "name": "Practitioner - a typical Ahpra registered professional",
         "description": "Shows a typical Ahpra registered professional",
+        "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/example-sex-and-gender"
+        },
+        "name": "Practitioner - for use in sex and gender",
+        "description": "Shows an example of a practitioner that demonstrates the adopted extensions for sex and gender.",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
       },
       {
@@ -3798,7 +4351,9 @@
             "valueString": "Endpoint"
           }
         ],
-        "reference": { "reference": "Endpoint/example0" },
+        "reference": {
+          "reference": "Endpoint/example0"
+        },
         "name": "Endpoint - a secure messaging endpoint example",
         "description": "Shows a secure messaging endpoint example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/Endpoint"
@@ -3810,7 +4365,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example3" },
+        "reference": {
+          "reference": "Location/example3"
+        },
         "name": "Location - of a Practitioner as a General Practitioner",
         "description": "Shows a typical location at which this General Practitioner provides care",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -3822,7 +4379,9 @@
             "valueString": "Organization"
           }
         ],
-        "reference": { "reference": "Organization/example3" },
+        "reference": {
+          "reference": "Organization/example3"
+        },
         "name": "Organization - a typical Organisation the General Practitioner belongs to",
         "description": "Shows a typical Organisation the General Practitioner belongs to",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-organization"
@@ -3834,7 +4393,9 @@
             "valueString": "PractitionerRole"
           }
         ],
-        "reference": { "reference": "PractitionerRole/example3" },
+        "reference": {
+          "reference": "PractitionerRole/example3"
+        },
         "name": "PractitionerRole - a typical Practitioner Role as a General Practitioner",
         "description": "Shows a typical Practitioner Role as a General Practitioner",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"
@@ -3846,7 +4407,9 @@
             "valueString": "HealthcareService"
           }
         ],
-        "reference": { "reference": "HealthcareService/example3" },
+        "reference": {
+          "reference": "HealthcareService/example3"
+        },
         "name": "HealthcareService - general practice",
         "description": "Shows a typical Healthcare Service the General Practitioner belongs while also describing communication languages",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
@@ -3858,9 +4421,11 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example-sex-and-gender" },
+        "reference": {
+          "reference": "Patient/example-sex-and-gender"
+        },
         "name": "Patient - Transgender Person Example",
-        "description": "Shows an example of a patient that demonstrates the R5 pre-adopted extensions for sex and gender. This example is taken and adapted from the R5 Transgender Person Example.",
+        "description": "Shows an example of a patient that demonstrates the adopted extensions for sex and gender. This example is taken and adapted from the R5 Transgender Person Example.",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
       },
       {
@@ -3870,7 +4435,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example0" },
+        "reference": {
+          "reference": "Patient/example0"
+        },
         "name": "Patient - with IHI, Medicare Card Number and the extension for Indigenous Status",
         "description": "Shows a typical patient using identifier profiles for IHI, Medicare Card Number and the extension for Indigenous Status",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -3882,7 +4449,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example1" },
+        "reference": {
+          "reference": "Patient/example1"
+        },
         "name": "Patient - with IHI, DVA Number (with specific card colour) and the extension for Indigenous Status",
         "description": "Shows a typical patient using identifier profiles for IHI, DVA Number (with specific card colour) and the extension for Indigenous Status",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -3894,7 +4463,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example2" },
+        "reference": {
+          "reference": "Patient/example2"
+        },
         "name": "Patient - with no birth date, and is eligible for Closing the Gap registration",
         "description": "Shows a patient with the extension for indigenous Status and the extension for Closing the Gap registration, with no birth date.",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -3906,7 +4477,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example3" },
+        "reference": {
+          "reference": "Patient/example3"
+        },
         "name": "Patient - with birth date and birth time",
         "description": "Shows a typical patient with birth date and birth time",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -3918,7 +4491,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example4" },
+        "reference": {
+          "reference": "Patient/example4"
+        },
         "name": "Patient - as a child born in 2008",
         "description": "Shows a typical child patient born in 2008",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -3930,7 +4505,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example5" },
+        "reference": {
+          "reference": "Patient/example5"
+        },
         "name": "Patient - as a mother for the patient in example 4",
         "description": "Shows a typical Patient as a mother for the patient in example 4",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -3942,7 +4519,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example6" },
+        "reference": {
+          "reference": "Patient/example6"
+        },
         "name": "Patient - as a Culturally and linguistically diverse (CALD) patient 1",
         "description": "Shows a patient who requires an interpreter and their preferred communication language",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -3954,7 +4533,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example7" },
+        "reference": {
+          "reference": "Patient/example7"
+        },
         "name": "Patient - as a Culturally and linguistically diverse (CALD) patient 2",
         "description": "Shows a patient who requires an interpreter and their country of birth",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -3966,7 +4547,9 @@
             "valueString": "Practitioner"
           }
         ],
-        "reference": { "reference": "Practitioner/example0" },
+        "reference": {
+          "reference": "Practitioner/example0"
+        },
         "name": "Practitioner - with HPI-I and Prescriber Number",
         "description": "Shows a typical practitioner using identifier profiles for HPI-I and Prescriber Number",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
@@ -3978,7 +4561,9 @@
             "valueString": "PractitionerRole"
           }
         ],
-        "reference": { "reference": "PractitionerRole/example0" },
+        "reference": {
+          "reference": "PractitionerRole/example0"
+        },
         "name": "PractitionerRole - with Provider Number and ANZSCO coded role",
         "description": "Shows a typical practitioner role using the identifier profile for Provider Number at a specific location, with role using ANZSCO",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"
@@ -3990,7 +4575,9 @@
             "valueString": "Organization"
           }
         ],
-        "reference": { "reference": "Organization/example0" },
+        "reference": {
+          "reference": "Organization/example0"
+        },
         "name": "Organization - with HPI-O",
         "description": "Shows a typical organisation using the identifier profile for HPI-O",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-organization"
@@ -4002,7 +4589,9 @@
             "valueString": "Organization"
           }
         ],
-        "reference": { "reference": "Organization/example6" },
+        "reference": {
+          "reference": "Organization/example6"
+        },
         "name": "Organization - a Pathology organisation with NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O",
         "description": "Shows a pathology organisation using the identifier profile for NATA Number, ARBN, ABN, ACN, HPI-O and PAI-O",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-organization"
@@ -4014,7 +4603,9 @@
             "valueString": "Organization"
           }
         ],
-        "reference": { "reference": "Organization/5-8631-1" },
+        "reference": {
+          "reference": "Organization/5-8631-1"
+        },
         "name": "Organization - a Pathology organisation with HPI-O and is a parent organization",
         "description": "Shows a parent pathology organisation using the identifier profile for HPI-O",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-organization"
@@ -4026,7 +4617,9 @@
             "valueString": "HealthcareService"
           }
         ],
-        "reference": { "reference": "HealthcareService/example0" },
+        "reference": {
+          "reference": "HealthcareService/example0"
+        },
         "name": "HealthcareService - with HPI-O and eligibility",
         "description": "Shows a typical healthcare service using the identifier profile for HPI-O, and eligibility information",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
@@ -4038,7 +4631,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example0" },
+        "reference": {
+          "reference": "Location/example0"
+        },
         "name": "Location - a hospital location with managing organisation of example0",
         "description": "Shows a typical hospital location with a managing organisation",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -4050,7 +4645,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/DateAccuracyIndicatorAAAexample0" },
+        "reference": {
+          "reference": "Patient/DateAccuracyIndicatorAAAexample0"
+        },
         "name": "Patient - with Birth Date Accuracy Indicator of AAA",
         "description": "Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Accurate Date",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -4062,7 +4659,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/DateAccuracyIndicatorAAUexample1" },
+        "reference": {
+          "reference": "Patient/DateAccuracyIndicatorAAUexample1"
+        },
         "name": "Patient - with Birth Date Accuracy Indicator of AAU",
         "description": "Shows a typical Patient Date Accuracy Indicator extension Accurate Year, Accurate Month and Unknown Date",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -4074,7 +4673,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/DateAccuracyIndicatorUAAexample2" },
+        "reference": {
+          "reference": "Patient/DateAccuracyIndicatorUAAexample2"
+        },
         "name": "Patient - with Birth Date Accuracy Indicator of UAA",
         "description": "Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Accurate Month and Accurate Date",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -4086,7 +4687,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/DateAccuracyIndicatorUEAexample3" },
+        "reference": {
+          "reference": "Patient/DateAccuracyIndicatorUEAexample3"
+        },
         "name": "Patient - with Birth Date Accuracy Indicator of UEA",
         "description": "Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Estimated Month and Accurate Date",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -4098,7 +4701,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/DateAccuracyIndicatorUUUexample4" },
+        "reference": {
+          "reference": "Patient/DateAccuracyIndicatorUUUexample4"
+        },
         "name": "Patient - with Birth Date Accuracy Indicator of UUU",
         "description": "Shows a typical Patient Date Accuracy Indicator extension Unknown Year, Unknown Month and Unknown Date",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -4110,7 +4715,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example2" },
+        "reference": {
+          "reference": "Location/example2"
+        },
         "name": "Location - of a Practitioner as a Pathologist",
         "description": "Shows a typical location at which this practitioner provides care",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -4122,7 +4729,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example4" },
+        "reference": {
+          "reference": "Location/example4"
+        },
         "name": "Location - for services delivered by phone, video or online",
         "description": "Shows a typical location where services are delivered by phone, video or online",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -4134,7 +4743,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example5" },
+        "reference": {
+          "reference": "Location/example5"
+        },
         "name": "Location - for mobile services that can be delivered in a person's house, apartment, or unit",
         "description": "Shows a typical location where services can be delivered in a person's house, apartment, or unit",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -4146,7 +4757,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example6" },
+        "reference": {
+          "reference": "Location/example6"
+        },
         "name": "Location - for mobile services that can be delivered in schools",
         "description": "Shows a typical location where services can be delivered in schools",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -4158,7 +4771,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example7" },
+        "reference": {
+          "reference": "Location/example7"
+        },
         "name": "Location - for mobile services that can be delivered in residential care facilities",
         "description": "Shows a typical location where services can be delivered in residential care facilities",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -4170,7 +4785,9 @@
             "valueString": "PractitionerRole"
           }
         ],
-        "reference": { "reference": "PractitionerRole/example2" },
+        "reference": {
+          "reference": "PractitionerRole/example2"
+        },
         "name": "PractitionerRole - as a Pathologist",
         "description": "Shows a typical Practitioner Role as a Pathologist",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"
@@ -4182,7 +4799,9 @@
             "valueString": "HealthcareService"
           }
         ],
-        "reference": { "reference": "HealthcareService/example2" },
+        "reference": {
+          "reference": "HealthcareService/example2"
+        },
         "name": "HealthcareService - of a Pathologist",
         "description": "Shows a typical Healthcare Service the Pathologist belongs to",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
@@ -4194,7 +4813,9 @@
             "valueString": "Practitioner"
           }
         ],
-        "reference": { "reference": "Practitioner/example2" },
+        "reference": {
+          "reference": "Practitioner/example2"
+        },
         "name": "Practitioner - as a Pathologist",
         "description": "Shows a typical Practitioner as a Pathologist",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
@@ -4206,7 +4827,9 @@
             "valueString": "PractitionerRole"
           }
         ],
-        "reference": { "reference": "PractitionerRole/example4" },
+        "reference": {
+          "reference": "PractitionerRole/example4"
+        },
         "name": "PractitionerRole - with assigning authority",
         "description": "PractitionerRole with identifier including assigning authority",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"
@@ -4218,7 +4841,9 @@
             "valueString": "Organization"
           }
         ],
-        "reference": { "reference": "Organization/example4" },
+        "reference": {
+          "reference": "Organization/example4"
+        },
         "name": "Organization - with source",
         "description": "Shows a typical organisation with a source reference",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-organization"
@@ -4230,7 +4855,9 @@
             "valueString": "RelatedPerson"
           }
         ],
-        "reference": { "reference": "RelatedPerson/example0" },
+        "reference": {
+          "reference": "RelatedPerson/example0"
+        },
         "name": "RelatedPerson - as attester party",
         "description": "Shows a typical related person example",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"
@@ -4242,7 +4869,9 @@
             "valueString": "RelatedPerson"
           }
         ],
-        "reference": { "reference": "RelatedPerson/example1" },
+        "reference": {
+          "reference": "RelatedPerson/example1"
+        },
         "name": "RelatedPerson - as a carer for an older patient",
         "description": "Shows an example of a carer as a related person for an older patient",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"
@@ -4254,7 +4883,9 @@
             "valueString": "RelatedPerson"
           }
         ],
-        "reference": { "reference": "RelatedPerson/example2" },
+        "reference": {
+          "reference": "RelatedPerson/example2"
+        },
         "name": "RelatedPerson - as a mother for the patient in example 4",
         "description": "Shows a typical related person as a mother of a patient",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"
@@ -4266,9 +4897,25 @@
             "valueString": "RelatedPerson"
           }
         ],
-        "reference": { "reference": "RelatedPerson/example3" },
+        "reference": {
+          "reference": "RelatedPerson/example3"
+        },
         "name": "RelatedPerson - as father",
         "description": "Shows a typical related person example as the father of a patient",
+        "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "RelatedPerson"
+          }
+        ],
+        "reference": {
+          "reference": "RelatedPerson/example-sex-and-gender"
+        },
+        "name": "RelatedPerson - as family member, for use in sex and gender",
+        "description": "Shows an example of a related person that demonstrates the adopted extensions for sex and gender.",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"
       },
       {
@@ -4278,7 +4925,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/example8" },
+        "reference": {
+          "reference": "Patient/example8"
+        },
         "name": "Patient - male born in 1949 with address and contact details",
         "description": "Shows a typical male born in 1949 with address and contact details",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
@@ -4290,7 +4939,9 @@
             "valueString": "Observation"
           }
         ],
-        "reference": { "reference": "Observation/norelevantfinding-example0" },
+        "reference": {
+          "reference": "Observation/norelevantfinding-example0"
+        },
         "name": "Observation - of no relevant finding of procedure",
         "description": "Shows an example of no history of procedure",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"
@@ -4302,7 +4953,9 @@
             "valueString": "Observation"
           }
         ],
-        "reference": { "reference": "Observation/norelevantfinding-example1" },
+        "reference": {
+          "reference": "Observation/norelevantfinding-example1"
+        },
         "name": "Observation - of no relevant finding of immunisations",
         "description": "Shows an example of no history of immunisation",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"
@@ -4314,7 +4967,9 @@
             "valueString": "Observation"
           }
         ],
-        "reference": { "reference": "Observation/norelevantfinding-example2" },
+        "reference": {
+          "reference": "Observation/norelevantfinding-example2"
+        },
         "name": "Observation - of no relevant finding of known history of conditions",
         "description": "Shows an example of no known history of conditions",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"
@@ -4326,7 +4981,9 @@
             "valueString": "Observation"
           }
         ],
-        "reference": { "reference": "Observation/norelevantfinding-example3" },
+        "reference": {
+          "reference": "Observation/norelevantfinding-example3"
+        },
         "name": "Observation - of no relevant finding of patient taking any medications",
         "description": "Shows an example of patient not taking any medications",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"
@@ -4338,7 +4995,9 @@
             "valueString": "Observation"
           }
         ],
-        "reference": { "reference": "Observation/healthprogramparticipation-example0" },
+        "reference": {
+          "reference": "Observation/healthprogramparticipation-example0"
+        },
         "name": "Observation - active participation in 12 step alcohol program",
         "description": "Active participation in 12 step alcohol program",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-healthprogramparticipation"
@@ -4350,7 +5009,9 @@
             "valueString": "Observation"
           }
         ],
-        "reference": { "reference": "Observation/healthprogramparticipation-example1" },
+        "reference": {
+          "reference": "Observation/healthprogramparticipation-example1"
+        },
         "name": "Observation - deferred BreastScreen Australia screening due to travel",
         "description": "Deferred BreastScreen Australia screening due to travel",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-healthprogramparticipation"
@@ -4362,7 +5023,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/address-example0" },
+        "reference": {
+          "reference": "Patient/address-example0"
+        },
         "name": "Patient - structured Australian Address",
         "description": "Shows a typical Address with structured Australian address",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/Patient"
@@ -4374,7 +5037,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/address-example1" },
+        "reference": {
+          "reference": "Patient/address-example1"
+        },
         "name": "Patient - unstructured Australian Address",
         "description": "Shows a typical Address with unstructured Australian address",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/Patient"
@@ -4386,7 +5051,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/address-example2" },
+        "reference": {
+          "reference": "Patient/address-example2"
+        },
         "name": "Patient - Australian No Fixed Address",
         "description": "Shows a typical Address with Australian no fixed address",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/Patient"
@@ -4398,7 +5065,9 @@
             "valueString": "Patient"
           }
         ],
-        "reference": { "reference": "Patient/address-example3" },
+        "reference": {
+          "reference": "Patient/address-example3"
+        },
         "name": "Patient - Australian address with identifiers",
         "description": "Shows a typical Address with identifiers",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/Patient"
@@ -4407,10 +5076,40 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/example-patient-name-context"
+        },
+        "name": "Patient - indicate IHI validation name context",
+        "description": "Shows an IHI validation name context indication",
+        "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/example-practitioner-name-context"
+        },
+        "name": "Practitioner - indicate HPI-I validation name context",
+        "description": "Shows an HPI-I validation name context indication",
+        "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/DoseBased" },
+        "reference": {
+          "reference": "Medication/DoseBased"
+        },
         "name": "Medication - dose based",
         "description": "Shows a typical dose based medication",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4422,7 +5121,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/UnbrandedProduct0" },
+        "reference": {
+          "reference": "Medication/UnbrandedProduct0"
+        },
         "name": "Medication - Unbranded Product of clarithromycin 500mg tablet",
         "description": "Shows an unbranded product of clarithromycin 500mg tablet",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4434,7 +5135,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/UnbrandedProduct1" },
+        "reference": {
+          "reference": "Medication/UnbrandedProduct1"
+        },
         "name": "Medication - Unbranded Product of esomeprazole 20mg tablet",
         "description": "Shows an unbranded product of esomeprazole 20mg tablet",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4446,7 +5149,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/UnbrandedProduct2" },
+        "reference": {
+          "reference": "Medication/UnbrandedProduct2"
+        },
         "name": "Medication - Unbranded product of amoxicillin 500mg capsule",
         "description": "Shows an unbranded product of amoxicillin 500mg capsule",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4458,7 +5163,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/UncodedProduct0" },
+        "reference": {
+          "reference": "Medication/UncodedProduct0"
+        },
         "name": "Medication - uncoded medicinal product information",
         "description": "Medication with uncoded medicinal product information",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4470,7 +5177,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/BrandedPack1" },
+        "reference": {
+          "reference": "Medication/BrandedPack1"
+        },
         "name": "Medication - branded pack",
         "description": "Medication with brand and generic name extensions",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4482,7 +5191,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/GenericPack0" },
+        "reference": {
+          "reference": "Medication/GenericPack0"
+        },
         "name": "Medication - Generic Pack of paracetamol 500mg (100)",
         "description": "Shows a generic pack of paracetamol 500mg (100)",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4494,7 +5205,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/BrandedPack0" },
+        "reference": {
+          "reference": "Medication/BrandedPack0"
+        },
         "name": "Medication - Branded Pack of Nexium HP7 20;500;500",
         "description": "Shows a branded pack of Nexium HP7 20;500;500",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4506,7 +5219,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/BrandedPackSingleActiveIngredient0" },
+        "reference": {
+          "reference": "Medication/BrandedPackSingleActiveIngredient0"
+        },
         "name": "Medication - Branded Pack With Single Active Ingredient",
         "description": "Shows a branded pack with a single active ingredient",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4518,7 +5233,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/TwoActiveIngredientsProduct0" },
+        "reference": {
+          "reference": "Medication/TwoActiveIngredientsProduct0"
+        },
         "name": "Medication - with two active ingredients product",
         "description": "Shows a medication product with 2 active ingredients",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4530,7 +5247,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/FourOrMoreActiveIngredientsProduct0" },
+        "reference": {
+          "reference": "Medication/FourOrMoreActiveIngredientsProduct0"
+        },
         "name": "Medication - with four or more active ingredients",
         "description": "Shows a medication with four or more active ingredients",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4542,7 +5261,9 @@
             "valueString": "Medication"
           }
         ],
-        "reference": { "reference": "Medication/BrandProductwithBatchDetails0" },
+        "reference": {
+          "reference": "Medication/BrandProductwithBatchDetails0"
+        },
         "name": "Medication - Branded Pack with Batch Details",
         "description": "Shows a branded pack with batch details",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medication"
@@ -4554,7 +5275,9 @@
             "valueString": "Composition"
           }
         ],
-        "reference": { "reference": "Composition/multiple-information-recipients" },
+        "reference": {
+          "reference": "Composition/multiple-information-recipients"
+        },
         "name": "Composition - with multiple information recipients",
         "description": "Shows a typical composition author role and multiple information recipients of different resource types",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-composition"
@@ -4566,7 +5289,9 @@
             "valueString": "Composition"
           }
         ],
-        "reference": { "reference": "Composition/different-authors" },
+        "reference": {
+          "reference": "Composition/different-authors"
+        },
         "name": "​Composition - with some sections having a different section author to the composition author",
         "description": "Shows a composition with some sections having a different section author to the composition author",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-composition"
@@ -4578,7 +5303,9 @@
             "valueString": "Composition"
           }
         ],
-        "reference": { "reference": "Composition/example0" },
+        "reference": {
+          "reference": "Composition/example0"
+        },
         "name": "Composition - Patient’s preference upon death",
         "description": "Shows a typical composition showing the patient's preference upon death",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-composition"
@@ -4590,7 +5317,9 @@
             "valueString": "MedicationStatement"
           }
         ],
-        "reference": { "reference": "MedicationStatement/example0" },
+        "reference": {
+          "reference": "MedicationStatement/example0"
+        },
         "name": "MedicationStatement - of a record of a patient's use of medication",
         "description": "Shows a typical informative record of a patient's use of medication",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"
@@ -4602,7 +5331,9 @@
             "valueString": "MedicationStatement"
           }
         ],
-        "reference": { "reference": "MedicationStatement/example1" },
+        "reference": {
+          "reference": "MedicationStatement/example1"
+        },
         "name": "MedicationStatement - of a record of a patient's long-term use of medication",
         "description": "Shows a typical informative record of a patient's long-term use of medication",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"
@@ -4614,7 +5345,9 @@
             "valueString": "MedicationStatement"
           }
         ],
-        "reference": { "reference": "MedicationStatement/example2" },
+        "reference": {
+          "reference": "MedicationStatement/example2"
+        },
         "name": "MedicationStatement - Practitioner reports patient has taken Diflucan in the past but is not taking it any more",
         "description": "Practitioner reports patient has taken Diflucan in the past but is not taking it any more",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"
@@ -4626,7 +5359,9 @@
             "valueString": "MedicationRequest"
           }
         ],
-        "reference": { "reference": "MedicationRequest/example0" },
+        "reference": {
+          "reference": "MedicationRequest/example0"
+        },
         "name": "MedicationRequest - a prescription for codeine with paracetamol",
         "description": "Shows a prescription for codeine with paracetamol",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"
@@ -4638,7 +5373,9 @@
             "valueString": "MedicationRequest"
           }
         ],
-        "reference": { "reference": "MedicationRequest/example1" },
+        "reference": {
+          "reference": "MedicationRequest/example1"
+        },
         "name": "MedicationRequest - a prescription for Stribild tablet",
         "description": "Shows a prescription for Stribild tablet",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"
@@ -4650,7 +5387,9 @@
             "valueString": "MedicationRequest"
           }
         ],
-        "reference": { "reference": "MedicationRequest/example2" },
+        "reference": {
+          "reference": "MedicationRequest/example2"
+        },
         "name": "MedicationRequest - Prescription with brand and generic name extensions",
         "description": "Shows a prescription with brand and generic name extensions",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationrequest"
@@ -4662,7 +5401,9 @@
             "valueString": "Encounter"
           }
         ],
-        "reference": { "reference": "Encounter/example0" },
+        "reference": {
+          "reference": "Encounter/example0"
+        },
         "name": "Encounter - with description",
         "description": "Encounter with encounter description",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-encounter"
@@ -4674,7 +5415,9 @@
             "valueString": "Encounter"
           }
         ],
-        "reference": { "reference": "Encounter/example1" },
+        "reference": {
+          "reference": "Encounter/example1"
+        },
         "name": "Encounter - with narative description",
         "description": "Encounter with narrative description",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-encounter"
@@ -4686,7 +5429,9 @@
             "valueString": "Encounter"
           }
         ],
-        "reference": { "reference": "Encounter/example2" },
+        "reference": {
+          "reference": "Encounter/example2"
+        },
         "name": "Encounter - Annual check up",
         "description": "Shows an annual check up encounter for Observation-healthprogramparticipation-example0",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-encounter"
@@ -4698,7 +5443,9 @@
             "valueString": "List"
           }
         ],
-        "reference": { "reference": "List/example0" },
+        "reference": {
+          "reference": "List/example0"
+        },
         "name": "List - Medicine list with referenced entries",
         "description": "Medicine list with referenced entries",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medlist"
@@ -4710,7 +5457,9 @@
             "valueString": "List"
           }
         ],
-        "reference": { "reference": "List/example1" },
+        "reference": {
+          "reference": "List/example1"
+        },
         "name": "List - Medicine list with no known current medicine",
         "description": "Medicine list - with no known current medicine",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medlist"
@@ -4722,7 +5471,9 @@
             "valueString": "Bundle"
           }
         ],
-        "reference": { "reference": "Bundle/example0" },
+        "reference": {
+          "reference": "Bundle/example0"
+        },
         "name": "Bundle - Medicine list in a bundle",
         "description": "Shows a medicine list in a bundle",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medlist"
@@ -4734,7 +5485,9 @@
             "valueString": "List"
           }
         ],
-        "reference": { "reference": "List/example2" },
+        "reference": {
+          "reference": "List/example2"
+        },
         "name": "List - Medicine list with changes",
         "description": "Shows a medicine list with changes",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medlist"
@@ -4746,7 +5499,9 @@
             "valueString": "List"
           }
         ],
-        "reference": { "reference": "List/example3" },
+        "reference": {
+          "reference": "List/example3"
+        },
         "name": "List - Medicine list authored by a related person",
         "description": "Shows a medicine list authored by a related person",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medlist"
@@ -4758,7 +5513,9 @@
             "valueString": "StructureDefinition:resource"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-diagnosticrequest" },
+        "reference": {
+          "reference": "StructureDefinition/au-diagnosticrequest"
+        },
         "name": "AU Base Diagnostic Request",
         "description": "This profile defines a service request structure to represent a request for a diagnostic investigation in an Australian context. This profile is intended to support ordering for pathology, radiology, and specialist diagnostic investigations.",
         "exampleBoolean": false
@@ -4770,7 +5527,9 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
-        "reference": { "reference": "StructureDefinition/date-of-arrival" },
+        "reference": {
+          "reference": "StructureDefinition/date-of-arrival"
+        },
         "name": "Date of Arrival in Australia",
         "description": "This extension applies to the Patient, RelatedPerson, and Practitioner resources and is used to represent a person's date of arrival in an Australian context (see [Australian Bureau of Statistics](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument) for further information). The date of arrival is when a person (born outside of Australia) first arrived in Australia, from another country, with the intention of living in Australia for one year or more. This date is recorded once for a person and is not subsequently updated with subsequent arrivals. This element is a part of Cultural and Linguistic Diversity (CALD) data set. It is an important indicator of cultural identity, and provides further information about a person's cultural values and practices which can be significant in determining service type, support required, and possible needs.",
         "exampleBoolean": false
@@ -4782,7 +5541,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-localorderidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-localorderidentifier"
+        },
         "name": "AU Local Order Identifier",
         "description": "This identifier profile defines a local order identifier in an Australian context.A local order identifier is an organisation's identifier for an order in that organisation's local system set of orders.\n\nTypically a local order identifier will be either a [placer identifier](https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.2ORC-2Placerordernumber(EI)00216) or a [filler identifier](https://confluence.hl7australia.com/display/OOADRM20181/5+Observation+Ordering#id-5ObservationOrdering-5.4.1.3ORC-3Fillerordernumber(EI)00217) (sometimes known as filler order number). A placer identifier is an identifier for a request or group of requests where the identifier is issued by the entity making the request. A filler identifier is an identifier for a request or group of requests where the identifier is issued by the entity that produces the observations or fulfills the request.",
         "exampleBoolean": false
@@ -4794,7 +5555,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-localreportidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-localreportidentifier"
+        },
         "name": "AU Local Report Identifier",
         "description": "This identifier profile defines a local report identifier in an Australian context. A local report identifier is an organisation's identifier for a report in that organisation's local system set of reports. A report identifier must uniquely identify the report from all other reports in a particular system (e.g. diagnostic imaging system, clinical laboratory system, document management system, referral systems). In some laboratory systems, the report identifier may be a concatenation of a lab number and report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same lab number.",
         "exampleBoolean": false
@@ -4806,7 +5569,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-accessionnumber" },
+        "reference": {
+          "reference": "StructureDefinition/au-accessionnumber"
+        },
         "name": "AU Accession Number",
         "description": "This identifier profile defines an accession number in an Australian context. Accession numbers are typically assigned by a diagnostic imaging system or clinical laboratory system and depending on the domain an accession number may for example identify a specimen, imaging examination, or biological polymer sequence.",
         "exampleBoolean": false
@@ -4818,7 +5583,9 @@
             "valueString": "MedicationDispense"
           }
         ],
-        "reference": { "reference": "MedicationDispense/example0" },
+        "reference": {
+          "reference": "MedicationDispense/example0"
+        },
         "name": "MedicationDispense - First dispense for Reaptan",
         "description": "Shows a first medication dispense for Reaptan",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense"
@@ -4830,7 +5597,9 @@
             "valueString": "StructureDefinition:complex-type"
           }
         ],
-        "reference": { "reference": "StructureDefinition/au-residentialagedcareserviceidentifier" },
+        "reference": {
+          "reference": "StructureDefinition/au-residentialagedcareserviceidentifier"
+        },
         "name": "AU Residential Aged Care Service Identifier",
         "description": "This identifier profile defines a residential aged care service identifier (RACS ID) in an Australian context.",
         "exampleBoolean": false
@@ -4842,7 +5611,9 @@
             "valueString": "HealthcareService"
           }
         ],
-        "reference": { "reference": "HealthcareService/example4" },
+        "reference": {
+          "reference": "HealthcareService/example4"
+        },
         "name": "HealthcareService - Leafy Grove Home for the Aged",
         "description": "Shows Leafy Grove Home for the Aged healthcare service",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
@@ -4854,7 +5625,9 @@
             "valueString": "HealthcareService"
           }
         ],
-        "reference": { "reference": "HealthcareService/example5" },
+        "reference": {
+          "reference": "HealthcareService/example5"
+        },
         "name": "HealthcareService - Leafy Grove Home for the Not Very Aged",
         "description": "Shows Leafy Grove Home for the Not Very Aged healthcare service",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
@@ -4866,7 +5639,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example8" },
+        "reference": {
+          "reference": "Location/example8"
+        },
         "name": "Location - Leafy Grove Home for the Aged",
         "description": "Shows Leafy Grove Home for the Aged as a location",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -4878,7 +5653,9 @@
             "valueString": "Location"
           }
         ],
-        "reference": { "reference": "Location/example9" },
+        "reference": {
+          "reference": "Location/example9"
+        },
         "name": "Location - Leafy Grove Home for the Not Very Aged",
         "description": "Shows Leafy Grove Home for the Not Very Aged as a location",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-location"
@@ -4890,7 +5667,9 @@
             "valueString": "MedicationDispense"
           }
         ],
-        "reference": { "reference": "MedicationDispense/example1" },
+        "reference": {
+          "reference": "MedicationDispense/example1"
+        },
         "name": "MedicationDispense - Second dispense for Reaptan",
         "description": "Shows a second medication dispense for Reaptan",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationdispense"
@@ -4902,7 +5681,9 @@
             "valueString": "Organization"
           }
         ],
-        "reference": { "reference": "Organization/example5" },
+        "reference": {
+          "reference": "Organization/example5"
+        },
         "name": "Organization - The Corporation of the Council of the Ward of Nundah",
         "description": "Shows the organisation of The Corporation of the Council of the Ward of Nundah",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-organization"
@@ -4914,7 +5695,9 @@
             "valueString": "Substance"
           }
         ],
-        "reference": { "reference": "Substance/example0" },
+        "reference": {
+          "reference": "Substance/example0"
+        },
         "name": "Substance - body substance of epiglottic mucus",
         "description": "Shows a body substance of epiglottic mucus",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-substance"
@@ -4926,7 +5709,9 @@
             "valueString": "Substance"
           }
         ],
-        "reference": { "reference": "Substance/example1" },
+        "reference": {
+          "reference": "Substance/example1"
+        },
         "name": "Substance - peanuts as an allergen",
         "description": "Peanuts as an allergen",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-substance"
@@ -4938,7 +5723,9 @@
             "valueString": "Substance"
           }
         ],
-        "reference": { "reference": "Substance/example2" },
+        "reference": {
+          "reference": "Substance/example2"
+        },
         "name": "Substance - medication substance with two active ingredients",
         "description": "Medication substance with two active ingredients",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-substance"
@@ -4950,7 +5737,9 @@
             "valueString": "MedicationAdministration"
           }
         ],
-        "reference": { "reference": "MedicationAdministration/example0" },
+        "reference": {
+          "reference": "MedicationAdministration/example0"
+        },
         "name": "MedicationAdministration - Administration of Chlorsig eye drops",
         "description": "Shows a medication administration of Chlorsig eye drops",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationadministration"
@@ -4962,7 +5751,9 @@
             "valueString": "MedicationAdministration"
           }
         ],
-        "reference": { "reference": "MedicationAdministration/example1" },
+        "reference": {
+          "reference": "MedicationAdministration/example1"
+        },
         "name": "MedicationAdministration - Self-administration of lantus 100 units/mL injection",
         "description": "Shows medication administration that is a self-administration of lantus 100 units/mL injection",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-medicationadministration"
@@ -4974,7 +5765,9 @@
             "valueString": "Procedure"
           }
         ],
-        "reference": { "reference": "Procedure/example0" },
+        "reference": {
+          "reference": "Procedure/example0"
+        },
         "name": "Procedure - Cryotherapy",
         "description": "Shows a cryotherapy procedure",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-procedure"
@@ -4986,7 +5779,9 @@
             "valueString": "Procedure"
           }
         ],
-        "reference": { "reference": "Procedure/example1" },
+        "reference": {
+          "reference": "Procedure/example1"
+        },
         "name": "Procedure - Cardiac catheterisation",
         "description": "Shows a cardiac catheterisation procedure",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-procedure"
@@ -4998,32 +5793,12 @@
             "valueString": "Procedure"
           }
         ],
-        "reference": { "reference": "Procedure/example2" },
+        "reference": {
+          "reference": "Procedure/example2"
+        },
         "name": "Procedure - Stent placement",
         "description": "Shows a stent placement procedure",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-procedure"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": { "reference": "StructureDefinition/individual-pronouns" },
-        "name": "Individual Pronouns",
-        "description": "The pronouns to use when referring to an individual in verbal or written communication.\n\nThis extension is published in this guide to pre-adopt an extension published in the R5 [FHIR Extensions Pack](http://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html)."
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": { "reference": "ValueSet/pronouns" },
-        "name": "Personal Pronouns",
-        "description": "Codes that indicate the pronouns to be used when communicating with or about an individual."
       }
     ],
     "page": {
@@ -5069,6 +5844,51 @@
           ],
           "nameUrl": "guidance.html",
           "title": "Guidance",
+          "generation": "markdown"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "generalguidance.html"
+            }
+          ],
+          "nameUrl": "generalguidance.html",
+          "title": "General Guidance",
+          "generation": "markdown"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "relationship.html"
+            }
+          ],
+          "nameUrl": "relationship.html",
+          "title": "Relationship with other IGs",
+          "generation": "markdown"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "future.html"
+            }
+          ],
+          "nameUrl": "future.html",
+          "title": "Future of AU Base",
           "generation": "markdown"
         },
         {
@@ -5139,11 +5959,41 @@
             },
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "support.html"
+            }
+          ],
+          "nameUrl": "support.html",
+          "title": "Support",
+          "generation": "markdown"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl": "downloads.html"
             }
           ],
           "nameUrl": "downloads.html",
           "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "license.html"
+            }
+          ],
+          "nameUrl": "license.html",
+          "title": "License and Legal",
           "generation": "markdown"
         },
         {
