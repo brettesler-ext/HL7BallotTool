@@ -294,6 +294,7 @@
 	<page key="index" name="Home"/>
 	<page key="guidance" name="Guidance"/>
 	<page key="generalguidance" name="General Guidance"/>
+	<page key="sexgender" name="Sex and Gender"/>
 	<page key="relationship" name="Relationship with other IGs"/>
 	<page key="future" name="Future of AU Base"/>
 	<page key="profiles-and-extensions" name="Profiles and Extensions"/>
