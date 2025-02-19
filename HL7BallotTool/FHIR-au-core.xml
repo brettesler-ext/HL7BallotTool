@@ -1,5 +1,7 @@
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org.au/fhir/core/1.0.0-ballot" ciUrl="https://build.fhir.org/ig/hl7au/au-fhir-core" defaultVersion="0.4.1-preview" defaultWorkgroup="au-fhir" gitUrl="https://github.com/hl7au/au-fhir-core" url="http://hl7.org.au/fhir/core">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org.au/fhir/core/1.0.0" ciUrl="https://build.fhir.org/ig/hl7au/au-fhir-core" defaultVersion="1.0.0" defaultWorkgroup="au-fhir" gitUrl="https://github.com/hl7au/au-fhir-core" url="http://hl7.org.au/fhir/core">
 	<version code="current" url="https://build.fhir.org/ig/hl7au/au-fhir-core"/>  
+    <version code="1.0.0" url="http://hl7.org.au/fhir/core/1.0.0"/>  
+    <version code="1.0.0-preview" url="http://hl7.org.au/fhir/core/1.0.0-preview"/>  
     <version code="1.0.0-ballot" url="http://hl7.org.au/fhir/core/1.0.0-ballot"/>  
     <version code="0.4.0-preview" url="http://hl7.org.au/fhir/core/0.4.0-preview"/>  
     <version code="0.3.0-ballot" url="http://hl7.org.au/fhir/core/0.3.0-ballot"/>  
@@ -39,29 +41,27 @@
 	<artifact id="AllergyIntolerance/penicillin" key="AllergyIntolerance-penicillin" name="AllergyIntolerance - Penicillin allergy" />
 	<artifact id="Condition/ckd" key="Condition-ckd" name="Condition - Chronic Kidney Disease" />
 	<artifact id="Condition/uti" key="Condition-uti" name="Condition - Urinary tract infection" />
-	<artifact id="Condition/cellulitis" key="Condition-cellulitis" name="Condition - Cellulitis of Right Knee" />
+	<artifact id="Condition/condition-masked" key="Condition-condition-masked" name="Condition - Data suppressed for category and code" />
 	<artifact id="Condition/noknown" key="Condition-noknown" name="Condition - No known condition" />
 	<artifact id="Encounter/covid-admin-1" key="Encounter-covid-admin-1" name="Encounter - COVID 19 Vaccine Administration Dose 1" />
 	<artifact id="Encounter/discharge-1" key="Encounter-discharge-1" name="Encounter - Discharge" />
 	<artifact id="Encounter/telehealth" key="Encounter-telehealth" name="Encounter - telehealth" />
-	<artifact id="Encounter/consultation" key="Encounter-consultation" name="Encounter - consultation" />
 	<artifact id="Immunization/covid-1" key="Immunization-covid-1" name="Immunization - COVID Dose 1" />
 	<artifact id="Immunization/zoster-notgiven" key="Immunization-zoster-notgiven" name="Immunization - Administration of Zoster vaccination refused" />
 	<artifact id="Location/bobrester-medical-center" key="Location-bobrester-medical-center" name="Location - Tindal Building" />
 	<artifact id="Location/patient-home" key="Location-patient-home" name="Location - Patient home" />
 	<artifact id="Location/murrabit-hospital" key="Location-murrabit-hospital" name="Location - Murrabit Public Hospital" />
-	<artifact id="Location/mitchells-hill-audiology" key="Location-mitchells-hill-audiology" name="Location - Mitchells Hill Audiology" />
 	<artifact id="Medication/1active-ingredient" key="Medication-1active-ingredient" name="Medication - Branded pack with one active ingredient" />
 	<artifact id="Medication/2active-ingredients" key="Medication-2active-ingredients" name="Medication - Product with two active ingredients" />
 	<artifact id="Medication/simvastatin" key="Medication-simvastatin" name="Medication - Simvastatin 40 MG Disintegrating Oral Tablet" />
-	<artifact id="MedicationRequest/paracetamol-codeine" key="MedicationRequest-paracetamol-codeine" name="MedicationRequest - active prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg" />
+	<artifact id="MedicationRequest/paracetamol-codeine" key="MedicationRequest-paracetamol-codeine" name="MedicationRequest - prescription, paracetamol 500 mg + codeine phosphate hemihydrate 30 mg (missing data for status and requester)" />
 	<artifact id="MedicationRequest/reaptan" key="MedicationRequest-reaptan" name="MedicationRequest - active prescription, Reaptan" />
-	<artifact id="Observation/bloodpressure-1" key="Observation-bloodpressure-1" name="Observation - Blood Pressure (systolic and dystolic)" />
+	<artifact id="MedicationRequest/simvastatin" key="MedicationRequest-simvastatin" name="MedicationRequest - active prescription, Simvastatin" />
+	<artifact id="Observation/bloodpressure-1" key="Observation-bloodpressure-1" name="Observation - Blood Pressure (systolic and diastolic)" />
 	<artifact id="Observation/bloodpressure-data-absent" key="Observation-bloodpressure-data-absent" name="Observation - Blood Pressure (data absent for diastolic)" />
 	<artifact id="Observation/bodyheight-1" key="Observation-bodyheight-1" name="Observation - Height" />
 	<artifact id="Observation/bodytemp-1" key="Observation-bodytemp-1" name="Observation - Temperature" />
 	<artifact id="Observation/bodyweight-1" key="Observation-bodyweight-1" name="Observation - Body weight" />
-	<artifact id="Observation/bun-mcc" key="Observation-bun-mcc" name="Observation - Urea nitrogen [Mass/volume] in Serum or Plasma" />
 	<artifact id="Observation/hearing-threshold-1" key="Observation-hearing-threshold-1" name="Observation - Hearing threshold Ear (left) 500 Hz" />
 	<artifact id="Observation/heartrate-1" key="Observation-heartrate-1" name="Observation - Heart rate" />
 	<artifact id="Observation/pulserate-1" key="Observation-pulserate-1" name="Observation - Pulse rate" />
@@ -73,10 +73,11 @@
 	<artifact id="Observation/resprate-1" key="Observation-resprate-1" name="Observation - Respiration rate" />
 	<artifact id="Observation/smokingstatus-current-smoker" key="Observation-smokingstatus-current-smoker" name="Observation - Current smoker" />
 	<artifact id="Observation/waistcircum-1" key="Observation-waistcircum-1" name="Observation - Waist Circumference" />
+	<artifact id="Observation/observation-masked" key="Observation-observation-masked" name="Observation - Data suppressed for category, code, effective[x] and value[x]" />
 	<artifact id="Organization/bobrester-medical-center" key="Organization-bobrester-medical-center" name="Organization - Bobrester Medical Centre" />
 	<artifact id="Organization/murrabit-hospital" key="Organization-murrabit-hospital" name="Organization - Murrabit Public Hospital" />
 	<artifact id="Organization/mitchells-hill-audiology" key="Organization-mitchells-hill-audiology" name="Organization - Mitchells Hill Audiology" />
-	<artifact id="Patient/dan-harry" key="Patient-dan-harry" name="Patient - Mr. Harry Dan" />
+	<artifact id="Patient/ronny-irvine" key="Patient-ronny-irvine" name="Patient - Ronny Lawrence Irvine (missing data for birth date)" />
 	<artifact id="Patient/bennelong-anne" key="Patient-bennelong-anne" name="Patient - Mrs. Anne Bennelong" />
 	<artifact id="Patient/wang-li" key="Patient-wang-li" name="Patient - Mr. Li Wang" />
 	<artifact id="Patient/banks-mia-leanne" key="Patient-banks-mia-leanne" name="Patient - Mia Leanne Banks" />
@@ -91,9 +92,12 @@
 	<artifact id="PractitionerRole/nephrologist-darleen-mackay" key="PractitionerRole-nephrologist-darleen-mackay" name="PractitionerRole - Nephrologist" />
 	<artifact id="Procedure/dialysis" key="Procedure-dialysis" name="Procedure - Dialysis" />
 	<artifact id="Procedure/stentinsertion" key="Procedure-stentinsertion" name="Procedure - Stent insertion" />
+	<artifact id="RelatedPerson/banks-mia-leanne-father" key="RelatedPerson-banks-mia-leanne-father" name="RelatedPerson - Father of Mia Leanne Banks" />
+	<artifact id="RelatedPerson/wang-li-friend" key="RelatedPerson-wang-li-friend" name="RelatedPerson - Friend of Mr. Li Wang" />
 	<artifact id="Specimen/nasoswab" key="Specimen-nasoswab" name="Specimen - Naso swab (COVID test)" />
 	<artifact id="StructureDefinition/au-core-diagnosticresult-path" key="StructureDefinition-au-core-diagnosticresult-path" name="AU Core Pathology Result Observation" />
 	<artifact id="StructureDefinition/au-core-diagnosticresult" key="StructureDefinition-au-core-diagnosticresult" name="AU Core Diagnostic Result Observation" />
+	<artifact id="StructureDefinition/au-core-relatedperson" key="StructureDefinition-au-core-relatedperson" name="AU Core RelatedPerson" />
 	<page key="NA" name="(NA)"/>
 	<page key="many" name="(many)"/>
 	<page key="toc" name="Table of Contents"/>
@@ -104,18 +108,22 @@
 	<page key="guidance" name="Guidance"/>
 	<page key="general-guidance" name="General Guidance"/>
 	<page key="medicine-information" name="Medicine Information"/>
-	<page key="aucdi" name="AUCDI"/>
+	<page key="sex-and-gender" name="Sex and Gender"/>
+	<page key="aucdi" name="AU Core Data for Interoperability"/>
 	<page key="relationship" name="Relationship with other IGs"/>
 	<page key="comparison" name="Comparison with other national and international IGs"/>
 	<page key="variance" name="AU Variance Statement"/>
 	<page key="future" name="Future of AU Core"/>
+	<page key="security" name="Security and Privacy"/>
+	<page key="fhirartefacts" name="FHIR Artefacts"/>
+	<page key="artifacts" name="Artefacts Summary"/>
 	<page key="profiles-and-extensions" name="Profiles and Extensions"/>
 	<page key="search-parameters" name="Search Parameters"/>
 	<page key="terminology" name="Terminology"/>
-	<page key="security" name="Security and Privacy"/>
 	<page key="capability-statements" name="Capability Statements"/>
 	<page key="actors" name="Actor Definitions"/>
 	<page key="examples" name="Examples"/>
+	<page key="support" name="Support"/>
 	<page key="downloads" name="Downloads"/>
 	<page key="license" name="License and Legal"/>
 	<page key="changes" name="Change Log"/>
