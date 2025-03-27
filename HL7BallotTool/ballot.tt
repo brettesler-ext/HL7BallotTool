@@ -21,19 +21,22 @@
 	string[] canonicals = new string[] { "http://hl7.org.au/fhir/core",   "http://hl7.org.au/fhir", "http://hl7.org.au/fhir/pd", "http://hl7.org.au/fhir/ereq", "http://hl7.org.au/fhir/ps" };
 	
 	// default current version for IG
-	string[] defaultv = new string[] { "1.0.0", "5.0.0", "2.0.1", "0.1.0-ballot", "0.1.0-preview" };
+	string[] defaultv = new string[] { "1.0.0", "5.0.0", "2.0.1", "0.3.0-preview", "0.1.0-preview" };
 
 	// past versions list
 	List<string>[] versions = new List<string>[] {
 		new List<string> {
+			"1.1.0-preview",
 			"1.0.0",
 			"1.0.0-preview",
 			"1.0.0-ballot", 
+			"0.4.1-preview", 
 			"0.4.0-preview", 
 			"0.3.0-ballot", 
 			"0.2.2-preview",
 		},
 		new List<string> {
+			"5.1.0-preview",
 			"5.0.0",
 			"4.2.2-ballot",
 			"4.2.1-preview",
@@ -45,6 +48,8 @@
 			"2.0.1"
 		},
 		new List<string> {
+			"0.3.0-preview",
+			"0.2.0-preview",
 			"0.1.0-ballot"
 		},
 		new List<string> {

@@ -3,7 +3,7 @@
   "id": "hl7.fhir.au.ps",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.au.ps</b></p><a name=\"hl7.fhir.au.ps\"> </a><a name=\"hchl7.fhir.au.ps\"> </a><a name=\"hl7.fhir.au.ps-en-AU\"> </a><h2>AUPatientSummaryImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps</pre><div><p>TBD: A brief description of what MyIG is about (probably the same text as in your readme)</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.au.ps</b></p><a name=\"hl7.fhir.au.ps\"> </a><a name=\"hchl7.fhir.au.ps\"> </a><a name=\"hl7.fhir.au.ps-en-AU\"> </a><h2>AUPatientSummaryImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps</pre><div><p>AU Patient Summary is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. It complies with the requirements defined in IPS and AU Core, and sets the minimum expectations on FHIR resources to support conformance and implementation in systems.</p>\n</div></div>"
   },
   "extension": [
     {
@@ -21,7 +21,7 @@
   "title": "AU Patient Summary Implementation Guide",
   "status": "draft",
   "experimental": false,
-  "date": "2025-02-13T20:33:06+00:00",
+  "date": "2025-03-26T00:00:32+00:00",
   "publisher": "HL7 Australia",
   "contact": [
     {
@@ -35,7 +35,7 @@
       ]
     }
   ],
-  "description": "TBD: A brief description of what MyIG is about (probably the same text as in your readme)",
+  "description": "AU Patient Summary is provided to support the use of patient summaries in HL7® FHIR®© in an Australian context. It complies with the requirements defined in IPS and AU Core, and sets the minimum expectations on FHIR resources to support conformance and implementation in systems.",
   "jurisdiction": [
     {
       "coding": [
@@ -467,7 +467,7 @@
       },
       {
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode": "hl7.fhir.uv.tools.r4#0.3.0"
+        "valueCode": "hl7.fhir.uv.tools.r4#0.4.1"
       },
       {
         "extension": [
@@ -852,7 +852,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -866,7 +866,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -880,7 +880,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -894,7 +894,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -908,7 +908,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -922,7 +922,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -936,7 +936,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -950,7 +950,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -964,21 +964,21 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
           "reference": "StructureDefinition/au-ps-medicationstatement"
         },
         "name": "AU PS MedicationStatement",
-        "description": "This profile sets minimum expectations for a MedicationStatement resource in the context of a patient summary in an Australian context. It is based on the [AU Base MedicationStatement](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationstatement.html) profile, and applies the constraints of [AU Core MedicationStatement](http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement) and [MedicationStatement (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips).",
+        "description": "This profile sets minimum expectations for a MedicationStatement resource in the context of a patient summary in an Australian context. It is based on the [AU Base MedicationStatement](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationstatement.html) profile, and applies the constraints of [AU Core MedicationStatement](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-medicationstatement.html) and [MedicationStatement (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips).",
         "exampleBoolean": false
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -992,7 +992,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -1006,7 +1006,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -1020,7 +1020,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
@@ -1034,21 +1034,49 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
           "reference": "StructureDefinition/au-ps-relatedperson"
         },
         "name": "AU PS RelatedPerson",
-        "description": "This profile sets minimum expectations for a RelatedPerson resource in the context of a patient summary in an Australian context. It is based on the [AU Base Related Person](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html) profile, and applies the constraints of [AU Core RelatedPerson](http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson.html) and IPS.",
+        "description": "This profile sets minimum expectations for a RelatedPerson resource in the context of a patient summary in an Australian context. It is based on the [AU Base Related Person](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html) profile, and applies the constraints of [AU Core RelatedPerson](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-relatedperson.html) and IPS.",
         "exampleBoolean": false
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition"
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/section-emptyreason"
+        },
+        "name": "Bundle - Section empty reason",
+        "description": "Shows an example of a software-assembled patient summary that demonstrates the system has no information for the sections: problems, allergies, medications, immunisations. Example for the *AU Patient Summary Bundle* and *AU Patient Summary Composition* profile. Patient: Ronny Lawrence Irvine.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/basicsummary"
+        },
+        "name": "Bundle - Basic summary",
+        "description": "Shows an example of a provider curated patient summary that demonstrates no known problems or disabilities, current allergies and intolerances, and current medication use. Example for the *AU Patient Summary Bundle* and *AU Patient Summary Composition* profile. Patient: Mia Leanne Banks.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
