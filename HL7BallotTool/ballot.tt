@@ -14,6 +14,8 @@
 	// source files
     string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json", "ImplementationGuide-hl7.fhir.au.ereq.json", "ImplementationGuide-hl7.fhir.au.ps.json" };
 	
+	string[] changes = new string[] { "ImplementationGuide-hl7.fhir.au.core.change.json", "ImplementationGuide-hl7.fhir.au.base.change.json", "ImplementationGuide-hl7.fhir.au.pd.change.json", "ImplementationGuide-hl7.fhir.au.ereq.change.json", "ImplementationGuide-hl7.fhir.au.ps.change.json" };
+	
 	// ci build location
 	string[] cibuild = new string[] { "hl7au/au-fhir-core", "hl7au/au-fhir-base", "hl7au/au-fhir-pd", "hl7au/au-fhir-erequesting", "hl7au/au-fhir-ps"};
 	
