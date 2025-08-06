@@ -47,6 +47,9 @@
 	<artifact id="ServiceRequest/order-fbc-1" key="ServiceRequest-order-fbc-1" name="ServiceRequest - Full Blood Count" />
 	<artifact id="ServiceRequest/order-xray-1" key="ServiceRequest-order-xray-1" name="ServiceRequest - X-Ray" />
 	<artifact id="ValueSet/ranzcr-radiology-referral" key="ValueSet-ranzcr-radiology-referral" name="RANZCR Radiology Referral" />
+	<artifact id="ActorDefinition/au-erequesting-actor-patientaccess" key="ActorDefinition-au-erequesting-actor-patientaccess" name="AU eRequesting Patient Access" deprecated="true"/>
+	<artifact id="CapabilityStatement/au-erequesting-patientaccess" key="CapabilityStatement-au-erequesting-patientaccess" name="AU eRequesting Patient Access CapabilityStatement" deprecated="true"/>
+	<artifact id="StructureDefinition/au-erequesting-servicerequest" key="StructureDefinition-au-erequesting-servicerequest" name="AU eRequesting ServiceRequest" deprecated="true"/>
 	<page key="NA" name="(NA)"/>
 	<page key="many" name="(many)"/>
 	<page key="toc" name="Table of Contents"/>
@@ -54,20 +57,25 @@
 	<page key="conformance" name="Conformance"/>
 	<page key="guidance" name="Guidance"/>
 	<page key="sex-and-gender" name="Sex and Gender"/>
-	<page key="auereqdi" name="AU eRequesting Data for Interoperability Mappings"/>
-	<page key="relationship" name="Relationships to Other Specifications"/>
+	<page key="auereqdi" name="AU eRequesting Data for Interoperability"/>
+	<page key="relationship" name="Relationship with other IGs"/>
 	<page key="variance" name="AU Variance Statement"/>
-	<page key="future" name="Future of AU eRequesting"/>
+	<page key="future" name="Future of AU eRequesting Page"/>
 	<page key="use-cases" name="Use Cases"/>
 	<page key="fhirartifacts" name="FHIR Artefacts"/>
 	<page key="artifacts" name="Artefacts Summary"/>
 	<page key="profiles-and-extensions" name="Profiles and Extensions"/>
 	<page key="terminology" name="Terminology"/>
-	<page key="capability-statements" name="Actors and Capabilities"/>
+	<page key="capability-statements" name="Capability Statements"/>
 	<page key="examples" name="Examples"/>
 	<page key="support" name="Support"/>
 	<page key="downloads" name="Downloads"/>
-	<page key="license" name="License and Legal"/>
+	<page key="license" name="License"/>
 	<page key="changes" name="Change Log"/>
+	<page key="search-parameters-and-operations" name="Search Parameters and Operations" deprecated="true"/>
+	<page key="artefacts" name="FHIR artefacts" deprecated="true"/>
+	<page key="actors" name="Actor Definitions" deprecated="true"/>
+	<page key="general-guidance" name="General Guidance" deprecated="true"/>
+	<page key="erequesting-future" name="Future of AU eRequesting" deprecated="true"/>
 </specification>
         

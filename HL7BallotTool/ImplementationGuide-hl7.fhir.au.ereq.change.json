@@ -10,6 +10,65 @@
     "0.2.0-preview",
     "0.1.0-ballot"
   ],
-  "change": [],
-  "deprecate": []
+  "change": [
+    {
+      "key": "auereqdi",
+      "name": "AU eRequesting Data for Interoperability"
+    },
+    {
+      "key": "relationship",
+      "name": "Relationship with other IGs"
+    },
+    {
+      "key": "future",
+      "name": "Future of AU eRequesting Page"
+    },
+    {
+      "key": "capability-statements",
+      "name": "Capability Statements"
+    },
+    {
+      "key": "license",
+      "name": "License"
+    }
+  ],
+  "deprecate": [
+    {
+      "id": "ActorDefinition/au-erequesting-actor-patientaccess",
+      "key": "ActorDefinition-au-erequesting-actor-patientaccess",
+      "name": "AU eRequesting Patient Access"
+    },
+    {
+      "id": "CapabilityStatement/au-erequesting-patientaccess",
+      "key": "CapabilityStatement-au-erequesting-patientaccess",
+      "name": "AU eRequesting Patient Access CapabilityStatement"
+    },
+    {
+      "id": "StructureDefinition/au-erequesting-servicerequest",
+      "key": "StructureDefinition-au-erequesting-servicerequest",
+      "name": "AU eRequesting ServiceRequest"
+    }
+  ],
+  "pagedeprecate": [
+    {
+      "key": "search-parameters-and-operations",
+      "name": "Search Parameters and Operations"
+    },
+    {
+      "key" : "artefacts",
+      "name" : "FHIR artefacts"
+    },
+    {
+      "key" : "actors",
+      "name" : "Actor Definitions"
+    },
+    {
+      "key" : "general-guidance",
+      "name" : "General Guidance"
+    },
+    {
+      "key" : "erequesting-future",
+      "name" : "Future of AU eRequesting"
+    }
+  ]
 }

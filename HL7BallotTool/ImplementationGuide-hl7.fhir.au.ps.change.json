@@ -9,5 +9,7 @@
     "0.1.0-preview"
   ],
   "change": [],
-  "deprecate": []
+  "deprecate": [],
+  "pagedeprecate": []
+
 }

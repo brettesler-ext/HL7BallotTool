@@ -52,7 +52,10 @@
 	Dictionary<string, string> changesdict = new Dictionary<string, string>();
     foreach(var changevalue in changessource.change)
 	{
-		changesdict.Add(changevalue.id.ToString(), changevalue.name.ToString() );
+		if(changevalue.id == null)
+			changesdict.Add(changevalue.key.ToString(), changevalue.name.ToString() );
+		else
+			changesdict.Add(changevalue.id.ToString(), changevalue.name.ToString() );
 	}
 
 	foreach(var rnode in datasource.definition.resource)
@@ -83,7 +86,15 @@
 	<page key="NA" name="(NA)"/>
 	<page key="many" name="(many)"/>
 <#
-		pages(datasource.definition.page);
+	pages(datasource.definition.page, changesdict);
+	
+	foreach(var pagedepvalue in changessource.pagedeprecate)
+	{
+#>
+	<page key="<#= pagedepvalue.key #>" name="<#= pagedepvalue.name #>" deprecated="true"/>
+<#	
+	
+	}
 #>
 </specification>
         <#
@@ -103,14 +114,18 @@ private void save(string outputFileName) {
 #>
 
 <#+
-private void pages(dynamic node) {
+private void pages(dynamic node, Dictionary<string, string> dict) {
 
 	if(node.nameUrl != null)
 	{
 		string key = node.nameUrl.ToString().Replace(".html","");
 
+		string title = node.title;
+		if(dict.ContainsKey(key))
+			title = dict[key];
+
 		#>
-	<page key="<#= key #>" name="<#= node.title #>"/>
+	<page key="<#= key #>" name="<#= title #>"/>
 <#+
 	}
 
@@ -118,6 +133,6 @@ private void pages(dynamic node) {
 		return;
 
 	foreach(var pnode in node.page)
-		pages(pnode);
+		pages(pnode, dict);
 }
 #>
