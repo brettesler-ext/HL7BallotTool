@@ -5,15 +5,15 @@
   "defaultver": "1.0.0",
   "versions": [
     "2.0.0-ballot",
-    "2.0.0-draft",
-    "1.1.0-preview",
+    "deprecated:2.0.0-draft",
+    "deprecated:1.1.0-preview",
     "1.0.0",
-    "1.0.0-preview",
-    "1.0.0-ballot",
-    "0.4.1-preview",
-    "0.4.0-preview",
-    "0.3.0-ballot",
-    "0.2.2-preview"
+    "deprecated:1.0.0-preview",
+    "deprecated:1.0.0-ballot",
+    "deprecated:0.4.1-preview",
+    "deprecated:0.4.0-preview",
+    "deprecated:0.3.0-ballot",
+    "deprecated:0.2.2-preview"
   ],
   "change": [
     {

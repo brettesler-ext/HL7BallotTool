@@ -40,9 +40,16 @@
 	<version code="current" url="https://build.fhir.org/ig/<#= cibuild #>"/><#
 		foreach(var version in changessource.versions)
 		{
-		
+			string deprecated = "";
+			string versionval = version;
+			if(versionval.StartsWith("deprecated:"))
+			{
+				versionval = versionval.Replace("deprecated:", "");
+				deprecated = " deprecated=\"true\"";
+			}
+
 #>  
-    <version code="<#= version #>" url="<#= canonical #>/<#= version #>"/><# 
+    <version code="<#= versionval #>"<#= deprecated #> url="<#= canonical #>/<#= versionval #>"/><# 
 		} 
 #>	
 	<artifactPageExtension value="-definitions"/>

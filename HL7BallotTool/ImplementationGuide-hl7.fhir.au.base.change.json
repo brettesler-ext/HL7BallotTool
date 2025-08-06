@@ -5,14 +5,14 @@
   "defaultver": "5.0.0",
   "versions": [
     "6.0.0-ballot",
-    "6.0.0-draft",
-    "5.1.0-preview",
+    "deprecated:6.0.0-draft",
+    "deprecated:5.1.0-preview",
     "5.0.0",
-    "4.2.2-ballot",
-    "4.2.1-preview",
-    "4.2.0-preview",
-    "4.1.2-preview",
-    "4.1.0"
+    "deprecated:4.2.2-ballot",
+    "deprecated:4.2.1-preview",
+    "deprecated:4.2.0-preview",
+    "deprecated:4.1.2-preview",
+    "deprecated:4.1.0"
   ],
   "deprecate": [
     {
