@@ -117,7 +117,7 @@
 	<artifact id="ValueSet/au-v2-0443-extended" key="ValueSet-au-v2-0443-extended" name="hl7VS-providerRole - AU Extended" />
 	<artifact id="ValueSet/service-provision-conditions" key="ValueSet-service-provision-conditions" name="Service Provision Conditions Australian Concepts" />
 	<artifact id="CodeSystem/pbs-item-external" key="CodeSystem-pbs-item-external" name="PBS Item Codes" />
-	<artifact id="ValueSet/pbs-item" key="ValueSet-pbs-item" name="PBS Item Codes ValueSet" />
+	<artifact id="ValueSet/pbs-item" key="ValueSet-pbs-item" name="PBS Item Codes Valueset" />
 	<artifact id="ValueSet/mims" key="ValueSet-mims" name="MIMS" />
 	<artifact id="CodeSystem/mims-external" key="CodeSystem-mims-external" name="Monthly Index of Medical Specialties (MIMS)" />
 	<artifact id="ValueSet/amt-mp-codes" key="ValueSet-amt-mp-codes" name="AMT Medicinal Product and Substances" />
@@ -137,17 +137,17 @@
 	<artifact id="CodeSystem/au-location-type" key="CodeSystem-au-location-type" name="Location Type AU" />
 	<artifact id="ValueSet/au-v3-ServiceDeliveryLocationRoleType-extended" key="ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended" name="ServiceDeliveryLocationRoleType - AU Extended" />
 	<artifact id="CodeSystem/medicine-item-change" key="CodeSystem-medicine-item-change" name="Medicine Item Change" />
-	<artifact id="ValueSet/medicine-item-change" key="ValueSet-medicine-item-change" name="Medicine Item Change ValueSet" />
+	<artifact id="ValueSet/medicine-item-change" key="ValueSet-medicine-item-change" name="Medicine Item Change Valueset" />
 	<artifact id="ValueSet/au-timezone" key="ValueSet-au-timezone" name="AU Time Zone" />
 	<artifact id="CodeSystem/au-observation-category" key="CodeSystem-au-observation-category" name="Observation Category Codes AU" />
 	<artifact id="ValueSet/au-observation-category-extended" key="ValueSet-au-observation-category-extended" name="Observation Category Codes - AU Extended" />
 	<artifact id="CodeSystem/rsg-source-document-type" key="CodeSystem-rsg-source-document-type" name="AU Recorded Sex or Gender Source Document Type" />
 	<artifact id="CodeSystem/rsg-type" key="CodeSystem-rsg-type" name="AU Recorded Sex or Gender Type Codes" />
-	<artifact id="ValueSet/name-context" key="ValueSet-name-context" name="Name Context ValueSet" />
+	<artifact id="ValueSet/name-context" key="ValueSet-name-context" name="Name Context Valueset" />
 	<artifact id="CodeSystem/name-context" key="CodeSystem-name-context" name="Name Context Codes" />
 	<artifact id="ValueSet/au-jurisdiction-extended" key="ValueSet-au-jurisdiction-extended" name="Jurisdiction ValueSet - AU Extended" />
 	<artifact id="ValueSet/rsg-source-document-type" key="ValueSet-rsg-source-document-type" name="AU Recorded Sex or Gender (RSG) Source Document Type" />
-	<artifact id="ValueSet/rsg-type" key="ValueSet-rsg-type" name="AU Recorded Sex or Gender Type ValueSet" />
+	<artifact id="ValueSet/rsg-type" key="ValueSet-rsg-type" name="AU Recorded Sex or Gender Type Value" />
 	<artifact id="StructureDefinition/au-timezone" key="StructureDefinition-au-timezone" name="Australian Time Zone" />
 	<artifact id="StructureDefinition/name-context" key="StructureDefinition-name-context" name="Name Context" />
 	<artifact id="StructureDefinition/au-procedure" key="StructureDefinition-au-procedure" name="AU Base Procedure" />
@@ -183,7 +183,7 @@
 	<artifact id="Organization/example3" key="Organization-example3" name="Organization - a typical Organisation the General Practitioner belongs to" />
 	<artifact id="PractitionerRole/example3" key="PractitionerRole-example3" name="PractitionerRole - a typical Practitioner Role as a General Practitioner" />
 	<artifact id="HealthcareService/example3" key="HealthcareService-example3" name="HealthcareService - general practice" />
-	<artifact id="Patient/example-sex-and-gender" key="Patient-example-sex-and-gender" name="Transgender Person Example" />
+	<artifact id="Patient/example-sex-and-gender" key="Patient-example-sex-and-gender" name="Patient - Transgender Person Example" />
 	<artifact id="Patient/example0" key="Patient-example0" name="Patient - with IHI, Medicare Card Number and the extension for Indigenous Status" />
 	<artifact id="Patient/example1" key="Patient-example1" name="Patient - with IHI, DVA Number (with specific card colour) and the extension for Indigenous Status" />
 	<artifact id="Patient/example2" key="Patient-example2" name="Patient - with no birth date, and is eligible for Closing the Gap registration" />
@@ -291,6 +291,7 @@
 	<artifact id="ValueSet/au-coverage-type-extended" key="ValueSet-au-coverage-type-extended" name="Coverage Type and Self-Pay Codes - AU Extended" deprecated="true"/>
 	<artifact id="ValueSet/au-coverage-selfpay-extended" key="ValueSet-au-coverage-selfpay-extended" name="Coverage SelfPay Codes - AU Extended" deprecated="true"/>
 	<artifact id="ValueSet/rsg-source-document-jurisdiction" key="ValueSet-rsg-source-document-jurisdiction" name="AU Recorded Sex or Gender (RSG) Source Document Jurisdiction" deprecated="true"/>
+	<artifact id="Encounter/example2" key="Encounter-example2" name="Encounter - Annual check up" deprecated="true"/>
 	<page key="NA" name="(NA)"/>
 	<page key="many" name="(many)"/>
 	<page key="toc" name="Table of Contents"/>

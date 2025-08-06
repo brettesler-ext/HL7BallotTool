@@ -27,10 +27,15 @@
     {
       "id": "PractitionerRole/surgeon-chau-fryer",
       "name": "PractitionerRole - Surgeon Fryer"
+    },
+    {
+      "key": "aucdi",
+      "name": "AUCDI"
     }
   ],
-  "pagedeprecate": [],
-
+  "pagedeprecate": [
+    { "key" : "must-support", "name" : "Must Support" }
+  ],
   "deprecate": [
     {
       "id": "Immunization/covid-2",

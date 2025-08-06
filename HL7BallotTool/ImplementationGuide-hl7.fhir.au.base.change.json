@@ -59,82 +59,87 @@
       "id": "ValueSet/rsg-source-document-jurisdiction",
       "key": "ValueSet-rsg-source-document-jurisdiction",
       "name": "AU Recorded Sex or Gender (RSG) Source Document Jurisdiction"
+    },
+    {
+      "id": "Encounter/example2",
+      "key": "Encounter-example2",
+      "name": "Encounter - Annual check up"
     }
   ],
   "pagedeprecate": [],
-   "change": [
-      {
-        "id": "ValueSet/contact-purpose",
-        "name": "Contact Purpose ValueSet"
-      },
-      {
-        "id": "ValueSet/pbs-item",
-        "name": "PBS Item Codes ValueSet"
-      },
-      {
-        "id": "ValueSet/medication-type",
-        "name": "Medication Type ValueSet"
-      },
+  "change": [
+    {
+      "id": "ValueSet/contact-purpose",
+      "name": "Contact Purpose ValueSet"
+    },
+    {
+      "id": "ValueSet/pbs-item",
+      "name": "PBS Item Codes Valueset"
+    },
+    {
+      "id": "ValueSet/medication-type",
+      "name": "Medication Type ValueSet"
+    },
 
-      {
-        "id": "CodeSystem/medication-type",
-        "name": "Medication Type Codes"
-      },
-      {
-        "id": "CodeSystem/service-provision-conditions",
-        "name": "Service Provision Conditions Australian Concepts Codes"
-      },
-      {
-        "id": "CodeSystem/contact-purpose",
-        "name": "Contact Purpose Codes"
-      },
-      {
-        "id": "ValueSet/medicine-item-change",
-        "name": "Medicine Item Change ValueSet"
-      },
-      {
-        "id": "CodeSystem/rsg-type",
-        "name": "AU Recorded Sex or Gender Type Codes"
-      },
-      {
-        "id": "ValueSet/name-context",
-        "name": "Name Context ValueSet"
-      },
-      {
-        "id": "CodeSystem/name-context",
-        "name": "Name Context Codes"
-      },
-      {
-        "id": "ValueSet/rsg-type",
-        "name": "AU Recorded Sex or Gender Type ValueSet"
-      },
-      {
-        "id": "Practitioner/example-sex-and-gender",
-        "name": "Practitioner - for use in sex and gender"
-      },
-      {
-        "id": "Patient/example-sex-and-gender",
-        "name": "Transgender Person Example"
-      },
-      {
-        "id": "HealthcareService/example0",
-        "name": "HealthcareService - with HPI-O and eligibility"
-      },
-      {
-        "id": "Organization/example4",
-        "name": "Organization - with source"
-      },
-      {
-        "id": "RelatedPerson/example-sex-and-gender",
-        "name": "RelatedPerson - as family member, for use in sex and gender"
-      },
-      {
-        "id": "Encounter/example1",
-        "name": "Encounter - with narative description"
-      },
-      {
-        "id": "HealthcareService/example5",
-        "name": "HealthcareService - Leafy Grove Home for the Not Very Aged"
-      }
-    ]
+    {
+      "id": "CodeSystem/medication-type",
+      "name": "Medication Type Codes"
+    },
+    {
+      "id": "CodeSystem/service-provision-conditions",
+      "name": "Service Provision Conditions Australian Concepts Codes"
+    },
+    {
+      "id": "CodeSystem/contact-purpose",
+      "name": "Contact Purpose Codes"
+    },
+    {
+      "id": "ValueSet/medicine-item-change",
+      "name": "Medicine Item Change Valueset"
+    },
+    {
+      "id": "CodeSystem/rsg-type",
+      "name": "AU Recorded Sex or Gender Type Codes"
+    },
+    {
+      "id": "ValueSet/name-context",
+      "name": "Name Context Valueset"
+    },
+    {
+      "id": "CodeSystem/name-context",
+      "name": "Name Context Codes"
+    },
+    {
+      "id": "ValueSet/rsg-type",
+      "name": "AU Recorded Sex or Gender Type Value"
+    },
+    {
+      "id": "Practitioner/example-sex-and-gender",
+      "name": "Practitioner - for use in sex and gender"
+    },
+    {
+      "id": "Patient/example-sex-and-gender",
+      "name": "Patient - Transgender Person Example"
+    },
+    {
+      "id": "HealthcareService/example0",
+      "name": "HealthcareService - with HPI-O and eligibility"
+    },
+    {
+      "id": "Organization/example4",
+      "name": "Organization - with source"
+    },
+    {
+      "id": "RelatedPerson/example-sex-and-gender",
+      "name": "RelatedPerson - as family member, for use in sex and gender"
+    },
+    {
+      "id": "Encounter/example1",
+      "name": "Encounter - with narative description"
+    },
+    {
+      "id": "HealthcareService/example5",
+      "name": "HealthcareService - Leafy Grove Home for the Not Very Aged"
+    }
+  ]
 }
