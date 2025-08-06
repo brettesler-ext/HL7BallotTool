@@ -15,49 +15,6 @@
     string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json", "ImplementationGuide-hl7.fhir.au.ereq.json", "ImplementationGuide-hl7.fhir.au.ps.json" };
 	
 	string[] changes = new string[] { "ImplementationGuide-hl7.fhir.au.core.change.json", "ImplementationGuide-hl7.fhir.au.base.change.json", "ImplementationGuide-hl7.fhir.au.pd.change.json", "ImplementationGuide-hl7.fhir.au.ereq.change.json", "ImplementationGuide-hl7.fhir.au.ps.change.json" };
-	
-	// ci build location
-	string[] cibuild = new string[] { "hl7au/au-fhir-core", "hl7au/au-fhir-base", "hl7au/au-fhir-pd", "hl7au/au-fhir-erequesting", "hl7au/au-fhir-ps"};
-	
-	// canonical for the IG
-	string[] canonicals = new string[] { "http://hl7.org.au/fhir/core",   "http://hl7.org.au/fhir", "http://hl7.org.au/fhir/pd", "http://hl7.org.au/fhir/ereq", "http://hl7.org.au/fhir/ps" };
-	
-	// default current version for IG
-	string[] defaultv = new string[] { "1.0.0", "5.0.0", "2.0.1", "0.3.0-preview", "0.1.0-preview" };
-
-	// past versions list
-	List<string>[] versions = new List<string>[] {
-		new List<string> {
-			"1.1.0-preview",
-			"1.0.0",
-			"1.0.0-preview",
-			"1.0.0-ballot", 
-			"0.4.1-preview", 
-			"0.4.0-preview", 
-			"0.3.0-ballot", 
-			"0.2.2-preview",
-		},
-		new List<string> {
-			"5.1.0-preview",
-			"5.0.0",
-			"4.2.2-ballot",
-			"4.2.1-preview",
-			"4.2.0-preview",
-			"4.1.2-preview",
-			"4.1.0" 
-		},
-		new List<string> {
-			"2.0.1"
-		},
-		new List<string> {
-			"0.3.0-preview",
-			"0.2.0-preview",
-			"0.1.0-ballot"
-		},
-		new List<string> {
-			"0.1.0-preview"
-		}
-	};
 
 	List<string> duplicates = new List<string>();
 
@@ -70,34 +27,58 @@
         string settingsJson = File.ReadAllText(settingsPath);
         dynamic datasource = JObject.Parse(settingsJson);
 
-		string ballotUrl = canonicals[i] + "/" + versions[i].First();
+		string changesPath = this.Host.ResolvePath(changes[i]);
+        string changesJson = File.ReadAllText(changesPath);
+        dynamic changessource = JObject.Parse(changesJson);
+
+		string canonical = changessource.canonical;
+		string ballotUrl = changessource.ballot;
+		string defaultv = changessource.defaultver;
+		string cibuild = changessource.cibuild;
         #>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="<#= ballotUrl #>" ciUrl="https://build.fhir.org/ig/<#= cibuild[i] #>" defaultVersion="<#= defaultv[i] #>" defaultWorkgroup="au-fhir" gitUrl="https://github.com/<#= cibuild[i] #>" url="<#= canonicals[i] #>">
-	<version code="current" url="https://build.fhir.org/ig/<#= cibuild[i] #>"/><#
-		foreach(var version in versions[i])
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="<#= ballotUrl #>" ciUrl="https://build.fhir.org/ig/<#= cibuild #>" defaultVersion="<#= defaultv #>" defaultWorkgroup="au-fhir" gitUrl="https://github.com/<#= cibuild #>" url="<#= canonical #>">
+	<version code="current" url="https://build.fhir.org/ig/<#= cibuild #>"/><#
+		foreach(var version in changessource.versions)
 		{
 		
 #>  
-    <version code="<#= version #>" url="<#= canonicals[i] #>/<#= version #>"/><# 
+    <version code="<#= version #>" url="<#= canonical #>/<#= version #>"/><# 
 		} 
 #>	
 	<artifactPageExtension value="-definitions"/>
 	<artifactPageExtension value="-examples"/>
 	<artifactPageExtension value="-mapping"/>
 <#
+	Dictionary<string, string> changesdict = new Dictionary<string, string>();
+    foreach(var changevalue in changessource.change)
+	{
+		changesdict.Add(changevalue.id.ToString(), changevalue.name.ToString() );
+	}
+
 	foreach(var rnode in datasource.definition.resource)
 	{
 		string key = rnode.reference.reference.ToString().Replace("/","-");
 
+		string idval = rnode.reference.reference.ToString();
+		string nameval = rnode.name.ToString();
+		if(changesdict.ContainsKey(idval))
+			nameval = changesdict[idval];
+
 		string duplicated = "";
-		if( duplicates.Contains(rnode.name.ToString() ) )
+		if( duplicates.Contains( nameval ) )
 			duplicated = "DUPLICATE" ;
 		else
-			duplicates.Add( rnode.name.ToString() );
+			duplicates.Add( nameval );
 
 	#>
-	<artifact id="<#= rnode.reference.reference #>" key="<#= key #>" name="<#= rnode.name #>" <#= duplicated #>/>
+	<artifact id="<#= rnode.reference.reference #>" key="<#= key #>" name="<#= nameval #>" <#= duplicated #>/>
 <#}
+	foreach(var depvalue in changessource.deprecate)
+	{
+	#>
+	<artifact id="<#= depvalue.id #>" key="<#= depvalue.key #>" name="<#= depvalue.name #>" deprecated="true"/>
+<#	
+	}
 #>
 	<page key="NA" name="(NA)"/>
 	<page key="many" name="(many)"/>

@@ -1,1 +1,15 @@
-{}
+{
+  "cibuild": "hl7au/au-fhir-erequesting",
+  "canonical": "http://hl7.org.au/fhir/ereq",
+  "ballot": "http://hl7.org.au/fhir/ereq/2.0.1",
+  "defaultver": "1.0.0-ballot",
+  "versions": [
+    "1.0.0-ballot",
+    "0.4.0-preview",
+    "0.3.0-preview",
+    "0.2.0-preview",
+    "0.1.0-ballot"
+  ],
+  "change": [],
+  "deprecate": []
+}

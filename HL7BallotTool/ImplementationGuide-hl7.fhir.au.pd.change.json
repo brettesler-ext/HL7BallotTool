@@ -1,1 +1,11 @@
-{}
+{
+  "cibuild": "hl7au/au-fhir-pd",
+  "canonical": "http://hl7.org.au/fhir/pd",
+  "ballot": "http://hl7.org.au/fhir/pd/2.0.1",
+  "defaultver": "2.0.1",
+  "versions": [
+    "2.0.1"
+  ],
+  "change": [],
+  "deprecate": []
+}

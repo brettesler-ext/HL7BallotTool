@@ -1,1 +1,139 @@
-{}
+{
+  "cibuild": "hl7au/au-fhir-base",
+  "canonical": "http://hl7.org.au/fhir",
+  "ballot": "http://hl7.org.au/fhir/6.0.0-ballot",
+  "defaultver": "5.0.0",
+  "versions": [
+    "6.0.0-ballot",
+    "6.0.0-draft",
+    "5.1.0-preview",
+    "5.0.0",
+    "4.2.2-ballot",
+    "4.2.1-preview",
+    "4.2.0-preview",
+    "4.1.2-preview",
+    "4.1.0"
+  ],
+  "deprecate": [
+    {
+      "id": "SearchParameter/patient-gender-identity",
+      "key": "SearchParameter-patient-gender-identity",
+      "name": "PatientGenderIdentity"
+    },
+    {
+      "id": "StructureDefinition/individual-recordedSexOrGender",
+      "key": "StructureDefinition-individual-recordedSexOrGender",
+      "name": "Person Recorded Sex Or Gender"
+    },
+    {
+      "id": "ValueSet/recorded-sex-or-gender-type",
+      "key": "ValueSet-recorded-sex-or-gender-type",
+      "name": "Recorded Sex Or Gender Type"
+    },
+    {
+      "id": "StructureDefinition/individual-pronouns",
+      "key": "StructureDefinition-individual-pronouns",
+      "name": "Individual Pronouns"
+    },
+    {
+      "id": "ValueSet/pronouns",
+      "key": "ValueSet-pronouns",
+      "name": "Personal Pronouns"
+    },
+    {
+      "id": "CodeSystem/au-coverage-selfpay",
+      "key": "CodeSystem-au-coverage-selfpay",
+      "name": "Coverage SelfPay Codes AU"
+    },
+    {
+      "id": "ValueSet/au-coverage-type-extended",
+      "key": "ValueSet-au-coverage-type-extended",
+      "name": "Coverage Type and Self-Pay Codes - AU Extended"
+    },
+    {
+      "id": "ValueSet/au-coverage-selfpay-extended",
+      "key": "ValueSet-au-coverage-selfpay-extended",
+      "name": "Coverage SelfPay Codes - AU Extended"
+    },
+    {
+      "id": "ValueSet/rsg-source-document-jurisdiction",
+      "key": "ValueSet-rsg-source-document-jurisdiction",
+      "name": "AU Recorded Sex or Gender (RSG) Source Document Jurisdiction"
+    }
+  ],
+  "change": [
+    {
+      "id": "ValueSet/contact-purpose",
+      "name": "Contact Purpose ValueSet"
+    },
+    {
+      "id": "ValueSet/pbs-item",
+      "name": "PBS Item Codes ValueSet"
+    },
+    {
+      "id": "ValueSet/medication-type",
+      "name": "Medication Type ValueSet"
+    },
+
+    {
+      "id": "CodeSystem/medication-type",
+      "name": "Medication Type Codes"
+    },
+    {
+      "id": "CodeSystem/service-provision-conditions",
+      "name": "Service Provision Conditions Australian Concepts Codes"
+    },
+    {
+      "id": "CodeSystem/contact-purpose",
+      "name": "Contact Purpose Codes"
+    },
+    {
+      "id": "ValueSet/medicine-item-change",
+      "name": "Medicine Item Change ValueSet"
+    },
+    {
+      "id": "CodeSystem/rsg-type",
+      "name": "AU Recorded Sex or Gender Type Codes"
+    },
+    {
+      "id": "ValueSet/name-context",
+      "name": "Name Context ValueSet"
+    },
+    {
+      "id": "CodeSystem/name-context",
+      "name": "Name Context Codes"
+    },
+    {
+      "id": "ValueSet/rsg-type",
+      "name": "AU Recorded Sex or Gender Type ValueSet"
+    },
+    {
+      "id": "Practitioner/example-sex-and-gender",
+      "name": "Practitioner - for use in sex and gender"
+    },
+    {
+      "id": "Patient/example-sex-and-gender",
+      "name": "Transgender Person Example"
+    },
+    {
+      "id": "HealthcareService/example0",
+      "name": "HealthcareService - with HPI-O and eligibility"
+    },
+    {
+      "id": "Organization/example4",
+      "name": "Organization - with source"
+    },
+    {
+      "id": "RelatedPerson/example-sex-and-gender",
+      "name": "RelatedPerson - as family member, for use in sex and gender"
+    },
+    {
+      "id": "Encounter/example1",
+      "name": "Encounter - with narative description"
+    },
+    {
+      "id": "HealthcareService/example5",
+      "name": "HealthcareService - Leafy Grove Home for the Not Very Aged"
+    }
+  ]
+}
