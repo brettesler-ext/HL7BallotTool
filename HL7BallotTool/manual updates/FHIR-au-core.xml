@@ -39,6 +39,7 @@
 	<artifact id="StructureDefinition/au-core-resprate" key="StructureDefinition-au-core-resprate" name="AU Core Respiration Rate" />
 	<artifact id="StructureDefinition/au-core-heartrate" key="StructureDefinition-au-core-heartrate" name="AU Core Heart Rate" />
 	<artifact id="StructureDefinition/au-core-waistcircum" key="StructureDefinition-au-core-waistcircum" name="AU Core Waist Circumference" />
+	<artifact id="StructureDefinition/au-core-healthcareservice" key="StructureDefinition-au-core-healthcareservice" name="AU Core HealthcareService" />
 	<artifact id="StructureDefinition/au-core-smokingstatus" key="StructureDefinition-au-core-smokingstatus" name="AU Core Smoking Status" />
 	<artifact id="AllergyIntolerance/lactose" key="AllergyIntolerance-lactose" name="AllergyIntolerance - Lactose intolerance" />
 	<artifact id="AllergyIntolerance/noneknown" key="AllergyIntolerance-noneknown" name="AllergyIntolerance - No known allergy" />
@@ -103,6 +104,8 @@
 	<artifact id="RelatedPerson/banks-mia-leanne-father" key="RelatedPerson-banks-mia-leanne-father" name="RelatedPerson - Father of Mia Leanne Banks" />
 	<artifact id="RelatedPerson/wang-li-friend" key="RelatedPerson-wang-li-friend" name="RelatedPerson - Friend of Mr. Li Wang" />
 	<artifact id="Specimen/nasoswab" key="Specimen-nasoswab" name="Specimen - Naso swab (COVID test)" />
+	<artifact id="HealthcareService/physiotherapy" key="HealthcareService-physiotherapy" name="HealthcareService - CoreStrength Physiotherapy" />
+	<artifact id="HealthcareService/murrabit-crisis-hotline" key="HealthcareService-murrabit-crisis-hotline" name="HealthcareService - Murrabit Crisis Hotline" />
 	<artifact id="StructureDefinition/au-core-diagnosticresult-path" key="StructureDefinition-au-core-diagnosticresult-path" name="AU Core Pathology Result Observation" />
 	<artifact id="StructureDefinition/au-core-diagnosticresult" key="StructureDefinition-au-core-diagnosticresult" name="AU Core Diagnostic Result Observation" />
 	<artifact id="StructureDefinition/au-core-medicationstatement" key="StructureDefinition-au-core-medicationstatement" name="AU Core MedicationStatement" />
@@ -120,7 +123,6 @@
 	<artifact id="SearchParameter/au-core-specimen-patient" key="SearchParameter-au-core-specimen-patient" name="AUCoreSpecimenPatient" deprecated="true"/>
 	<artifact id="StructureDefinition/au-core-diagnosticreport" key="StructureDefinition-au-core-diagnosticreport" name="AU Core DiagnosticReport" deprecated="true"/>
 	<artifact id="StructureDefinition/au-core-documentreference" key="StructureDefinition-au-core-documentreference" name="AU Core DocumentReference" deprecated="true"/>
-	<artifact id="StructureDefinition/au-core-healthcareservice" key="StructureDefinition-au-core-healthcareservice" name="AU Core HealthcareService" deprecated="true"/>
 	<artifact id="StructureDefinition/au-core-observation" key="StructureDefinition-au-core-observation" name="AU Core Observation" deprecated="true"/>
 	<artifact id="StructureDefinition/au-core-provenance" key="StructureDefinition-au-core-provenance" name="AU Core Provenance" deprecated="true"/>
 	<artifact id="StructureDefinition/au-core-vitalspanel" key="StructureDefinition-au-core-vitalspanel" name="AU Core Vitals Panel" deprecated="true"/>
@@ -251,8 +253,8 @@
 	<page key="medicine-information" name="Medicine Information"/>
 	<page key="sex-and-gender" name="Sex and Gender"/>
 	<page key="aucdi" name="AUCDI"/>
-	<page key="relationship" name="Relationship with other IGs"/>
-	<page key="comparison" name="Comparison with other national and international IGs"/>
+	<page key="relationship" name="Relationship With Other IGs"/>
+	<page key="comparison" name="Comparison With Other National and International IGs"/>
 	<page key="variance" name="AU Variance Statement"/>
 	<page key="future" name="Future of AU Core"/>
 	<page key="security" name="Security and Privacy"/>

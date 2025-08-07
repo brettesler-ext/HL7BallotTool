@@ -16,6 +16,11 @@
   ],
   "deprecate": [
     {
+      "id": "StructureDefinition/ethnicity",
+      "key": "StructureDefinition-ethnicity",
+      "name": "Ethnicity"
+    },
+    {
       "id": "SearchParameter/patient-gender-identity",
       "key": "SearchParameter-patient-gender-identity",
       "name": "PatientGenderIdentity"
@@ -46,11 +51,6 @@
       "name": "Coverage SelfPay Codes AU"
     },
     {
-      "id": "ValueSet/au-coverage-type-extended",
-      "key": "ValueSet-au-coverage-type-extended",
-      "name": "Coverage Type and Self-Pay Codes - AU Extended"
-    },
-    {
       "id": "ValueSet/au-coverage-selfpay-extended",
       "key": "ValueSet-au-coverage-selfpay-extended",
       "name": "Coverage SelfPay Codes - AU Extended"
@@ -64,7 +64,43 @@
       "id": "Encounter/example2",
       "key": "Encounter-example2",
       "name": "Encounter - Annual check up"
+    },
+    {
+      "id": "StructureDefinition/au-healthprogramparticipation",
+      "key": "StructureDefinition-au-healthprogramparticipation",
+      "name": "AU Health Program Participation Summary"
+    },
+    {
+      "id": "CodeSystem/au-observation-category",
+      "key": "CodeSystem-au-observation-category",
+      "name": "Observation Category Codes AU"
+    },
+    {
+      "id": "ValueSet/au-observation-category-extended",
+      "key": "ValueSet-au-observation-category-extended",
+      "name": "Observation Category Codes - AU Extended"
+    },
+    {
+      "id": "Observation/healthprogramparticipation-example0",
+      "key": "Observation-healthprogramparticipation-example0",
+      "name": "Observation - active participation in 12 step alcohol program"
+    },
+    {
+      "id": "Observation/healthprogramparticipation-example1",
+      "key": "Observation-healthprogramparticipation-example1",
+      "name": "Observation - deferred BreastScreen Australia screening due to travel"
+    },
+    {
+      "id": "Practitioner/example-practitioner-name-context",
+      "key": "Practitioner-example-practitioner-name-context",
+      "name": "Practitioner - indicate HPI-I validation name context"
+    },
+    {
+      "id": "Patient/example-patient-name-context",
+      "key": "Patient-example-patient-name-context",
+      "name": "Patient - indicate IHI validation name context"
     }
+
   ],
   "pagedeprecate": [],
   "change": [

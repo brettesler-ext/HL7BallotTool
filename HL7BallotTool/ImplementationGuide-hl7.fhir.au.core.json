@@ -3,7 +3,7 @@
   "id": "hl7.fhir.au.core",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.au.core</b></p><a name=\"hl7.fhir.au.core\"> </a><a name=\"hchl7.fhir.au.core\"> </a><a name=\"hl7.fhir.au.core-en-AU\"> </a><h2>AUCoreImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core</pre><div><p>This implementation guide is provided to support the use of FHIR®© in an Australian context, and defines the minimum set of constraints on the FHIR resources to create the AU Core profiles. This implementation guide forms the foundation to build future AU Realm FHIR implementation guides and its content will continue to grow to meet the needs of AU implementers.</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.au.core</b></p><a name=\"hl7.fhir.au.core\"> </a><a name=\"hchl7.fhir.au.core\"> </a><h2>AUCoreImplementationGuide</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core</pre><div><p>This implementation guide is provided to support the use of FHIR®© in an Australian context, and defines the minimum set of constraints on the FHIR resources to create the AU Core profiles. This implementation guide forms the foundation to build future AU Realm FHIR implementation guides and its content will continue to grow to meet the needs of AU implementers.</p>\n</div></div>"
   },
   "extension": [
     {
@@ -16,11 +16,11 @@
     }
   ],
   "url": "http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core",
-  "version": "1.1.0-ci-build",
+  "version": "2.0.0-ballot",
   "name": "AUCoreImplementationGuide",
   "title": "AU Core Implementation Guide",
   "status": "active",
-  "date": "2025-03-25T09:55:50+00:00",
+  "date": "2025-07-31T00:07:51+00:00",
   "publisher": "HL7 Australia",
   "contact": [
     {
@@ -60,7 +60,7 @@
       ],
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
-      "version": "6.2.0"
+      "version": "6.5.0"
     },
     {
       "id": "hl7ext",
@@ -78,17 +78,17 @@
       "id": "aubaser4",
       "uri": "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base",
       "packageId": "hl7.fhir.au.base",
-      "version": "current"
+      "version": "6.0.0-ballot"
     },
     {
       "uri": "http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch",
       "packageId": "hl7.fhir.uv.smart-app-launch",
-      "version": "2.1.0"
+      "version": "2.2.0"
     },
     {
       "uri": "http://hl7.org/fhir/uv/ipa/ImplementationGuide/hl7.fhir.uv.ipa",
       "packageId": "hl7.fhir.uv.ipa",
-      "version": "current"
+      "version": "1.1.0"
     }
   ],
   "definition": {
@@ -114,7 +114,7 @@
           },
           {
             "url": "value",
-            "valueString": "CI Build"
+            "valueString": "Ballot"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -485,7 +485,7 @@
       },
       {
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode": "hl7.fhir.uv.tools.r4#0.4.1"
+        "valueCode": "hl7.fhir.uv.tools.r4#0.7.1"
       },
       {
         "extension": [
@@ -508,7 +508,7 @@
           },
           {
             "url": "value",
-            "valueString": "CI Build"
+            "valueString": "Ballot"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -946,7 +946,7 @@
           "reference": "SearchParameter/au-core-clinical-patient"
         },
         "name": "AUCoreClinicalPatient",
-        "description": "A clinical patient **SHOULD** support patient.identifier. This AU Core SearchParameter extends the usage context of the\nclinical-patient parameter\n - multipleAnd\n - multipleOr\n - chain",
+        "description": "This SearchParameter describes the rules on the clinical-patient search parameter in AU Core. It is based on the core FHIR [clinical-patient](https://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient) search parameter and identifies the additional requirements when conforming to AU Core.",
         "exampleBoolean": false
       },
       {
@@ -960,7 +960,7 @@
           "reference": "SearchParameter/au-core-practitionerrole-practitioner"
         },
         "name": "AUCorePractitionerRolePractitioner",
-        "description": "A practitioner role practitioner **SHOULD** support practitioner.identifier. NOTE: This AU Core SearchParameter extends the usage context of the\nPractitionerRole-practitioner parameter\n - multipleAnd\n - multipleOr\n - chain",
+        "description": "This SearchParameter describes the rules on the PractitionerRole-practitioner search parameter in AU Core. It is based on the core FHIR [PractitionerRole-practitioner](https://hl7.org/fhir/R4/practitionerrole.html#search) search parameter and identifies the additional requirements when conforming to AU Core.",
         "exampleBoolean": false
       },
       {
@@ -1241,6 +1241,20 @@
         },
         "name": "AU Core Waist Circumference",
         "description": "This profile sets minimum expectations for an Observation resource to record, search, and fetch waist circumference observations with standard coding and units of measure. It is based on the [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/vitalsigns.html) and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Observation resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/au-core-healthcareservice"
+        },
+        "name": "AU Core HealthcareService",
+        "description": "This profile sets minimum expectations for a HealthcareService resource to record, search, and fetch information about a healthcare service. It is based on the [AU Base HealthcareService](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-healthcareservice.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the HealthcareService resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
         "exampleBoolean": false
       },
       {
@@ -2143,6 +2157,34 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "HealthcareService"
+          }
+        ],
+        "reference": {
+          "reference": "HealthcareService/physiotherapy"
+        },
+        "name": "HealthcareService - CoreStrength Physiotherapy",
+        "description": "Shows an example of a physiotherapy healthcare service, CoreStrength Physiotherapy, for the *AU Core HealthcareService* profile, with type and contact details.",
+        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "HealthcareService"
+          }
+        ],
+        "reference": {
+          "reference": "HealthcareService/murrabit-crisis-hotline"
+        },
+        "name": "HealthcareService - Murrabit Crisis Hotline",
+        "description": "Shows an example of a 24/7 telephone counselling service, Murrabit Crisis Hotline, for the *AU Core HealthcareService* profile, with healthcare service types, identifier and a telephone contact number.",
+        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -2163,7 +2205,7 @@
           "reference": "StructureDefinition/au-core-diagnosticresult"
         },
         "name": "AU Core Diagnostic Result Observation",
-        "description": "This profile sets minimum expectations for an Observation resource to record, search, and fetch diagnostic results associated with a patient. It is based on the [AU Base Diagnostic Result](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-diagnosticresult.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Observation when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."
+        "description": "This profile sets minimum expectations for an Observation resource to record, search, and fetch specialist or other diagnostic (non imaging or pathology) results for a patient. It is based on the [AU Base Diagnostic Result](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-diagnosticresult.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Observation when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."
       },
       {
         "extension": [
@@ -2341,7 +2383,7 @@
                 }
               ],
               "nameUrl": "aucdi.html",
-              "title": "AU Core Data for Interoperability",
+              "title": "AUCDI",
               "generation": "markdown"
             },
             {
@@ -2356,7 +2398,7 @@
                 }
               ],
               "nameUrl": "relationship.html",
-              "title": "Relationship with other IGs",
+              "title": "Relationship With Other IGs",
               "generation": "markdown"
             },
             {
@@ -2371,7 +2413,7 @@
                 }
               ],
               "nameUrl": "comparison.html",
-              "title": "Comparison with other national and international IGs",
+              "title": "Comparison With Other National and International IGs",
               "generation": "markdown"
             },
             {

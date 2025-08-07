@@ -103,11 +103,6 @@
       "name": "AU Core DocumentReference"
     },
     {
-      "id": "StructureDefinition/au-core-healthcareservice",
-      "key": "StructureDefinition-au-core-healthcareservice",
-      "name": "AU Core HealthcareService"
-    },
-    {
       "id": "StructureDefinition/au-core-observation",
       "key": "StructureDefinition-au-core-observation",
       "name": "AU Core Observation"
