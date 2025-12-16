@@ -1,9 +1,10 @@
 {
   "cibuild": "hl7au/au-fhir-erequesting",
   "canonical": "http://hl7.org.au/fhir/ereq",
-  "ballot": "http://hl7.org.au/fhir/ereq/2.0.1",
+  "ballot": "http://hl7.org.au/fhir/ereq/1.0.0-ballot",
   "defaultver": "1.0.0-ballot",
   "versions": [
+    "1.0.0-preview",
     "1.0.0-ballot",
     "deprecated:0.4.0-preview",
     "deprecated:0.3.0-preview",
@@ -30,9 +31,27 @@
     {
       "key": "license",
       "name": "License"
+    },
+    {
+      "id": "ActorDefinition/au-erequesting-actor-patient",
+      "name": "AU eRequesting Patient Actor"
+    },
+    {
+      "id": "ServiceRequest/order-xray-1",
+      "name": "ServiceRequest - X-ray"
     }
   ],
   "deprecate": [
+    {
+      "id": "Organization/elimbah-medical-center",
+      "key": "Organization-elimbah-medical-center",
+      "name": "Organization - Elimbah Medical Center"
+    },
+    {
+      "id": "Patient/irvine-ronny-lawrence",
+      "key": "Patient-irvine-ronny-lawrence",
+      "name": "Patient - Ronny Lawrence Irvine"
+    },
     {
       "id": "CodeSystem/au-erequesting-communication-request-reason",
       "key": "CodeSystem-au-erequesting-communication-request-reason",

@@ -16,11 +16,11 @@
     }
   ],
   "url": "http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core",
-  "version": "2.0.0-ballot",
+  "version": "2.0.0-preview",
   "name": "AUCoreImplementationGuide",
   "title": "AU Core Implementation Guide",
   "status": "active",
-  "date": "2025-07-31T00:07:51+00:00",
+  "date": "2025-11-27T01:36:36+00:00",
   "publisher": "HL7 Australia",
   "contact": [
     {
@@ -60,7 +60,7 @@
       ],
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
-      "version": "6.5.0"
+      "version": "7.0.0"
     },
     {
       "id": "hl7ext",
@@ -78,7 +78,7 @@
       "id": "aubaser4",
       "uri": "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base",
       "packageId": "hl7.fhir.au.base",
-      "version": "6.0.0-ballot"
+      "version": "6.0.0-preview"
     },
     {
       "uri": "http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch",
@@ -114,7 +114,7 @@
           },
           {
             "url": "value",
-            "valueString": "Ballot"
+            "valueString": "Preview"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -484,8 +484,14 @@
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
       },
       {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters",
+        "valueReference": {
+          "reference": "Parameters/expansion-parameters"
+        }
+      },
+      {
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode": "hl7.fhir.uv.tools.r4#0.7.1"
+        "valueCode": "hl7.fhir.uv.tools.r4#0.8.0"
       },
       {
         "extension": [
@@ -508,7 +514,7 @@
           },
           {
             "url": "value",
-            "valueString": "Ballot"
+            "valueString": "Preview"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -974,7 +980,7 @@
           "reference": "StructureDefinition/au-core-allergyintolerance"
         },
         "name": "AU Core AllergyIntolerance",
-        "description": "This profile sets minimum expectations for an AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient. It is based on the [AU Base Allergy Intolerance](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the AllergyIntolerance resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
+        "description": "This profile sets minimum expectations for an AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient. It is based on the [AU Base AllergyIntolerance](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the AllergyIntolerance resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
         "exampleBoolean": false
       },
       {
@@ -1016,7 +1022,7 @@
           "reference": "StructureDefinition/au-core-immunization"
         },
         "name": "AU Core Immunization",
-        "description": "This profile sets minimum expectations for an Immunization resource to record, search, and fetch immunisation history associated with a patient. It is based on the [AU Base Immunisation](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunization.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Immunization resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
+        "description": "This profile sets minimum expectations for an Immunization resource to record, search, and fetch immunisation history associated with a patient. It is based on the [AU Base Immunization](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunization.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Immunization resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
         "exampleBoolean": false
       },
       {
@@ -1058,7 +1064,7 @@
           "reference": "StructureDefinition/au-core-medicationrequest"
         },
         "name": "AU Core MedicationRequest",
-        "description": "This profile sets minimum expectations for a MedicationRequest resource to record, search, and fetch medication orders and requests (i.e. prescriptions) associated with a patient. It is based on the [AU Base Medication Request](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationrequest.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the MedicationRequest when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
+        "description": "This profile sets minimum expectations for a MedicationRequest resource to record, search, and fetch medication orders and requests (i.e. prescriptions) associated with a patient. It is based on the [AU Base MedicationRequest](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationrequest.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the MedicationRequest when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
         "exampleBoolean": false
       },
       {
@@ -1114,7 +1120,7 @@
           "reference": "StructureDefinition/au-core-practitionerrole"
         },
         "name": "AU Core PractitionerRole",
-        "description": "This profile sets minimum expectations for a PractitionerRole resource to record, search, and fetch a practitioner role for a practitioner associated with a patient. It is based on the [AU Base Practitioner Role](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-practitionerrole.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the PractitionerRole resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
+        "description": "This profile sets minimum expectations for a PractitionerRole resource to record, search, and fetch a practitioner role for a practitioner associated with a patient. It is based on the [AU Base PractitionerRole](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-practitionerrole.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the PractitionerRole resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context.",
         "exampleBoolean": false
       },
       {
@@ -2218,7 +2224,7 @@
           "reference": "StructureDefinition/au-core-medicationstatement"
         },
         "name": "AU Core MedicationStatement",
-        "description": "This profile sets minimum expectations for a MedicationStatement resource to record, search, and fetch summary statements of medication use associated with a patient. It is based on the [AU Base Medication Statement](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationstatement.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the MedicationStatement when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."
+        "description": "This profile sets minimum expectations for a MedicationStatement resource to record, search, and fetch summary statements of medication use associated with a patient. It is based on the [AU Base MedicationStatement](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medicationstatement.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the MedicationStatement when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."
       },
       {
         "extension": [
@@ -2231,7 +2237,7 @@
           "reference": "StructureDefinition/au-core-relatedperson"
         },
         "name": "AU Core RelatedPerson",
-        "description": "This profile sets minimum expectations for a RelatedPerson resource to record, search, and fetch basic demographics and other administrative information about individual related persons associated with a patient. It is based on the [AU Base Related Person](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the RelatedPerson resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."
+        "description": "This profile sets minimum expectations for a RelatedPerson resource to record, search, and fetch basic demographics and other administrative information about individual related persons associated with a patient. It is based on the [AU Base RelatedPerson](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the RelatedPerson resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context."
       }
     ],
     "page": {

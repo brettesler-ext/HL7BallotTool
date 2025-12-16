@@ -4,6 +4,7 @@
   "ballot": "http://hl7.org.au/fhir/core/2.0.0-ballot",
   "defaultver": "1.0.0",
   "versions": [
+    "2.0.0-preview",
     "2.0.0-ballot",
     "deprecated:2.0.0-draft",
     "deprecated:1.1.0-preview",

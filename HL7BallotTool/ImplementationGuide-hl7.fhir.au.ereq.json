@@ -17,11 +17,11 @@
     }
   ],
   "url": "http://hl7.org.au/fhir/ereq/ImplementationGuide/hl7.fhir.au.ereq",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0-preview",
   "name": "AUeRequestingImplementationGuide",
   "title": "AU eRequesting Implementation Guide",
   "status": "active",
-  "date": "2025-08-05T01:05:54+00:00",
+  "date": "2025-12-04T05:48:34+00:00",
   "publisher": "HL7 Australia",
   "contact": [
     {
@@ -70,31 +70,37 @@
       ],
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
-      "version": "6.5.0"
+      "version": "7.0.0"
+    },
+    {
+      "id": "hl7ext",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+          "valueMarkdown": "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+        }
+      ],
+      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+      "packageId": "hl7.fhir.uv.extensions.r4",
+      "version": "5.2.0"
     },
     {
       "id": "hl7_fhir_au_base",
       "uri": "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base",
       "packageId": "hl7.fhir.au.base",
-      "version": "6.0.0-ballot"
+      "version": "6.0.0-preview"
     },
     {
       "id": "hl7_fhir_au_core",
       "uri": "http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core",
       "packageId": "hl7.fhir.au.core",
-      "version": "2.0.0-ballot"
+      "version": "2.0.0-preview"
     },
     {
       "id": "hl7_fhir_uv_ips",
       "uri": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
       "packageId": "hl7.fhir.uv.ips",
-      "version": "2.0.0-ballot"
-    },
-    {
-      "id": "hl7_fhir_uv_extensions_r4",
-      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
-      "packageId": "hl7.fhir.uv.extensions.r4",
-      "version": "5.2.0"
+      "version": "2.0.0"
     }
   ],
   "definition": {
@@ -120,7 +126,7 @@
           },
           {
             "url": "value",
-            "valueString": "Ballot"
+            "valueString": "Preview"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -134,6 +140,45 @@
           {
             "url": "value",
             "valueString": "https://ranzcr.com/fhir/ValueSet/radiology-referral-1"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/au-erequesting-communicationrequest-category"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/au-erequesting-communicationrequest-patientmedium"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/communicationrequest-category"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -211,6 +256,19 @@
           },
           {
             "url": "value",
+            "valueString": "http://terminology.hl7.org.au/CodeSystem/communication-request-category"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "special-url"
+          },
+          {
+            "url": "value",
             "valueString": "http://terminology.hl7.org.au/CodeSystem/communicationrequest-reason"
           }
         ],
@@ -263,7 +321,7 @@
           },
           {
             "url": "value",
-            "valueString": "false"
+            "valueString": "true"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -419,7 +477,7 @@
           },
           {
             "url": "value",
-            "valueString": "0.1.0-ballot"
+            "valueString": "1.0.0-ballot"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -497,7 +555,7 @@
           },
           {
             "url": "value",
-            "valueString": "CI Build"
+            "valueString": "Preview"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -737,8 +795,14 @@
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
       },
       {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters",
+        "valueReference": {
+          "reference": "Parameters/expansion-parameters"
+        }
+      },
+      {
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode": "hl7.fhir.uv.tools.r4#0.7.1"
+        "valueCode": "hl7.fhir.uv.tools.r4#0.8.0"
       },
       {
         "extension": [
@@ -761,7 +825,7 @@
           },
           {
             "url": "value",
-            "valueString": "Ballot"
+            "valueString": "Preview"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -775,6 +839,45 @@
           {
             "url": "value",
             "valueString": "https://ranzcr.com/fhir/ValueSet/radiology-referral-1"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/au-erequesting-communicationrequest-category"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/au-erequesting-communicationrequest-patientmedium"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
+            "valueString": "http://terminology.hl7.org.au/ValueSet/communicationrequest-category"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -852,6 +955,19 @@
           },
           {
             "url": "value",
+            "valueString": "http://terminology.hl7.org.au/CodeSystem/communication-request-category"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "special-url"
+          },
+          {
+            "url": "value",
             "valueString": "http://terminology.hl7.org.au/CodeSystem/communicationrequest-reason"
           }
         ],
@@ -904,7 +1020,7 @@
           },
           {
             "url": "value",
-            "valueString": "false"
+            "valueString": "true"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1060,7 +1176,7 @@
           },
           {
             "url": "value",
-            "valueString": "0.1.0-ballot"
+            "valueString": "1.0.0-ballot"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1138,7 +1254,7 @@
           },
           {
             "url": "value",
-            "valueString": "CI Build"
+            "valueString": "Preview"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1390,7 +1506,7 @@
           "reference": "StructureDefinition/au-erequesting-clinicalcontext-documentreference"
         },
         "name": "AU eRequesting Clinical Context DocumentReference",
-        "description": "This profile sets minimum expectations for representing Clinical Context using a DocumentReference resource to record, search, and fetch clinical context narrative information that provides an overview of the individual's current clinical situation assocated with a requested service. Clinical context is intended to describe the broader clinical background or circumstances relating to the request, supporting the service provider in making informed decisions about service delivery.  It is based on the [DocumentReference](https://hl7.org/fhir/R4/documentreference.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the DocumentReference when conforming to this profile.",
+        "description": "This profile sets minimum expectations for representing clinical context using a DocumentReference resource to record, search, and fetch clinical context narrative information that provides an overview of the individual's current clinical situation associated with a requested service. Clinical context is intended to describe the broader clinical background or circumstances relating to the request, supporting the service provider in making informed decisions about service delivery.  It is based on the [DocumentReference](https://hl7.org/fhir/R4/documentreference.html) resource and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the DocumentReference when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1404,7 +1520,21 @@
           "reference": "StructureDefinition/au-erequesting-communicationrequest"
         },
         "name": "AU eRequesting CommunicationRequest",
-        "description": "This profile sets the minimum expectations for derived CommunicationRequest resources that are used to record, search, and fetch information about a communication request to be performed.  \nIt is based on the [CommunicationRequest](https://hl7.org/fhir/R4/communicationrequest.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the CommunicationRequest when conforming to this profile.",
+        "description": "This profile sets minimum expectations for CommunicationRequest resources that are used to record, search, and fetch information about a communication request to be performed.  It is based on the [CommunicationRequest](https://hl7.org/fhir/R4/communicationrequest.html) resource and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the CommunicationRequest when conforming to this profile.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/au-erequesting-communicationrequest-category"
+        },
+        "name": "AU eRequesting CommunicationRequest Category",
+        "description": "Categories for a communication request used in the Australian eRequesting context.",
         "exampleBoolean": false
       },
       {
@@ -1418,7 +1548,7 @@
           "reference": "StructureDefinition/au-erequesting-communicationrequest-copyto"
         },
         "name": "AU eRequesting CommunicationRequest CopyTo",
-        "description": "This profile sets the minimum expectations for a CommunicationRequest resource used to represent a request for a report to be copied to a clinician or patient as an additional recipient. A copy-to clinician is distinct from a request for urgent communication to a provider, as the priority may not be urgent.  \nIt is based on the [AU eRequesting CommunicationRequest](StructureDefinition-au-erequesting-communicationrequest.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the CommunicationRequest when conforming to this profile.",
+        "description": "This profile sets the minimum expectations for a CommunicationRequest resource used to represent a request for a report to be copied to a clinician or patient as an additional recipient. A copy-to clinician is distinct from a request for urgent communication to a provider, as the priority may not be urgent. It is based on the [AU eRequesting CommunicationRequest](StructureDefinition-au-erequesting-communicationrequest.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the CommunicationRequest when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1432,7 +1562,7 @@
           "reference": "StructureDefinition/au-erequesting-communicationrequest-patient"
         },
         "name": "AU eRequesting CommunicationRequest Patient",
-        "description": "This profile sets the minimum expectations for a CommunicationRequest resource used to represent a request for direct communication from a diagnostic provider (Filler) to a patient. It supports use cases where the diagnostic provider may communicate with the patient, for example, to suggest booking an appointment or to provide instructions for a diagnostic test. It also supports requests for communication not to be performed, for example, when a patient has requested that they not be contacted by SMS. Supported communication mediums include SMS and email.  \nIt is based on the [AU eRequesting CommunicationRequest](StructureDefinition-au-erequesting-communicationrequest.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the CommunicationRequest when conforming to this profile.",
+        "description": "This profile sets the minimum expectations for a CommunicationRequest resource used to represent a request for direct communication from a diagnostic provider (filler) to a patient. It is based on the [AU eRequesting CommunicationRequest](StructureDefinition-au-erequesting-communicationrequest.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the CommunicationRequest when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1488,7 +1618,7 @@
           "reference": "StructureDefinition/au-erequesting-communicationrequest-urgentprovider"
         },
         "name": "AU eRequesting CommunicationRequest Urgent Provider",
-        "description": "This profile sets the minimum expectations for a CommunicationRequest resource used to represent a request for direct communication from a diagnostic provider (Filler) to a clinical provider for the purpose of providing urgent results. This communication is not a substitute for the formal diagnostic report, but is intended to provide timely notification of a result, usually by phone.  \nIt is based on the [AU eRequesting CommunicationRequest](StructureDefinition-au-erequesting-communicationrequest.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the CommunicationRequest when conforming to this profile.",
+        "description": "This profile sets the minimum expectations for a CommunicationRequest resource used to represent a request for direct communication from a diagnostic provider (filler) to a clinical provider for the purpose of providing urgent results. This communication is not a substitute for the formal diagnostic report, but is intended to provide timely notification of a result, usually by phone.  It is based on the [AU eRequesting CommunicationRequest](StructureDefinition-au-erequesting-communicationrequest.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the CommunicationRequest when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1502,7 +1632,7 @@
           "reference": "StructureDefinition/au-erequesting-coverage"
         },
         "name": "AU eRequesting Coverage",
-        "description": "This profile sets minimum expectations for a Coverage resource that is used to record, search, and fetch information about insurance or medical plan or a payment agreement for a patient. It is based on the [AU Base Coverage](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-coverage.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Coverage when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a Coverage resource that is used to record, search, and fetch information about insurance or medical plan or a payment agreement for a patient. It is based on the [AU Base Coverage](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-coverage.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Coverage when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1530,7 +1660,7 @@
           "reference": "StructureDefinition/au-erequesting-diagnosticrequest"
         },
         "name": "AU eRequesting Diagnostic Request",
-        "description": "This profile sets minimum expectations for a ServiceRequest resource that is used to record, search, and fetch information about diagnostic requests for a patient. It is based on the [AU Base ServiceRequest](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-servicerequest.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the ServiceRequest when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a ServiceRequest resource that is used to record, search, and fetch information about diagnostic requests for a patient. It is based on the [AU Base ServiceRequest](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-servicerequest.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the ServiceRequest resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1544,7 +1674,21 @@
           "reference": "StructureDefinition/au-erequesting-displaysequence"
         },
         "name": "AU eRequesting Display Sequence",
-        "description": "This profile defines the minimum expectations for representing display sequence in the AU eRequesting context.  The display sequence is an integer assigned to an individual test or service in a ServiceRequest that matches the sequence as seen on a paper request form. The ability to sort based on display sequence more easily allows for reconciliation of paper and digital requesting data by the filler, especially for collection centre staff within a pathology collection centre.",
+        "description": "This extension applies to the ServiceRequest resource and is used to represent the integer assigned to an individual test or service in a ServiceRequest that corresponds with the sequential position in which a test or service appears on a paper request form.\n\nSorting by display sequence enables more efficient reconciliation of paper and digital request data at the point of service provision.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/au-erequesting-encounter"
+        },
+        "name": "AU eRequesting Encounter",
+        "description": "This profile sets minimum expectations for an Encounter resource that is used to record, search, and fetch basic encounter information for a patient. It is based on the [AU Core Encounter](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-encounter.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Encounter resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1558,7 +1702,7 @@
           "reference": "StructureDefinition/au-erequesting-fastingprecondition"
         },
         "name": "AU eRequesting Fasting Precondition",
-        "description": "This profile defines the minimum expectations for representing fasting precondition in the AU eRequesting context. The fasting precondition is a code that indicates the recommendation related to the fasting status of the patient as a precondition to the diagnostic procedure or test being requested.",
+        "description": "This extension applies to the ServiceRequest resource and is used to represent whether fasting is a recommended precondition for the diagnostic request. It conveys the requester's recommendation regarding fasting at the time of ordering, not the actual fasting status of the patient.",
         "exampleBoolean": false
       },
       {
@@ -1614,7 +1758,7 @@
           "reference": "StructureDefinition/au-erequesting-servicerequest-imag"
         },
         "name": "AU eRequesting Imaging Request",
-        "description": "This profile sets minimum expectations for a ServiceRequest resource that is used to record, search, and fetch information about diagnostic imaging requests for a patient. It is based on the [AU eRequesting Diagnostic Request](StructureDefinition-au-erequesting-diagnosticrequest.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the ServiceRequest when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a ServiceRequest resource that is used to record, search, and fetch information about diagnostic imaging requests for a patient. It is based on the [AU eRequesting Diagnostic Request](StructureDefinition-au-erequesting-diagnosticrequest.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the ServiceRequest resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1628,7 +1772,21 @@
           "reference": "StructureDefinition/au-erequesting-mhrconsentwithdrawal"
         },
         "name": "AU eRequesting MHR Consent Withdrawal",
-        "description": "This profile sets minimum expectations for a Consent resource to record, search, and fetch a My Health Record (MHR) consent withdrawal. It represents a patient's withdrawal of consent to upload to MHR in accordance with paragraph 45(d) of the [My Health Records Act 2012](https://www.legislation.gov.au/C2012A00063). It is based on the [Consent](https://hl7.org/fhir/R4/consent.html) and identifies the additional mandatory core elements, extensions, vocabularies and value sets that SHALL be present in the Consent when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a Consent resource to record, search, and fetch a My Health Record (MHR) consent withdrawal. It represents a patient's withdrawal of consent to upload to MHR in accordance with paragraph 45(d) of the [My Health Records Act 2012](https://www.legislation.gov.au/C2012A00063). It is based on the [Consent](https://hl7.org/fhir/R4/consent.html) resource and identifies the additional mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Consent when conforming to this profile.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/au-erequesting-organization"
+        },
+        "name": "AU eRequesting Organization",
+        "description": "This profile sets minimum expectations for an Organization resource that is used to record, search, and fetch information about an organisation. It is based on the [AU Core Organization](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-organization.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Organization resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1642,7 +1800,21 @@
           "reference": "StructureDefinition/au-erequesting-servicerequest-path"
         },
         "name": "AU eRequesting Pathology Request",
-        "description": "This profile sets minimum expectations for a ServiceRequest resource that is used to record, search, and fetch information about pathology requests for a patient. It is based on the [AU eRequesting Diagnostic Request](StructureDefinition-au-erequesting-diagnosticrequest.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the ServiceRequest when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a ServiceRequest resource that is used to record, search, and fetch information about pathology requests for a patient. It is based on the [AU eRequesting Diagnostic Request](StructureDefinition-au-erequesting-diagnosticrequest.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the ServiceRequest resource when conforming to this profile.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/au-erequesting-patient"
+        },
+        "name": "AU eRequesting Patient",
+        "description": "This profile sets minimum expectations for a Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It is based on the [AU Core Patient](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-patient.html) profile and identifies the additional mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Patient resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1705,6 +1877,34 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/au-erequesting-practitioner"
+        },
+        "name": "AU eRequesting Practitioner",
+        "description": "This profile sets minimum expectations for a Practitioner resource that is used to record, search, and fetch basic demographics and other administrative information about an individual practitioner. It is based on the [AU Core Practitioner](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitioner.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Practitioner resource when conforming to this profile.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/au-erequesting-practitionerrole"
+        },
+        "name": "AU eRequesting PractitionerRole",
+        "description": "This profile sets minimum expectations for a PractitionerRole resource that is used to record, search, and fetch a practitioner role for a practitioner associated with a patient. It is based on the [AU Core PractitionerRole](https://build.fhir.org/ig/hl7au/au-fhir-core/StructureDefinition-au-core-practitionerrole.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the PractitionerRole resource when conforming to this profile.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -1754,7 +1954,7 @@
           "reference": "StructureDefinition/au-erequesting-task"
         },
         "name": "AU eRequesting Task",
-        "description": "This profile sets minimum expectations for a Task resource that is used to record, search, and fetch information about a task to be performed. It is based on the [Task](https://www.hl7.org/fhir/R4/task.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Task when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a Task resource that is used to record, search, and fetch information about a task to be performed. It is based on the [Task](https://www.hl7.org/fhir/R4/task.html) resource and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Task resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1782,7 +1982,7 @@
           "reference": "StructureDefinition/au-erequesting-task-communicationrequest"
         },
         "name": "AU eRequesting Task Communication Request",
-        "description": "This profile sets minimum expectations for a Task resource that is used to track the fulfilment of a communication request. For example, whether fulfilment of the communication request was attempted, successful, or failed. \nIt is based on the [AU eRequesting Task](StructureDefinition-au-erequesting-task.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a Task resource that is used to track the fulfilment of a communication request. For example, whether fulfilment of the communication request was attempted, successful, or failed. It is based on the [AU eRequesting Task](StructureDefinition-au-erequesting-task.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Task resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1796,7 +1996,7 @@
           "reference": "StructureDefinition/au-erequesting-task-diagnosticrequest"
         },
         "name": "AU eRequesting Task Diagnostic Request",
-        "description": "This profile sets minimum expectations for a Task resource that is used to record, search, and fetch information about a diagnostic request task to be fulfilled. It is based on the [AU eRequesting Task](StructureDefinition-au-erequesting-task.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a Task resource that is used to record, search, and fetch information about a diagnostic request task to be fulfilled. It is based on the [AU eRequesting Task](StructureDefinition-au-erequesting-task.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Task resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1810,7 +2010,7 @@
           "reference": "StructureDefinition/au-erequesting-task-group"
         },
         "name": "AU eRequesting Task Group",
-        "description": "This profile sets minimum expectations for a Task resource that is used to record, search, and fetch information about a group of tasks that are part of the same fulfilment group. It is based on the [AU eRequesting Task](StructureDefinition-au-erequesting-task.html) and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present when conforming to this profile.",
+        "description": "This profile sets minimum expectations for a Task resource that is used to record, search, and fetch information about a group of tasks that are part of the same fulfilment group. It is based on the [AU eRequesting Task](StructureDefinition-au-erequesting-task.html) profile and identifies the additional constraints, extensions, vocabularies and value sets that **SHALL** be present in the Task resource when conforming to this profile.",
         "exampleBoolean": false
       },
       {
@@ -1852,8 +2052,8 @@
           "reference": "Organization/barney-view-private-hospital"
         },
         "name": "Organization - Barney View Private Hospital",
-        "description": "Shows an example of an organisation, Barney View Private Hospital, for the *AU Core Organization* profile, with HPI-O and ABN, type as hospital, contact information and physical address.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"
+        "description": "Shows an example of an organisation, Barney View Private Hospital, for the *AU eRequesting Organization* profile, with HPI-O and ABN, type as hospital, contact information and physical address.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-organization"
       },
       {
         "extension": [
@@ -1866,8 +2066,8 @@
           "reference": "Patient/belger-remedios"
         },
         "name": "Patient - Remedios Belger",
-        "description": "Shows an example of a patient, Remedios Belger, for the *AU Core Patient* profile with IHI, medicare number, contact details, gender, birth date, address, and Indigenous status.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"
+        "description": "Shows an example of a patient, Remedios Belger, for the *AU eRequesting Patient* profile with IHI, medicare number, contact details, gender, birth date, address, and Indigenous status.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-patient"
       },
       {
         "extension": [
@@ -1950,7 +2150,7 @@
           "reference": "Coverage/coverage-dva"
         },
         "name": "Coverage - DVA",
-        "description": "Shows an example of coverage for the *AU eRequesting Coverage* profile, demonstrating the Department of Veterans’ Affairs coverage type. Beneficiary: Ronny Lawrence Irvine.",
+        "description": "Shows an example of coverage for the *AU eRequesting Coverage* profile, demonstrating the Department of Veterans’ Affairs coverage type. Beneficiary: Elijah KEN SCOTT.",
         "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-coverage"
       },
       {
@@ -1964,8 +2164,8 @@
           "reference": "PractitionerRole/diagnostic-mclaughlin-kimberlee"
         },
         "name": "PractitionerRole - Radiologist",
-        "description": "Shows an example of a Radiologist role for the *AU Core PractitionerRole* profile, including Medicare Provider Number, role, telecom and references to the associated Practitioner and Organization.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"
+        "description": "Shows an example of a Radiologist role for the *AU eRequesting PractitionerRole* profile, including Medicare Provider Number, role, telecom and references to the associated Practitioner and Organization.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-practitionerrole"
       },
       {
         "extension": [
@@ -1989,11 +2189,11 @@
           }
         ],
         "reference": {
-          "reference": "Organization/elimbah-medical-center"
+          "reference": "Organization/elimbah-medical-centre"
         },
-        "name": "Organization - Elimbah Medical Center",
-        "description": "Shows an example of an organisation, Elimbah Medical Center, for the *AU Core Organization* profile, with HPI-O and contact details.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"
+        "name": "Organization - Elimbah Medical Centre",
+        "description": "Shows an example of an organisation, Elimbah Medical Centre, for the *AU eRequesting Organization* profile, with HPI-O and contact details.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-organization"
       },
       {
         "extension": [
@@ -2006,8 +2206,22 @@
           "reference": "PractitionerRole/generalpractitioner-guthridge-jarred"
         },
         "name": "PractitionerRole - General practitioner",
-        "description": "Shows an example of a General Practitioner role for the *AU Core PractitionerRole* profile, using a Medicare Provider Number as the role identifier, and references to the associated Practitioner and Organization.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"
+        "description": "Shows an example of a General Practitioner role for the *AU eRequesting PractitionerRole* profile, using a Medicare Provider Number as the role identifier, and references to the associated Practitioner and Organization.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-practitionerrole"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Encounter"
+          }
+        ],
+        "reference": {
+          "reference": "Encounter/gp-consult-finger-pain"
+        },
+        "name": "Encounter - Finger Pain Consultation",
+        "description": "Shows an example of an encounter for the *AU eRequesting Encounter* profile, representing a general practice consultation for finger pain. Patient: Elijah KEN SCOTT.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-encounter"
       },
       {
         "extension": [
@@ -2020,8 +2234,8 @@
           "reference": "Encounter/gp-consultation"
         },
         "name": "Encounter - Consultation",
-        "description": "Shows an example of an encounter for the *AU Core Encounter* profile, representing a general practice consultation. Patient: Fred Roberts.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"
+        "description": "Shows an example of an encounter for the *AU eRequesting Encounter* profile, representing a general practice consultation. Patient: Fred Roberts.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-encounter"
       },
       {
         "extension": [
@@ -2034,22 +2248,8 @@
           "reference": "Practitioner/herbert-aimee"
         },
         "name": "Practitioner - Aimee Herbert",
-        "description": "Shows an example of a practitioner, Aimee Herbert, for the *AU Core Practitioner* profile, including HPI-I and name information.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Patient"
-          }
-        ],
-        "reference": {
-          "reference": "Patient/irvine-ronny-lawrence"
-        },
-        "name": "Patient - Ronny Lawrence Irvine",
-        "description": "Shows an example of a patient, Ronny Lawrence Irvine, for the *AU Core Patient* profile, with an IHI, Medicare and DVA identifiers.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"
+        "description": "Shows an example of a practitioner, Aimee Herbert, for the *AU eRequesting Practitioner* profile, including HPI-I and name information.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-practitioner"
       },
       {
         "extension": [
@@ -2062,8 +2262,8 @@
           "reference": "Organization/kioma-pathology"
         },
         "name": "Organization - Kioma Pathology Laboratory",
-        "description": "Shows an example of an organisation, Kioma Pathology Laboratory, for the *AU Core Organization* profile, with HPI-O, type as a pathology laboratory, contact information and physical address.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"
+        "description": "Shows an example of an organisation, Kioma Pathology Laboratory, for the *AU eRequesting Organization* profile, with HPI-O, type as a pathology laboratory, contact information and physical address.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-organization"
       },
       {
         "extension": [
@@ -2076,8 +2276,8 @@
           "reference": "Practitioner/losch-sallie"
         },
         "name": "Practitioner - Sallie Losch",
-        "description": "Shows an example of a practitioner, Sallie Losch, for the *AU Core Practitioner* profile, including HPI-I, name and APHRA information.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"
+        "description": "Shows an example of a practitioner, Sallie Losch, for the *AU eRequesting Practitioner* profile, including HPI-I, name and APHRA information.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-practitioner"
       },
       {
         "extension": [
@@ -2090,8 +2290,8 @@
           "reference": "Practitioner/mclaughlin-kimberlee"
         },
         "name": "Practitioner - Kimberlee McLaughlin",
-        "description": "Shows an example of a practitioner, Kimberlee McLaughlin, for the *AU Core Practitioner* profile, including HPI-I and name information.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"
+        "description": "Shows an example of a practitioner, Kimberlee McLaughlin, for the *AU eRequesting Practitioner* profile, including HPI-I and name information.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-practitioner"
       },
       {
         "extension": [
@@ -2118,8 +2318,8 @@
           "reference": "Organization/mount-charlton-radiology"
         },
         "name": "Organization - Mount Charlton Radiology",
-        "description": "Shows an example of an organisation, Mount Charlton Radiology, for the *AU Core Organization* profile, with HPI-O, type as a radiology practice, contact information and physical address.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"
+        "description": "Shows an example of an organisation, Mount Charlton Radiology, for the *AU eRequesting Organization* profile, with HPI-O, type as a radiology practice, contact information and physical address.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-organization"
       },
       {
         "extension": [
@@ -2146,8 +2346,8 @@
           "reference": "Encounter/obsgynaeclinic"
         },
         "name": "Encounter - OBGYN Outpatient Clinic",
-        "description": "Shows an example for the *AU Core Encounter* profile, representing a hospital outpatient obstetrics clinic visit. Patient: Remedios Belger.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"
+        "description": "Shows an example for the *AU eRequesting Encounter* profile, representing a hospital outpatient obstetrics clinic visit. Patient: Remedios Belger.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-encounter"
       },
       {
         "extension": [
@@ -2160,8 +2360,8 @@
           "reference": "PractitionerRole/obstetrician-losch-sallie"
         },
         "name": "PractitionerRole - Obstetrician and gynaecologist",
-        "description": "Shows an example of an obstetrician and gynaecologist, Sallie Losch, for the *AU Core PractitionerRole* profile, including Medicare Provider Number, associated organisation, role, and contact details.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"
+        "description": "Shows an example of an obstetrician and gynaecologist, Sallie Losch, for the *AU eRequesting PractitionerRole* profile, including Medicare Provider Number, associated organisation, role, and contact details.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-practitionerrole"
       },
       {
         "extension": [
@@ -2257,8 +2457,22 @@
         "reference": {
           "reference": "ServiceRequest/order-xray-1"
         },
-        "name": "ServiceRequest - X-ray",
+        "name": "ServiceRequest - Chest X-ray",
         "description": "Shows an example of a request for a chest X-ray for the *AU eRequesting Imaging Request* profile. Patient: Fred Roberts.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-servicerequest-imag"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/order-xray-2"
+        },
+        "name": "ServiceRequest - Hand X-ray (with coded body site)",
+        "description": "Shows an example of a request for Hand X-ray, with coded body site, for the *AU eRequesting Imaging Request* profile. Patient: Elijah KEN SCOTT.",
         "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-servicerequest-imag"
       },
       {
@@ -2272,8 +2486,8 @@
           "reference": "PractitionerRole/pathologist-herbert-aimee"
         },
         "name": "PractitionerRole - Pathologist",
-        "description": "Shows an example of a Pathologist role for the *AU Core PractitionerRole* profile, including Medicare Provider Number, role, telecom and references to the associated Practitioner and Organization.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"
+        "description": "Shows an example of a Pathologist role for the *AU eRequesting PractitionerRole* profile, including Medicare Provider Number, role, telecom and references to the associated Practitioner and Organization.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-practitionerrole"
       },
       {
         "extension": [
@@ -2286,8 +2500,8 @@
           "reference": "Practitioner/practitioner-guthridge-jarred"
         },
         "name": "Practitioner - Dr. Jarred Guthridge",
-        "description": "Shows an example of a practitioner, Jarred Guthridge, for the *AU Core Practitioner* profile, including HPI-I and name information.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner"
+        "description": "Shows an example of a practitioner, Jarred Guthridge, for the *AU eRequesting Practitioner* profile, including HPI-I and name information.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-practitioner"
       },
       {
         "extension": [
@@ -2300,8 +2514,22 @@
           "reference": "Patient/roberts-fred"
         },
         "name": "Patient - Fred Roberts",
-        "description": "Shows an example of a patient, Fred Roberts, for the *AU Core Patient* profile, with an IHI, contact details, gender, birth date, address, and Indigenous status.",
-        "exampleCanonical": "http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"
+        "description": "Shows an example of a patient, Fred Roberts, for the *AU eRequesting Patient* profile, with an IHI, contact details, gender, birth date, address, and Indigenous status.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/scott-elijah-ken"
+        },
+        "name": "Patient - Elijah KEN SCOTT",
+        "description": "Shows an example of a patient, Elijah KEN SCOTT, for the *AU eRequesting Patient* profile, with an IHI, Medicare and DVA identifiers.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-patient"
       },
       {
         "extension": [

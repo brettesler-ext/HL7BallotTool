@@ -4,6 +4,7 @@
   "ballot": "http://hl7.org.au/fhir/6.0.0-ballot",
   "defaultver": "5.0.0",
   "versions": [
+    "6.0.0-preview",
     "6.0.0-ballot",
     "deprecated:6.0.0-draft",
     "deprecated:5.1.0-preview",
@@ -176,6 +177,10 @@
     {
       "id": "HealthcareService/example5",
       "name": "HealthcareService - Leafy Grove Home for the Not Very Aged"
+    },
+    {
+      "id" : "ServiceRequest/path-example0",
+      "name" : "ServiceRequest - with multiple result copies to indicated"
     }
   ]
 }

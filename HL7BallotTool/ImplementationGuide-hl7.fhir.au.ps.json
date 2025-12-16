@@ -12,16 +12,16 @@
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "valueInteger": 0
+      "valueInteger": 1
     }
   ],
   "url": "http://hl7.org.au/fhir/ps/ImplementationGuide/hl7.fhir.au.ps",
-  "version": "0.3.0-ballot",
+  "version": "0.5.0-preview",
   "name": "AUPatientSummaryImplementationGuide",
   "title": "AU Patient Summary Implementation Guide",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2025-08-04T12:38:57+00:00",
+  "date": "2025-12-03T03:25:00+00:00",
   "publisher": "HL7 Australia",
   "contact": [
     {
@@ -61,22 +61,29 @@
       ],
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
-      "version": "6.5.0"
+      "version": "7.0.0"
+    },
+    {
+      "id": "hl7ext",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+          "valueMarkdown": "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+        }
+      ],
+      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+      "packageId": "hl7.fhir.uv.extensions.r4",
+      "version": "5.2.0"
     },
     {
       "uri": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
       "packageId": "hl7.fhir.uv.ips",
-      "version": "current"
+      "version": "2.0.0"
     },
     {
       "uri": "http://hl7.org.au/fhir/core/ImplementationGuide/hl7.fhir.au.core",
       "packageId": "hl7.fhir.au.core",
-      "version": "2.0.0-ballot"
-    },
-    {
-      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
-      "packageId": "hl7.fhir.uv.extensions.r4",
-      "version": "5.2.0"
+      "version": "2.0.0-preview"
     }
   ],
   "definition": {
@@ -102,7 +109,7 @@
           },
           {
             "url": "value",
-            "valueString": "Ballot"
+            "valueString": "Preview"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -168,6 +175,19 @@
           {
             "url": "value",
             "valueString": "https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "ips-comparison"
+          },
+          {
+            "url": "value",
+            "valueString": "current"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -459,8 +479,14 @@
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
       },
       {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters",
+        "valueReference": {
+          "reference": "Parameters/expansion-parameters"
+        }
+      },
+      {
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode": "hl7.fhir.uv.tools.r4#0.7.1"
+        "valueCode": "hl7.fhir.uv.tools.r4#0.8.0"
       },
       {
         "extension": [
@@ -483,7 +509,7 @@
           },
           {
             "url": "value",
-            "valueString": "Ballot"
+            "valueString": "Preview"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -549,6 +575,19 @@
           {
             "url": "value",
             "valueString": "https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#maturity-levels"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "ips-comparison"
+          },
+          {
+            "url": "value",
+            "valueString": "current"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1104,7 +1143,21 @@
           "reference": "Bundle/aups-section-emptyreason"
         },
         "name": "Bundle - Section empty reason",
-        "description": "Shows an example of a software-assembled patient summary that demonstrates the system has no information for the sections: problems, allergies, medications, immunisations. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Ronny Lawrence Irvine.",
+        "description": "Shows a software-assembled patient summary that demonstrates missing data for Patient.birthDate and suppressed data for Patient.gender and Patient.identifier using the Data Absent Reason extension. The system also has no information for the sections: problems, allergies, medications, and immunisations. Example for the *AU PS Bundle* and *AU PS Composition* profiles. Patient: Ronny Lawrence Irvine.",
+        "exampleCanonical": "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/aups-noknownx"
+        },
+        "name": "Bundle - No Known X",
+        "description": "Shows an example of a patient summary that demonstrates no known problems or disabilities, no known allergies and intolerances, and no known current medications. Example for the *AU PS Bundle* and *AU PS Composition* profile. Patient: Charlotte Morris.",
         "exampleCanonical": "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
       },
       {
@@ -1418,7 +1471,7 @@
             }
           ],
           "nameUrl": "usecase.html",
-          "title": "Example Use Cases",
+          "title": "Use Cases",
           "generation": "markdown",
           "page": [
             {
@@ -1606,6 +1659,21 @@
               "generation": "markdown"
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "changes.html"
+            }
+          ],
+          "nameUrl": "changes.html",
+          "title": "Change Log",
+          "generation": "markdown"
         }
       ]
     },
