@@ -30,6 +30,7 @@
 	<artifact id="StructureDefinition/medication-strength" key="StructureDefinition-medication-strength" name="Medication Strength" />
 	<artifact id="StructureDefinition/medication-brand-name" key="StructureDefinition-medication-brand-name" name="Medication Brand Name" />
 	<artifact id="StructureDefinition/medication-generic-name" key="StructureDefinition-medication-generic-name" name="Medication Generic Drug Name" />
+	<artifact id="StructureDefinition/ethnicity" key="StructureDefinition-ethnicity" name="Ethnicity" />
 	<artifact id="StructureDefinition/closing-the-gap-registration" key="StructureDefinition-closing-the-gap-registration" name="Closing the Gap Registration" />
 	<artifact id="StructureDefinition/associated-healthcareservice" key="StructureDefinition-associated-healthcareservice" name="Associated Healthcare Service" />
 	<artifact id="StructureDefinition/subsidised-concurrent-supply" key="StructureDefinition-subsidised-concurrent-supply" name="Subsidised Concurrent Supply" />

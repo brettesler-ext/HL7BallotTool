@@ -1,9 +1,10 @@
 {
   "cibuild": "hl7au/au-fhir-ps",
   "canonical": "http://hl7.org.au/fhir/ps",
-  "ballot": "http://hl7.org.au/fhir/ps/0.3.0-ballot",
-  "defaultver": "0.3.0-ballot",
+  "ballot": "http://hl7.org.au/fhir/ps/1.0.0-ballot",
+  "defaultver": "1.0.0-ballot",
   "versions": [
+    "1.0.0-ballot",
     "0.5.0-preview",
     "0.4.0-draft",
     "0.3.0-ballot",
@@ -11,10 +12,6 @@
     "deprecated:0.1.0-preview"
   ],
   "change": [
-    {
-      "key": "usecase",
-      "name" : "Example Use Cases"
-    }
   ],
   "deprecate": [
     {
