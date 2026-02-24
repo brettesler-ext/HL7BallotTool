@@ -2,10 +2,11 @@
   "cibuild": "hl7au/au-fhir-base",
   "canonical": "http://hl7.org.au/fhir",
   "ballot": "http://hl7.org.au/fhir/6.0.0-ballot",
-  "defaultver": "5.0.0",
+  "defaultver": "6.0.0",
   "versions": [
-    "6.0.0-preview",
-    "6.0.0-ballot",
+    "6.0.0",
+    "deprecated:6.0.0-preview",
+    "deprecated:6.0.0-ballot",
     "deprecated:6.0.0-draft",
     "deprecated:5.1.0-preview",
     "5.0.0",
@@ -16,6 +17,11 @@
     "deprecated:4.1.0"
   ],
   "deprecate": [
+    {
+      "id": "CodeSystem/communicationrequest-reason",
+      "key": "CodeSystem-communicationrequest-reason",
+      "name": "Communication Request Reason"
+    },
     {
       "id": "StructureDefinition/ethnicity",
       "key": "StructureDefinition-ethnicity",
@@ -64,7 +70,7 @@
     {
       "id": "Encounter/example2",
       "key": "Encounter-example2",
-      "name": "Encounter - Annual check up"
+      "name": "Encounter - Annual check up deprecated"
     },
     {
       "id": "StructureDefinition/au-healthprogramparticipation",
@@ -149,38 +155,6 @@
     {
       "id": "ValueSet/rsg-type",
       "name": "AU Recorded Sex or Gender Type Value"
-    },
-    {
-      "id": "Practitioner/example-sex-and-gender",
-      "name": "Practitioner - for use in sex and gender"
-    },
-    {
-      "id": "Patient/example-sex-and-gender",
-      "name": "Patient - Transgender Person Example"
-    },
-    {
-      "id": "HealthcareService/example0",
-      "name": "HealthcareService - with HPI-O and eligibility"
-    },
-    {
-      "id": "Organization/example4",
-      "name": "Organization - with source"
-    },
-    {
-      "id": "RelatedPerson/example-sex-and-gender",
-      "name": "RelatedPerson - as family member, for use in sex and gender"
-    },
-    {
-      "id": "Encounter/example1",
-      "name": "Encounter - with narative description"
-    },
-    {
-      "id": "HealthcareService/example5",
-      "name": "HealthcareService - Leafy Grove Home for the Not Very Aged"
-    },
-    {
-      "id" : "ServiceRequest/path-example0",
-      "name" : "ServiceRequest - with multiple result copies to indicated"
     }
   ]
 }
