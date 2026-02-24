@@ -23,11 +23,6 @@
       "name": "Communication Request Reason"
     },
     {
-      "id": "StructureDefinition/ethnicity",
-      "key": "StructureDefinition-ethnicity",
-      "name": "Ethnicity"
-    },
-    {
       "id": "SearchParameter/patient-gender-identity",
       "key": "SearchParameter-patient-gender-identity",
       "name": "PatientGenderIdentity"

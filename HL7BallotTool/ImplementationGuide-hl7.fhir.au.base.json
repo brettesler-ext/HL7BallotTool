@@ -12,12 +12,12 @@
     }
   ],
   "url": "http://hl7.org.au/fhir/ImplementationGuide/hl7.fhir.au.base",
-  "version": "6.0.0",
+  "version": "6.0.1-ci-build",
   "name": "AUBaseImplementationGuide",
   "title": "AU Base Implementation Guide",
   "status": "active",
   "experimental": false,
-  "date": "2026-01-15T22:29:38+00:00",
+  "date": "2026-01-18T21:39:42+00:00",
   "publisher": "HL7 Australia",
   "contact": [
     {
@@ -95,7 +95,7 @@
           },
           {
             "url": "value",
-            "valueString": "Working Standard"
+            "valueString": "CI Build"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -1104,7 +1104,7 @@
           },
           {
             "url": "value",
-            "valueString": "Working Standard"
+            "valueString": "CI Build"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -2297,6 +2297,18 @@
             "valueString": "StructureDefinition:extension"
           }
         ],
+        "reference": { "reference": "StructureDefinition/ethnicity" },
+        "name": "Ethnicity",
+        "description": "This extension applies to the Patient resource and is used to represent ethnic identity (see [Australian Bureau of Statistics](https://www.abs.gov.au/statistics/classifications/australian-standard-classification-cultural-and-ethnic-groups-ascceg/2019) for further information). This extension is to support the provision of healthcare services to patients with specific cultural identities. This extension provides further information about a person’s cultural values and practices which can be significant in determining service type, support required and possible needs.\n\nThe words 'ethnicity' and 'ethnic' are associated with many different meanings, but for the purpose of this extension ethnicity refers to the shared identity or similarity of a group of people on the basis of one or more distinguishing sociological characteristics, such as language, shared history, religion, cultural traditions or geographic origin etc. This extension supports Australian Aboriginal and Torres Strait Islander peoples as well as ethnicities originating from outside of Australia.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
         "reference": { "reference": "StructureDefinition/closing-the-gap-registration" },
         "name": "Closing the Gap Registration",
         "description": "This extension applies to the Patient resource and provides an indicator of whether the patient is eligible for a Closing the Gap (CTG) co-payment.",
@@ -3115,7 +3127,7 @@
         ],
         "reference": { "reference": "StructureDefinition/au-diagnosticreport" },
         "name": "AU Base DiagnosticReport",
-        "description": "This profile defines a diagnostic report structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.\n\nFor specific reporting of pathology or imaging services the more specific [AU Base Pathology Report](https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-pathologyreport.html) or [AU Base Diagnostic Imaging Report](https://hl7.org.au/fhir/6.0.0/StructureDefinition-au-imagingreport.html) profiles would be preferred. This profile is suitable for any other diagnostic service reporting needs.",
+        "description": "This profile defines a diagnostic report structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.\n\nFor specific reporting of pathology or imaging services the more specific [AU Base Pathology Report](StructureDefinition-au-pathologyreport.html) or [AU Base Diagnostic Imaging Report](StructureDefinition-au-imagingreport.html) profiles would be preferred. This profile is suitable for any other diagnostic service reporting needs.",
         "exampleBoolean": false
       },
       {
@@ -5011,7 +5023,7 @@
         ],
         "reference": { "reference": "Encounter/example1" },
         "name": "Encounter - Annual check up",
-        "description": "Shows an example of an encounter for the *AU Base Encounter* profile, representing an annual check up encounter. Patient: Suzanne Simmons.",
+        "description": "Shows an example of an encounter for the *AU Base Encounter* profile, representing an annual check up encounter for [Observation-healthprogramparticipation-example0](https://build.fhir.org/ig/hl7au/au-fhir-base/Observation-healthprogramparticipation-example0.html). Patient: Suzanne Simmons.",
         "exampleCanonical": "http://hl7.org.au/fhir/StructureDefinition/au-encounter"
       },
       {
