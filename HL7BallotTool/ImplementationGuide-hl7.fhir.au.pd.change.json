@@ -8,7 +8,12 @@
   "versions": [
     "2.0.1"
   ],
-  "change": [],
+  "change": [
+    {
+      "id": "CodeSystem/endpoint-payload-type",
+      "name": "Australian Endpoint Payload Types Codes"
+    }
+  ],
   "deprecate": [],
   "pagedeprecate": []
 

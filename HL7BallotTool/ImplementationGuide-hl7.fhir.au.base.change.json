@@ -3,9 +3,11 @@
   "workgroup": "au-fhir",
   "cibuild": "hl7au/au-fhir-base",
   "canonical": "http://hl7.org.au/fhir",
-  "ballot": "http://hl7.org.au/fhir/6.0.0-ballot",
+  "ballot": "http://hl7.org.au/fhir/7.0.0-ballot1",
   "defaultver": "6.0.0",
   "versions": [
+    "7.0.0-ballot1",
+    "deprecated:6.1.1-draft",
     "6.0.0",
     "deprecated:6.0.0-preview",
     "deprecated:6.0.0-ballot",
@@ -19,6 +21,16 @@
     "deprecated:4.1.0"
   ],
   "deprecate": [
+    {
+      "id": "StructureDefinition/ethnicity",
+      "key": "StructureDefinition-ethnicity",
+      "name": "Ethnicity"
+    },
+    {
+      "id": "Substance/example2",
+      "key": "Substance-example2",
+      "name": "Substance - medication substance with two active ingredients"
+    },
     {
       "id": "CodeSystem/communicationrequest-reason",
       "key": "CodeSystem-communicationrequest-reason",

@@ -7,8 +7,8 @@
   "defaultver": "1.0.0",
   "versions": [
     "1.0.0",
-    "1.0.0-preview",
-    "1.0.0-ballot",
+    "deprecated:1.0.0-preview",
+    "deprecated:1.0.0-ballot",
     "deprecated:0.4.0-preview",
     "deprecated:0.3.0-preview",
     "deprecated:0.2.0-preview",

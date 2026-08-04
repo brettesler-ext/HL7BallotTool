@@ -115,7 +115,91 @@ before copying so they are not clobbered:
 - `FHIR-au-base.xml` — deployed lists `StructureDefinition/ethnicity` at the end of the artifact
   block rather than in IG order. Cosmetic; order is not significant.
 
-## Update workflow
+## Command: "refresh all igs"
+
+When Brett says **"refresh all igs"** (or "refresh the IGs", "refresh au-core", etc.), run the
+whole update for all five AU IGs — or just the named ones — end to end, without asking for each
+IG in turn. Steps:
+
+### 1. Discover published versions
+
+Each IG's publication history is `<canonical>/package-list.json` on hl7.org.au:
+
+| Spec | package-list |
+| --- | --- |
+| au-base | <https://hl7.org.au/fhir/package-list.json> |
+| au-core | <https://hl7.org.au/fhir/core/package-list.json> |
+| au-pd | <https://hl7.org.au/fhir/pd/package-list.json> |
+| au-ps | <https://hl7.org.au/fhir/ps/package-list.json> |
+| au-erequesting | <https://hl7.org.au/fhir/ereq/package-list.json> |
+
+Each `list[]` entry has `version`, `path`, `status` (`ci-build` | `draft` | `preview` | `ballot` |
+`trial-use`), `date`, and optionally `current: true`. Reading rules:
+
+- **Ignore the `status: ci-build` entry** — the template already emits a `current` version pointing
+  at the CI build. (It also carries `current: true`; that is not the release flag.)
+- **Newest publication** = the non-ci-build entry with the latest `date`. This is the version whose
+  ImplementationGuide resource gets downloaded — a ballot or draft counts, because feedback is
+  raised against ballot content and its artifacts must exist in the JIRA file.
+- **`defaultver`** = the entry flagged `current: true` (excluding the ci-build one) — the milestone
+  release, not the newest pre-release.
+- **`ballot`** = the `path` of the most recent `status: ballot` entry. (au-pd has none — see the
+  manual-deltas note.)
+- Compare against the IG's current `change.json` to see what is new since the last refresh.
+
+### 2. Download the ImplementationGuide resource
+
+`<path>/ImplementationGuide-<package-id>.json` from the newest publication, e.g.
+`https://hl7.org.au/fhir/7.0.0-ballot1/ImplementationGuide-hl7.fhir.au.base.json`. Save over
+`HL7BallotTool/ImplementationGuide-hl7.fhir.au.<stem>.json`, keeping the existing filename stem
+(`base`, `core`, `pd`, `ereq`, `ps`) — the template's arrays reference those names.
+
+### 3. Update the change.json
+
+Before overwriting the IG json, capture the previous artifact and page keys (the existing
+`FHIR-au-*.xml` in this folder is the easiest source), then:
+
+- **New versions** — insert every newly published version into `versions[]`, newest first, matching
+  package-list order. Prefix with `deprecated:` any pre-release (`draft` / `preview` / `ballot` /
+  `snapshot`) that a later publication supersedes. Released (`trial-use`) versions stay active
+  unless deliberately retired — see 4.1.0 in au-base for a retired release.
+- **`defaultver`, `ballot`** — set per the rules above.
+- **Vanished artifacts** — any artifact in the previous output that is no longer in
+  `definition.resource[]` moves into `deprecate[]` with its **exact previous `id`, `key` and
+  `name`**. Never invent or re-derive the key.
+- **Vanished pages** — same, into `pagedeprecate[]` with `{key, name}`.
+- **Renames** — an artifact whose name changed but which must keep its old JIRA label goes in
+  `change[]` as `{id, name}`. Also the fix for a `DUPLICATE` marker.
+- Never delete an existing `deprecate` / `pagedeprecate` / `versions` entry. **Deprecated stays
+  deprecated**, and keys are permanent (see Standing rules).
+
+### 4. Regenerate, verify, report
+
+Run the template (headless command above, or VS **Run Custom Tool**), then:
+
+- grep the outputs for `DUPLICATE` — resolve any hit via `change[]` and regenerate.
+- **Check for duplicate `key` values within each output.** If an artifact was deprecated in a past
+  refresh and the IG has since reinstated it, the template emits it twice — once live from the IG
+  and once from `deprecate[]` — and the `DUPLICATE` tripwire does *not* catch this, because it only
+  compares names within the IG loop. Fix by removing the resurrected entry from `deprecate[]`; the
+  key survives (now as a live artifact), so the permanence rule is not breached.
+- Confirm no key present in the deployed file is missing from the new output.
+- diff each `FHIR-au-*.xml` against `C:\repos\JIRA-Spec-Artifacts\xml\` and confirm every change is
+  explained by the refresh, allowing for the known manual deltas.
+- XSD validation against `JIRA-Spec-Artifacts/schemas/specification.xsd` will report
+  `defaultWorkgroup` enum failures for `au-core` / `au-ereq` locally. That is a stale
+  `schemas/workgroups.xsd` build artifact (last regenerated Nov 2024, before the AU work groups
+  were added to `xml/_workgroups.xml`); the ant `validate` target rebuilds it from
+  `_workgroups.xml` first, so upstream CI passes. The already-deployed files fail the same way.
+- Report per IG: previous → new version loaded, `defaultver` / `ballot` changes, versions added,
+  artifacts and pages newly deprecated, and anything that needed a judgement call.
+
+Stop and ask before copying into `JIRA-Spec-Artifacts` or pushing — "refresh all igs" covers
+steps 1–4 only. The copy/PR is the separate workflow below.
+
+## Update workflow (end to end)
+
+Steps 1–4 are what "refresh all igs" automates; 5–6 are the deployment half.
 
 1. Replace `ImplementationGuide-hl7.fhir.au.<key>.json` with the IG resource from the newly
    published version.
