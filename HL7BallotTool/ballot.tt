@@ -29,14 +29,20 @@
 
 		string changesPath = this.Host.ResolvePath(changes[i]);
         string changesJson = File.ReadAllText(changesPath);
-        dynamic changessource = JObject.Parse(changesJson);
+		JObject changesobj = JObject.Parse(changesJson);
+        dynamic changessource = changesobj;
 
 		string canonical = changessource.canonical;
 		string ballotUrl = changessource.ballot;
 		string defaultv = changessource.defaultver;
 		string cibuild = changessource.cibuild;
+
+		// owning work group - must be a key from JIRA-Spec-Artifacts/xml/_workgroups.xml
+		string workgroup = (string)changesobj["workgroup"] ?? "au-fhir";
+		// spec key registered in JIRA-Spec-Artifacts/xml/SPECS-FHIR.xml - drives the output filename
+		string speckey = (string)changesobj["speckey"];
         #>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="<#= ballotUrl #>" ciUrl="https://build.fhir.org/ig/<#= cibuild #>" defaultVersion="<#= defaultv #>" defaultWorkgroup="au-fhir" gitUrl="https://github.com/<#= cibuild #>" url="<#= canonical #>">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="<#= ballotUrl #>" ciUrl="https://build.fhir.org/ig/<#= cibuild #>" defaultVersion="<#= defaultv #>" defaultWorkgroup="<#= workgroup #>" gitUrl="https://github.com/<#= cibuild #>" url="<#= canonical #>">
 	<version code="current" url="https://build.fhir.org/ig/<#= cibuild #>"/><#
 		foreach(var version in changessource.versions)
 		{
@@ -105,7 +111,9 @@
 #>
 </specification>
         <#
-		var fname = "FHIR-" + filename.Replace("ImplementationGuide-hl7.fhir.","").Replace(".","-").Replace("-json",".xml");
+		var fname = speckey != null
+			? "FHIR-" + speckey + ".xml"
+			: "FHIR-" + filename.Replace("ImplementationGuide-hl7.fhir.","").Replace(".","-").Replace("-json",".xml");
         save(fname);
 		duplicates.Clear();
 		i++;

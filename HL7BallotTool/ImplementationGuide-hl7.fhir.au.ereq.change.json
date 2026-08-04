@@ -1,4 +1,6 @@
 {
+  "speckey": "au-erequesting",
+  "workgroup": "au-ereq",
   "cibuild": "hl7au/au-fhir-erequesting",
   "canonical": "http://hl7.org.au/fhir/ereq",
   "ballot": "http://hl7.org.au/fhir/ereq/1.0.0-ballot",

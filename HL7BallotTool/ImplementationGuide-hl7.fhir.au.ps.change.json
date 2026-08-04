@@ -1,4 +1,6 @@
 {
+  "speckey": "au-ps",
+  "workgroup": "au-core",
   "cibuild": "hl7au/au-fhir-ps",
   "canonical": "http://hl7.org.au/fhir/ps",
   "ballot": "http://hl7.org.au/fhir/ps/1.0.0-ballot",

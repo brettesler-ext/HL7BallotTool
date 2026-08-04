@@ -1,4 +1,6 @@
 {
+  "speckey": "au-base",
+  "workgroup": "au-fhir",
   "cibuild": "hl7au/au-fhir-base",
   "canonical": "http://hl7.org.au/fhir",
   "ballot": "http://hl7.org.au/fhir/6.0.0-ballot",
