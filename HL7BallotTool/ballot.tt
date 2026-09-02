@@ -12,9 +12,9 @@
 <#@ output extension=".txt" #>
 <#
 	// source files 
-	string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json", "ImplementationGuide-hl7.fhir.au.ereq.json", "ImplementationGuide-hl7.fhir.au.ps.json" };
+	string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json", "ImplementationGuide-hl7.fhir.au.ereq.json", "ImplementationGuide-hl7.fhir.au.ps.json", "ImplementationGuide-hl7.fhir.au.encounter.json" };
 	
-	string[] changes = new string[] { "ImplementationGuide-hl7.fhir.au.core.change.json", "ImplementationGuide-hl7.fhir.au.base.change.json", "ImplementationGuide-hl7.fhir.au.pd.change.json", "ImplementationGuide-hl7.fhir.au.ereq.change.json", "ImplementationGuide-hl7.fhir.au.ps.change.json" };
+	string[] changes = new string[] { "ImplementationGuide-hl7.fhir.au.core.change.json", "ImplementationGuide-hl7.fhir.au.base.change.json", "ImplementationGuide-hl7.fhir.au.pd.change.json", "ImplementationGuide-hl7.fhir.au.ereq.change.json", "ImplementationGuide-hl7.fhir.au.ps.change.json", "ImplementationGuide-hl7.fhir.au.encounter.change.json" };
 
 	List<string> duplicates = new List<string>();
 
@@ -33,7 +33,8 @@
         dynamic changessource = changesobj;
 
 		string canonical = changessource.canonical;
-		string ballotUrl = changessource.ballot;
+		// optional - a CI-only spec has never been balloted, so no ballotUrl is emitted
+		string ballotUrl = (string)changesobj["ballot"];
 		string defaultv = changessource.defaultver;
 		string cibuild = changessource.cibuild;
 
@@ -41,8 +42,19 @@
 		string workgroup = (string)changesobj["workgroup"] ?? "au-fhir";
 		// spec key registered in JIRA-Spec-Artifacts/xml/SPECS-FHIR.xml - drives the output filename
 		string speckey = (string)changesobj["speckey"];
+		string ballotAttr = string.IsNullOrEmpty(ballotUrl) ? "" : " ballotUrl=\"" + ballotUrl + "\"";
+
+		// artifact ids to leave out of the output entirely - IG scaffolding that must never
+		// become a permanent JIRA key. Never use this to drop a real artifact; deprecate it.
+		HashSet<string> excluded = new HashSet<string>();
+		JArray excludearr = (JArray)changesobj["exclude"];
+		if(excludearr != null)
+		{
+			foreach(var ex in excludearr)
+				excluded.Add(ex.ToString());
+		}
         #>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="<#= ballotUrl #>" ciUrl="https://build.fhir.org/ig/<#= cibuild #>" defaultVersion="<#= defaultv #>" defaultWorkgroup="<#= workgroup #>" gitUrl="https://github.com/<#= cibuild #>" url="<#= canonical #>">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<#= ballotAttr #> ciUrl="https://build.fhir.org/ig/<#= cibuild #>" defaultVersion="<#= defaultv #>" defaultWorkgroup="<#= workgroup #>" gitUrl="https://github.com/<#= cibuild #>" url="<#= canonical #>">
 	<version code="current" url="https://build.fhir.org/ig/<#= cibuild #>"/><#
 		foreach(var version in changessource.versions)
 		{
@@ -76,6 +88,9 @@
 		string key = rnode.reference.reference.ToString().Replace("/","-");
 
 		string idval = rnode.reference.reference.ToString();
+		if(excluded.Contains(idval))
+			continue;
+
 		string nameval = rnode.name.ToString();
 		if(changesdict.ContainsKey(idval))
 			nameval = changesdict[idval];

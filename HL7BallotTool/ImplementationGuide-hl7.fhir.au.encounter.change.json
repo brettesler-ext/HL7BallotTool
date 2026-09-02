@@ -1,0 +1,14 @@
+{
+  "speckey": "au-encounter",
+  "workgroup": "au-fhir",
+  "cibuild": "hl7au/au-fhir-encounter",
+  "canonical": "http://hl7.org.au/fhir/encounter",
+  "defaultver": "current",
+  "versions": [],
+  "exclude": [
+    "StructureDefinition/myobservation"
+  ],
+  "change": [],
+  "deprecate": [],
+  "pagedeprecate": []
+}

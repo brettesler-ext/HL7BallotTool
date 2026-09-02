@@ -32,8 +32,10 @@ CLI, so pass `-P` with a Newtonsoft.Json directory:
 cd /c/repos/HL7BallotTool/HL7BallotTool && "/c/Program Files/Microsoft Visual Studio/18/Professional/Common7/IDE/TextTransform.exe" -P "C:\Users\brett\.nuget\packages\newtonsoft.json\13.0.3\lib\net45" -out ballot.txt ballot.tt
 ```
 
-The template loops over five hard-coded IG/change pairs. Adding a new IG means editing the
-`filenames` and `changes` arrays at the top of `ballot.tt`.
+The template loops over hard-coded IG/change pairs. Adding a new IG means editing the
+`filenames` and `changes` arrays at the top of `ballot.tt`, adding the two input files, and —
+on the deployment side — registering the spec key in `JIRA-Spec-Artifacts/xml/SPECS-FHIR.xml`
+(`<specification key="…" name="…"/>`). JIRA will not offer the spec until that entry exists.
 
 ### Inputs (per IG, in `HL7BallotTool/`)
 
@@ -49,11 +51,12 @@ The template loops over five hard-coded IG/change pairs. Adding a new IG means e
    | `workgroup` | `defaultWorkgroup`. Optional — defaults to `au-fhir`. Must be a key from `JIRA-Spec-Artifacts/xml/_workgroups.xml` |
    | `cibuild` | `org/repo` → `ciUrl` (`https://build.fhir.org/ig/…`) and `gitUrl` |
    | `canonical` | `url` on `<specification>`, and the base for each version URL |
-   | `ballot` | `ballotUrl` |
+   | `ballot` | `ballotUrl`. Optional — omit for a spec that has never been balloted and no `ballotUrl` attribute is emitted |
    | `defaultver` | `defaultVersion` |
    | `versions[]` | one `<version>` each, in order; prefix a value with `deprecated:` to emit `deprecated="true"` |
    | `deprecate[]` | `{id, key, name}` artifacts that no longer exist in the IG but must remain, emitted with `deprecated="true"` |
    | `pagedeprecate[]` | `{key, name}` same, for pages |
+   | `exclude[]` | artifact `reference.reference` ids to leave out of the output entirely. For IG scaffolding only (e.g. the `StructureDefinition/myobservation` placeholder in AU Encounter) — never a way to drop a real artifact, which must be deprecated instead |
    | `change[]` | `{id, name}` renames — overrides the artifact/page display name coming from the IG json (matched on artifact `reference.reference` or page key) |
 
    `defaultWorkgroup` is hard-coded to `au-fhir` in the template — see manual deltas below.
@@ -94,9 +97,20 @@ Registered in `JIRA-Spec-Artifacts/xml/SPECS-FHIR.xml`; work group keys in `xml/
 | `au-pd` | `FHIR-au-pd.xml` | `hl7.fhir.au.pd` | `au-fhir` |
 | `au-ps` | `FHIR-au-ps.xml` | `hl7.fhir.au.ps` | `au-core` |
 | `au-erequesting` | `FHIR-au-erequesting.xml` | `hl7.fhir.au.ereq` | `au-ereq` |
+| `au-encounter` | `FHIR-au-encounter.xml` | `hl7.fhir.au.encounter` | `au-fhir` |
 
 Note eRequesting: the IG input files and canonical use the `ereq` stem while the registered JIRA
 spec key is `au-erequesting`. `speckey` bridges that, so no rename is needed on copy.
+
+**AU Encounter Record is CI-only** — no publication, so no `package-list.json`, no `versions[]`,
+no `ballot`, and `defaultver` is `current` (the CI `<version>` the template always emits). Its IG
+resource comes straight from the CI build:
+<https://build.fhir.org/ig/hl7au/au-fhir-encounter/ImplementationGuide-hl7.fhir.au.encounter.json>.
+`ballotUrl` is omitted from the output whenever `ballot` is absent or empty.
+
+Its only IG resource so far is the `StructureDefinition/myobservation` scaffold left over from the
+IG template, listed in `exclude[]` so it never becomes a permanent JIRA key. Drop that entry once
+the IG defines real profiles; the 17 pages are the useful content in the meantime.
 
 `HL7BallotTool/manual updates/` holds copies of deployed files that were edited by hand (including
 `FHIR-au-signup.xml`, which has no generator inputs and is not yet in `SPECS-FHIR.xml`). Treat it
@@ -109,9 +123,9 @@ As of the `speckey`/`workgroup` change, `FHIR-au-core.xml`, `FHIR-au-ps.xml` and
 before copying so they are not clobbered:
 
 - `FHIR-au-pd.xml` — deployed has **no** `ballotUrl` attribute, and its `<version>` lines are
-  formatted differently. `pd.change.json` sets `ballot` to the 2.0.1 release URL, which the
-  template emits unconditionally. Strip `ballotUrl` on copy (or drop the `ballot` field and make
-  the attribute conditional in the template).
+  formatted differently. `pd.change.json` still sets `ballot` to the 2.0.1 release URL (2.0.1 was
+  never balloted). The template now omits `ballotUrl` when `ballot` is absent, so deleting that
+  field from `pd.change.json` would close this delta — not done yet.
 - `FHIR-au-base.xml` — deployed lists `StructureDefinition/ethnicity` at the end of the artifact
   block rather than in IG order. Cosmetic; order is not significant.
 
@@ -132,6 +146,7 @@ Each IG's publication history is `<canonical>/package-list.json` on hl7.org.au:
 | au-pd | <https://hl7.org.au/fhir/pd/package-list.json> |
 | au-ps | <https://hl7.org.au/fhir/ps/package-list.json> |
 | au-erequesting | <https://hl7.org.au/fhir/ereq/package-list.json> |
+| au-encounter | *(none — CI only; re-pull the IG resource from the CI build instead)* |
 
 Each `list[]` entry has `version`, `path`, `status` (`ci-build` | `draft` | `preview` | `ballot` |
 `trial-use`), `date`, and optionally `current: true`. Reading rules:
