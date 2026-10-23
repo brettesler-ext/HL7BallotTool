@@ -136,16 +136,16 @@ as a scratch/reference area, not the source of truth.
 
 ## Known manual deltas (generated → deployed)
 
-As of the `speckey`/`workgroup` change, `FHIR-au-core.xml`, `FHIR-au-ps.xml` and
-`FHIR-au-erequesting.xml` regenerate byte-identical to what is deployed. Two deltas remain — diff
-before copying so they are not clobbered:
+There are no substantive deltas left. Every generated file now matches what is deployed in
+element and attribute content, so a refresh can be copied straight across.
 
-- `FHIR-au-pd.xml` — deployed has **no** `ballotUrl` attribute, and its `<version>` lines are
-  formatted differently. `pd.change.json` still sets `ballot` to the 2.0.1 release URL (2.0.1 was
-  never balloted). The template now omits `ballotUrl` when `ballot` is absent, so deleting that
-  field from `pd.change.json` would close this delta — not done yet.
-- `FHIR-au-base.xml` — deployed lists `StructureDefinition/ethnicity` at the end of the artifact
-  block rather than in IG order. Cosmetic; order is not significant.
+`FHIR-au-pd.xml` is the one file that still differs as *text*: the deployed copy was hand-written
+(tab-indented `<version>` lines, no trailing spaces, `name="…"/>` on one artifact) while the
+generator emits its usual style (4-space `<version>` indent with trailing spaces, a space before
+every `/>`, and a trailing whitespace line with no newline at EOF — all of which the other six
+deployed files already have). Verified identical with `remove_blank_text` parsing: same 45
+elements, same attributes. `pd.change.json` no longer sets `ballot`, since 2.0.1 was never
+balloted, so no `ballotUrl` is emitted.
 
 ## Command: "refresh all igs"
 
