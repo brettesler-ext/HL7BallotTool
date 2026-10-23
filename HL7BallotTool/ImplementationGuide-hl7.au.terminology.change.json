@@ -1,0 +1,12 @@
+{
+  "speckey": "au-terminology",
+  "workgroup": "au-terminology",
+  "cibuild": "hl7au/au-terminology",
+  "canonical": "http://terminology.hl7.org.au",
+  "defaultver": "current",
+  "versions": [],
+  "exclude": [],
+  "change": [],
+  "deprecate": [],
+  "pagedeprecate": []
+}

@@ -12,9 +12,9 @@
 <#@ output extension=".txt" #>
 <#
 	// source files 
-	string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json", "ImplementationGuide-hl7.fhir.au.ereq.json", "ImplementationGuide-hl7.fhir.au.ps.json", "ImplementationGuide-hl7.fhir.au.encounter.json" };
+	string[] filenames = new string[] { "ImplementationGuide-hl7.fhir.au.core.json", "ImplementationGuide-hl7.fhir.au.base.json", "ImplementationGuide-hl7.fhir.au.pd.json", "ImplementationGuide-hl7.fhir.au.ereq.json", "ImplementationGuide-hl7.fhir.au.ps.json", "ImplementationGuide-hl7.fhir.au.encounter.json", "ImplementationGuide-hl7.au.terminology.json" };
 	
-	string[] changes = new string[] { "ImplementationGuide-hl7.fhir.au.core.change.json", "ImplementationGuide-hl7.fhir.au.base.change.json", "ImplementationGuide-hl7.fhir.au.pd.change.json", "ImplementationGuide-hl7.fhir.au.ereq.change.json", "ImplementationGuide-hl7.fhir.au.ps.change.json", "ImplementationGuide-hl7.fhir.au.encounter.change.json" };
+	string[] changes = new string[] { "ImplementationGuide-hl7.fhir.au.core.change.json", "ImplementationGuide-hl7.fhir.au.base.change.json", "ImplementationGuide-hl7.fhir.au.pd.change.json", "ImplementationGuide-hl7.fhir.au.ereq.change.json", "ImplementationGuide-hl7.fhir.au.ps.change.json", "ImplementationGuide-hl7.fhir.au.encounter.change.json", "ImplementationGuide-hl7.au.terminology.change.json" };
 
 	List<string> duplicates = new List<string>();
 
@@ -25,7 +25,13 @@
     {
         string settingsPath = this.Host.ResolvePath(filename);
         string settingsJson = File.ReadAllText(settingsPath);
-        dynamic datasource = JObject.Parse(settingsJson);
+		JObject datasourceobj = JObject.Parse(settingsJson);
+        dynamic datasource = datasourceobj;
+
+		// an IG that defines no artifacts yet has no definition.resource at all,
+		// and definition.page can likewise be absent - treat both as empty
+		JArray resources = (JArray)datasourceobj["definition"]["resource"] ?? new JArray();
+		JToken rootpage = datasourceobj["definition"]["page"];
 
 		string changesPath = this.Host.ResolvePath(changes[i]);
         string changesJson = File.ReadAllText(changesPath);
@@ -83,7 +89,7 @@
 			changesdict.Add(changevalue.id.ToString(), changevalue.name.ToString() );
 	}
 
-	foreach(var rnode in datasource.definition.resource)
+	foreach(dynamic rnode in resources)
 	{
 		string key = rnode.reference.reference.ToString().Replace("/","-");
 
@@ -114,7 +120,8 @@
 	<page key="NA" name="(NA)"/>
 	<page key="many" name="(many)"/>
 <#
-	pages(datasource.definition.page, changesdict);
+	if(rootpage != null)
+		pages(rootpage, changesdict);
 	
 	foreach(var pagedepvalue in changessource.pagedeprecate)
 	{

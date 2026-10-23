@@ -39,7 +39,8 @@ on the deployment side — registering the spec key in `JIRA-Spec-Artifacts/xml/
 
 ### Inputs (per IG, in `HL7BallotTool/`)
 
-1. `ImplementationGuide-hl7.fhir.au.<key>.json` — the **ImplementationGuide resource from the
+1. `ImplementationGuide-<package id>.json` (usually `hl7.fhir.au.<key>`, but see AU Terminology)
+   — the **ImplementationGuide resource from the
    latest published version** of that IG (not the CI build, unless deliberately generating from
    CI — see commit `447b766 "AU Base ci generation"`). Supplies
    `definition.resource[]` → `<artifact>` and `definition.page` (recursed) → `<page>`.
@@ -98,6 +99,7 @@ Registered in `JIRA-Spec-Artifacts/xml/SPECS-FHIR.xml`; work group keys in `xml/
 | `au-ps` | `FHIR-au-ps.xml` | `hl7.fhir.au.ps` | `au-core` |
 | `au-erequesting` | `FHIR-au-erequesting.xml` | `hl7.fhir.au.ereq` | `au-ereq` |
 | `au-encounter` | `FHIR-au-encounter.xml` | `hl7.fhir.au.encounter` | `au-fhir` |
+| `au-terminology` | `FHIR-au-terminology.xml` | `hl7.au.terminology` | `au-terminology` |
 
 Note eRequesting: the IG input files and canonical use the `ereq` stem while the registered JIRA
 spec key is `au-erequesting`. `speckey` bridges that, so no rename is needed on copy.
@@ -111,6 +113,22 @@ resource comes straight from the CI build:
 Its only IG resource so far is the `StructureDefinition/myobservation` scaffold left over from the
 IG template, listed in `exclude[]` so it never becomes a permanent JIRA key. Drop that entry once
 the IG defines real profiles; the 17 pages are the useful content in the meantime.
+
+**AU Terminology (THO-AU) is CI-only too**, and breaks two conventions the other AU IGs follow:
+
+- its package id is `hl7.au.terminology`, with **no `.fhir`** segment, so the input files are
+  `ImplementationGuide-hl7.au.terminology.json` / `.change.json`. The CI resource is at
+  <https://build.fhir.org/ig/hl7au/au-terminology/ImplementationGuide-hl7.au.terminology.json>
+  (the `hl7.fhir.au.terminology` spelling 404s). The CI build also exposes
+  `package.manifest.json`, which is how to confirm the package id for a new IG.
+- its canonical is `http://terminology.hl7.org.au` — not under `hl7.org.au/fhir`.
+
+It currently defines **no artifacts at all**: `definition.resource` is absent from the IG
+resource, not merely empty. The template treats a missing `definition.resource` (and a missing
+`definition.page`) as empty rather than failing, so the output is the 13 pages and nothing else.
+`https://hl7.org.au/fhir/terminology/package-list.json` returns a 200 "Content Not Found" HTML
+page, which is how hl7.org.au signals an unpublished IG — check that a package-list actually
+parses as JSON before trusting the status code.
 
 `HL7BallotTool/manual updates/` holds copies of deployed files that were edited by hand (including
 `FHIR-au-signup.xml`, which has no generator inputs and is not yet in `SPECS-FHIR.xml`). Treat it
@@ -147,6 +165,7 @@ Each IG's publication history is `<canonical>/package-list.json` on hl7.org.au:
 | au-ps | <https://hl7.org.au/fhir/ps/package-list.json> |
 | au-erequesting | <https://hl7.org.au/fhir/ereq/package-list.json> |
 | au-encounter | *(none — CI only; re-pull the IG resource from the CI build instead)* |
+| au-terminology | *(none — CI only; re-pull the IG resource from the CI build instead)* |
 
 Each `list[]` entry has `version`, `path`, `status` (`ci-build` | `draft` | `preview` | `ballot` |
 `trial-use`), `date`, and optionally `current: true`. Reading rules:
